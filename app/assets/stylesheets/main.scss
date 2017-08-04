@@ -16,44 +16,61 @@
 	justify-content: center;
 	align-items: center;
 }
-
 .hero-box {
 	height: 72vh;
 	width: 72vw;
-	background-color: #4343bb;
-	opacity: 0.75;
+	background-color: #444;
+	opacity: 0.85;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 1;
 }
 
 .carousel {
 	height: 65vh;
 	width: 68vw;
-	background-color: #8c8c8c;
-	opacity: 0.75;
+	background-color: #444;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
 .Wallop {
-	background-color: #444;
 }
-
 .Wallop-list {
-	
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-
-.Wallop-item {
-	
+.Wallop-item, .Wallop-item--current {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-
+.carousel-image {
+	height: 65vh;
+	width: 68vw;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.carousel-image-1 {
+	background-image: image-url("h1img1.jpg");
+}
+.carousel-image-2 {
+	background-image: image-url("h1img2.jpg");
+}
+.carousel-image-3 {
+	background-image: image-url("h1img3.jpg");
+}
+.carousel-image-4 {
+	background-image: image-url("h1img4.jpg");
+}
 .Wallop-buttonPrevious {
 	right: 32vw;
 	
 }
-
 .Wallop-buttonNext {
 	left: 32vw;
 
@@ -69,8 +86,6 @@
 	font-size: 22px;
 	color: #d9d9d9;
 }
-
-
 .fps-games-header .part-1{
 	background-color: #6600ff;
 	display: flex;
@@ -126,45 +141,53 @@
 
 .games-section {
 	background-color: #444;
-	height: 86vh;
+	flex-wrap: wrap;
+	flex: 1;
+	min-height: 50vh;
 }
 
 .game-items {
 	background-color: #333;
-	height: 50%;
+	height: 30vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
 }
-
 .game-item {
 	height: 90%;
 	width: 80%;
-	border-radius: 5px;
+	border-radius: 3px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
-	img {
-	max-height: 92%;
-	max-width: 95%;
-	background-color: #8eb83b;
-	}
 }
-
 .fps-game-item {
 	background-color: #6600ff;
 }
-
 .moba-game-item {
 	background-color: #ff8533;
 }
-
 .hero-game-item {
 	background-color: #0066cc;
 }
-
 .more-game-item {
 	background-color: #00b386;
+}
+
+.game-link {
+	height: 100%;
+	width: 100%;
+	background-color: #6600ff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.game-image {
+	background-image: image-url("h2img1.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	max-height: 92%;
+	max-width: 95%;
 }

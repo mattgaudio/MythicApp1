@@ -1,0 +1,105 @@
+.tourn-section {
+	color: #d2d2d2;
+}
+.tourn-fps-section {
+
+}
+.tourn-moba-section {
+
+}
+.tourn-hero-section {
+
+}
+.tourn-more-section {
+
+}
+
+.tourn-game-item {
+	background-color: #333;
+	margin-bottom: 2vh;
+}
+.tourn-fps-game-item {
+	border: 2px solid #000;
+
+}
+.tourn-moba-game-item {
+
+}
+.tourn-hero-game-item {
+
+}
+.tourn-more-game-item {
+
+}
+
+.tourn-game-header {
+	padding: 4px;
+	margin-bottom: 2vh;
+}
+.tourn-fps-game-header {
+	border: 2px solid #6600ff;
+	border-bottom: 2px solid #6600ff;
+}
+.tourn-moba-game-header {
+
+}
+.tourn-hero-game-header {
+
+}
+.tourn-more-game-header {
+
+}
+.tourn-game-header-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 22px;
+}
+
+
+.tourn-img-placing {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #000;
+}
+
+.tournament-img {
+	height: 20vh;
+	width: 20vw;
+}
+
+.tourn-square {
+	background-color: #444;
+}
+
+.tourn-item {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	height: 100%;
+}
+
+.tourn-item-part1 {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.tourn-item-part2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.current-players-item {
+	padding: 15px;
+}
+.brackets-filled-item {
+	padding: 15px;
+}
+.prize-pool {
+	padding: 15px;
+}
+

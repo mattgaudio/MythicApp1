@@ -3,28 +3,76 @@
 
     <div class="nav-left">
       <div class="nav-item logo-box">
-        <i class="fa fa-cubes"></i> | Mythic Gaming
+        <%= link_to root_path, :class => "logo-link" do %>
+          <i class="fa fa-cubes"></i> Mythic Gaming
+        <% end %>  
       </div>
     </div>
 
     <div class="nav-middle">
-      <div class="nav-item">
-        FPS Games
+      <div class="nav-item dropdown">
+        <div class="drop-btn">
+          FPS Games <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="drop-content">
+          <div class="drop-item">Call of Duty: BO3</div>
+          <div class="drop-item">Call of Duty: MWR</div>
+          <div class="drop-item">Counter Strike: GO</div>
+          <div class="drop-item">Halo: MCC</div>
+          <div class="drop-item">Halo 5</div>
+          <div class="drop-item">Halo 3</div>
+          <div class="drop-item">Rainbow Six: Siege</div>
+          <div class="drop-item">Destiny</div>
+          <div class="drop-item">Gears of War 4</div>
+        </div>
       </div>
-      <div class="nav-item">
-        MOBA Games
+      <div class="nav-item dropdown">
+        <div class="drop-btn">
+          MOBA Games <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="drop-content">
+          <div class="drop-item">League of Legends</div>
+          <div class="drop-item">DOTA 2</div>
+          <div class="drop-item">SMITE</div>
+          <div class="drop-item">Heroes of the Storm</div>
+          <div class="drop-item">Paragon</div>
+        </div>
       </div>
-      <div class="nav-item">
-        Hero Games
+      <div class="nav-item dropdown">
+        <div class="drop-btn">
+          Hero Games <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="drop-content">
+          <div class="drop-item">Overwatch</div>
+          <div class="drop-item">Lawbreakers</div>
+          <div class="drop-item">Quake Champions</div>
+        </div>
       </div>
-      <div class="nav-item">
-        More Games
+      <div class="nav-item dropdown">
+        <div class="drop-btn">
+          More Games <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="drop-content">
+          <div class="drop-item">Starcraft 2</div>
+        </div>
       </div>
-      <div class="nav-item">
-        Information
+      <div class="nav-item dropdown">
+        <div class="drop-btn">
+          Information <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="drop-content">
+          <div class="drop-item">Reddit</div>
+          <div class="drop-item">Pricing</div>
+        </div>
       </div>
-      <div class="nav-item">
-        More <i class="fa fa-caret-down"></i>
+      <div class="nav-item dropdown">
+        <div class="drop-btn">
+          More <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="drop-content">
+          <div class="drop-item">Schedule</div>
+          <div class="drop-item">Find Teammates</div>
+        </div>
       </div>
 
     </div>
@@ -37,27 +85,3 @@
 
   </div>
 </nav>
-
-<!-- <nav class="off-screen-navigation" id="off-screen">
-  <div class="off-screen-level">
-     <ul>
-      <li>
-        <a href="#">Setup</a>
-        <div class="off-screen-level">
-          <div class="off-screen-header">
-            <h3 class="header">Setup</h3>
-          </div>
-          <a class="navigation-back" href="#">back</a>
-          <ul>
-            <li><a href="/docs">Getting Started</a></li>
-            <li><a href="/whats_included">What's included?</a></li>
-            <li><a href="/basic_setup">Basic Setup</a></li>
-            <li><a href="/browser_support">Browser Support</a></li>
-            <li><a href="/using_rails">Using Rails</a></li>
-            <li><a href="/examples">Apps Examples</a></li>
-          </ul>
-        </div>
-      </li>  
-     </ul>
-  </div>
-</nav> -->
