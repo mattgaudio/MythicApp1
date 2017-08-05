@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// Hero Section
+// HERO SECTION
 
 .hero-section {
 	height: 90vh;
@@ -20,12 +20,14 @@
 	height: 72vh;
 	width: 72vw;
 	background-color: #444;
-	opacity: 0.85;
+	opacity: 0.90;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 1;
 }
+
+// WALLOP AND CAROUSEL
 
 .carousel {
 	height: 65vh;
@@ -75,6 +77,8 @@
 	left: 32vw;
 
 }
+
+// GAMES SECTION
 
 .header, .games-header {
 	height: 10vh;
@@ -182,6 +186,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-radius: 5px;
 }
 .game-image {
 	background-image: image-url("h2img1.jpg");
@@ -191,3 +196,140 @@
 	max-height: 92%;
 	max-width: 95%;
 }
+
+// SECTION HEADER
+
+.section-header {
+	height: 10vh;
+	border: 2px solid #000;
+	margin: 2vh 0vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 22px;
+	background-color: #333;
+	color: #d9d9d9;
+}
+
+// SIGN IN | ACCOUNT CREATION
+
+.signup-section {
+	font-size: 22px;
+	border: 2px solid #000;
+	background-image: image-url("hexagonimg2");
+	background-size: 50% 100%;
+	background-repeat: repeat;
+	color: #d2d2d2;
+	min-height: 50vh;
+
+}
+.sign-in-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.create-account-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.sign-in-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 40vh;
+}
+.create-account-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 40vh;
+}
+.sign-in-content {
+}
+.create-account-content {
+}
+.signin-email-label {
+	
+}
+.signin-email-input {
+	
+	text-align: center;
+}
+.signin-password-label {
+	
+}
+.signin-password-input {
+	
+	text-align: center;
+}
+.ca-email-label {
+	
+}
+.ca-email-input {
+	
+	text-align: center;
+}
+.ca-password-label {
+	
+}
+.ca-password-input {
+	
+	text-align: center;
+}
+.confirm-ca-password-label {
+	
+}
+.confirm-ca-password-input {
+	
+	text-align: center;
+}
+.submit-btn {
+	border: 2px solid #444;
+	opacity: 0.9;
+	padding: 10px 20px;
+	color: #d2d2d2;
+	background-color: #333;
+	cursor: pointer;
+}
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.form-label {
+	color: #d2d2d2;
+	font-size: 18px;
+}
+.form-input {
+	color: #d2d2d2;
+	font-size: 18px;
+}
+
+
+// INFORMATION 
+
+// STATISTICS
+.statistics-header .col-3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 18px;
+	color: #d2d2d2;
+}
+
+.statistics-section {
+	border: 2px solid #000;
+}
+
+.console-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 20vh;
+}
+

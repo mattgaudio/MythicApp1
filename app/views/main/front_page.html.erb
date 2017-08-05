@@ -1,6 +1,7 @@
+<!-- HERO -->
 <div class="hero-section">
   <div class="hero-box">
-
+    <!-- CAROUSEL -->
     <div class="carousel Wallop">
       <div class="Wallop-list">
         <div class="Wallop-item">
@@ -28,7 +29,7 @@
   </div>
 </div>
 
-
+<!-- FPS GAMES -->
 <div class="box">
   <div class="row games-header fps-games-header">
     <div class="col-6 part-1">FPS Games</div>
@@ -77,14 +78,25 @@
         <%= image_tag "destinyimg1.jpg", class: "game-image" %>
       </div>
     </div>
-      <div class="col-3 game-items">
+    <div class="col-3 game-items">
       <div class="game-item fps-game-item">
         <%= image_tag "destinyimg1.jpg", class: "game-image" %>
+      </div>
+    </div>
+    <div class="col-3 game-items">
+      <div class="game-item fps-game-item">
+        <%= image_tag "gow4img1.jpg", class: "game-image" %>
+      </div>
+    </div>
+    <div class="col-3 game-items">
+      <div class="game-item fps-game-item">
+        <%= image_tag "doomimg1.jpg", class: "game-image" %>
       </div>
     </div>
   </div>
 </div>
 
+<!-- MOBA GAMES -->
 <div class="box">
   <div class="row games-header moba-games-header">
     <div class="col-6 part-1">MOBA Games</div>
@@ -119,6 +131,7 @@
   </div>
 </div>
 
+<!-- HERO GAMES -->
 <div class="box">
   <div class="row games-header hero-games-header">
     <div class="col-6 part-1">Hero Games</div>
@@ -143,6 +156,7 @@
   </div>
 </div>
 
+<!-- MORE GAMES -->
 <div class="box">
   <div class="row games-header more-games-header">
     <div class="col-6 part-1">More Games</div>
@@ -157,13 +171,205 @@
   </div>
 </div>
 
+<!-- SIGN IN & ACCOUNT CREATION -->
 <div class="box">
-  <div class="header">
+  <div class="section-header">
+    <div class="section-header-content">Sign In | Account Creation</div>
+  </div>
+  <div class="row signup-section">
     <div class="row">
-      <div class="col-6"></div>
-      <div class="col-6"></div>
+      <div class="col-6 sign-in-header">
+        <div class="sign-in-content"> Sign In </div>
+      </div>
+      <div class="col-6 create-account-header">
+        <div class="create-account-content"> Create Account </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 sign-in-section">
+        <%= form_tag do %>
+          <%= label_tag(:email, "Email or Gamertag", class: "signin-email-label form-label") %>
+          <%= email_field(:user, :address, class: "signin-email-input medium form-input") %>
+          <%= label_tag(:password, "Password", class: "signin-password-label form-label") %>
+          <%= password_field_tag(:password, '', class: "signin-password-input medium form-input") %>
+          <%= submit_tag("Log in", class: "submit-btn") %>
+        <% end %>
+      </div>
+      <div class="col-6 create-account-section">
+        <%= form_tag do %>
+          <%= label_tag(:email, "Email", class: "ca-email-label form-label") %>
+          <%= email_field(:user, :address, class: "ca-email-input medium form-input") %>
+          <%= label_tag(:password, "Password", class: "ca-password-label form-label") %>
+          <%= password_field_tag(:password, '', class: "ca-password-input medium form-input") %>
+          <%= label_tag(:confirm_password, "Confirm Password", class: "confirm-ca-password-label form-label") %>
+          <%= password_field_tag(:confirm_password, '', class: "confirm-ca-password-input medium form-input") %>
+          <%= submit_tag("Create Account", class: "submit-btn") %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
+
+<!-- INFORMATION -->
+<div class="box">
+  <div class="section-header">
+    <div class="section-header-content">Information</div>
+  </div>
+</div>
+
+<!-- STATISTICS -->
+<div class="box">
+  <div class="section-header">
+    <div class="section-header-content">Statistics</div>
+  </div>
+  <div class="statistics-section">
+    <div class="row statistics-header">
+      <div class="col-3 console-img">Xbox1 <br>
+        <%= image_tag("xb1img1.png", class: "logo-img", height: "100", width: "100") %>
+      </div>
+      <div class="col-3 console-img">PS4 <br>
+        <%= image_tag("ps4svg1.svg", class: "logo-img", height: "100", width: "100") %>
+      </div>
+      <div class="col-3 console-img">Steam <br>
+        <%= image_tag("steamsvg1.svg", class: "logo-img", height: "100", width: "100") %>
+      </div>
+      <div class="col-3 console-img">All
+        <%= image_tag("xb1img1.png", class: "logo-img", height: "100", width: "100") %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div class="current-players-item">Current Players: <br>
+          NUMBER
+        </div>
+        <div class="brackets-filled-item">Brackets Filled: <br>
+          NUMBER
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="current-players-item">Current Players: <br>
+          NUMBER
+        </div>
+        <div class="brackets-filled-item">Brackets Filled: <br>
+          NUMBER
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="current-players-item">Current Players: <br>
+          NUMBER
+        </div>
+        <div class="brackets-filled-item">Brackets Filled: <br>
+          NUMBER
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="current-players-item">Current Players: <br>
+          NUMBER
+        </div>
+        <div class="brackets-filled-item">Brackets Filled: <br>
+          NUMBER
+        </div>
+      </div> 
+    </div>
+    <div class="row statistics-header">
+      <div class="col-3 console-img">Xbox1 <br>
+        <%= image_tag("xb1img1.png", class: "logo-img", height: "100", width: "100") %>
+      </div>
+      <div class="col-3 console-img">PS4 <br>
+        <%= image_tag("ps4svg1.svg", class: "logo-img", height: "100", width: "100") %>
+      </div>
+      <div class="col-3 console-img">Steam <br>
+        <%= image_tag("steamsvg1.svg", class: "logo-img", height: "100", width: "100") %>
+      </div>
+      <div class="col-3 console-img">All
+        <%= image_tag("xb1img1.png", class: "logo-img", height: "100", width: "100") %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div class="current-players-item">Current Players: <br>
+          NUMBER
+        </div>
+        <div class="brackets-filled-item">Brackets Filled: <br>
+          NUMBER
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="current-players-item">Current Players: <br>
+          NUMBER
+        </div>
+        <div class="brackets-filled-item">Brackets Filled: <br>
+          NUMBER
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="current-players-item">Current Players: <br>
+          NUMBER
+        </div>
+        <div class="brackets-filled-item">Brackets Filled: <br>
+          NUMBER
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="current-players-item">Current Players: <br>
+          NUMBER
+        </div>
+        <div class="brackets-filled-item">Brackets Filled: <br>
+          NUMBER
+        </div>
+      </div> 
+    </div>
+    <div class="row statistics-header">
+      <div class="col-3 console-img">Xbox1 <br>
+        <%= image_tag("xb1img1.png", class: "logo-img", height: "100", width: "100") %>
+      </div>
+      <div class="col-3 console-img">PS4 <br>
+        <%= image_tag("ps4svg1.svg", class: "logo-img", height: "100", width: "100") %>
+      </div>
+      <div class="col-3 console-img">Steam <br>
+        <%= image_tag("steamsvg1.svg", class: "logo-img", height: "100", width: "100") %>
+      </div>
+      <div class="col-3 console-img">All
+        <%= image_tag("xb1img1.png", class: "logo-img", height: "100", width: "100") %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div class="current-players-item">Current Players: <br>
+          NUMBER
+        </div>
+        <div class="brackets-filled-item">Brackets Filled: <br>
+          NUMBER
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="current-players-item">Current Players: <br>
+          NUMBER
+        </div>
+        <div class="brackets-filled-item">Brackets Filled: <br>
+          NUMBER
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="current-players-item">Current Players: <br>
+          NUMBER
+        </div>
+        <div class="brackets-filled-item">Brackets Filled: <br>
+          NUMBER
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="current-players-item">Current Players: <br>
+          NUMBER
+        </div>
+        <div class="brackets-filled-item">Brackets Filled: <br>
+          NUMBER
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+
+
 
 

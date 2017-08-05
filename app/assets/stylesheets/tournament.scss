@@ -19,10 +19,10 @@
 	margin-bottom: 2vh;
 }
 .tourn-fps-game-item {
-	border: 2px solid #000;
 
 }
 .tourn-moba-game-item {
+
 
 }
 .tourn-hero-game-item {
@@ -38,16 +38,15 @@
 }
 .tourn-fps-game-header {
 	border: 2px solid #6600ff;
-	border-bottom: 2px solid #6600ff;
 }
 .tourn-moba-game-header {
-
+	border: 2px solid #ff8533;
 }
 .tourn-hero-game-header {
-
+	border: 2px solid #0066cc;
 }
 .tourn-more-game-header {
-
+	border: 2px solid #00b386;
 }
 .tourn-game-header-content {
 	display: flex;
@@ -63,8 +62,21 @@
 	align-items: center;
 	background-color: #000;
 }
+.tourn-img-placing-fps {
+background-color: #6600ff;
+}
+.tourn-img-placing-moba {
+background-color: #ff8533;
+}
+.tourn-img-placing-hero {
+background-color: #0066cc;
+}
+.tourn-img-placing-more {
+background-color: #00b386;
+}
 
-.tournament-img {
+
+.tourn-img {
 	height: 20vh;
 	width: 20vw;
 }
@@ -80,6 +92,11 @@
 	flex: 1;
 	height: 100%;
 }
+.tourn-item-1 {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
 
 .tourn-item-part1 {
 	display: flex;
@@ -94,12 +111,45 @@
 	flex-direction: column;
 }
 .current-players-item {
-	padding: 15px;
+	padding: 5px;
 }
 .brackets-filled-item {
-	padding: 15px;
+	padding: 5px;
 }
 .prize-pool {
 	padding: 15px;
 }
 
+.prize-pool-button {
+	padding: 10px 20px;
+	
+}
+.join-bracket-button {
+	padding: 10px;
+}
+.fps-button {
+	background-color: #6600ff
+}
+.moba-button {
+	background-color: #ff8533;
+}
+.hero-button {
+	background-color: #0066cc;
+}
+.more-button {
+	background-color: #00b386;
+}
+
+.tourn-label {
+	border: 2px solid #000;
+	padding: 10px 25px;
+}
+
+.current-players-total {
+	color: #2952a3;
+	padding: 10px;
+}
+.brackets-filled-total {
+	color: #339966;
+	padding: 10px;
+}
