@@ -5,8 +5,8 @@
 }
 
 .full-footer {
-	background-color: #000;
 	min-height: 25vh;
+	font-size: 12px;
 }
 
 .footer-col {
@@ -21,6 +21,7 @@
 	text-decoration: underline;
 	text-align: center;
 	padding: 4px;
+	font-size: 12px;
 
 }
 
@@ -30,11 +31,13 @@
 }
 
 .footer-list-item {
-	padding: 4px;
-	text-align: center;
+	padding: 4px 12px;
+	text-align: left;
+	font-size: 11px;
 	&:hover {
 		background-color: #1a1a1a;
-		color: #bfbfbf;
+		color: #fff;
 		cursor: pointer;
+		border-radius: 3px;
 	}
 }

@@ -168,21 +168,25 @@
 }
 .fps-game-item {
 	background-color: #6600ff;
+	background-color: #000;
 }
 .moba-game-item {
 	background-color: #ff8533;
+	background-color: #000;
 }
 .hero-game-item {
 	background-color: #0066cc;
+	background-color: #000;
 }
 .more-game-item {
 	background-color: #00b386;
+	background-color: #000;
 }
 
 .game-link {
 	height: 100%;
 	width: 100%;
-	background-color: #6600ff;
+	background-color: #000;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -309,9 +313,6 @@ form {
 	font-size: 18px;
 }
 
-
-// INFORMATION 
-
 // STATISTICS
 .statistics-header .col-3 {
 	display: flex;
@@ -324,6 +325,21 @@ form {
 
 .statistics-section {
 	border: 2px solid #000;
+	font-size: 18px;
+	color: #d2d2d2;
+	background-color: #333;
+}
+
+.statistics-catalogue-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.statistics-catalogue-item {
+	border: 2px solid #000;
+	font-weight: bold;
+	padding: 10px 25px;
+
 }
 
 .console-img {
@@ -331,5 +347,105 @@ form {
 	justify-content: center;
 	align-items: center;
 	min-height: 20vh;
+}
+
+.logo-img {
+	color: #000 !important;
+	filter: grayscale(100%);
+}
+.logo-game-img {
+
+}
+
+.statistics-header-top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 5vh;
+}
+.statistics-header-middle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 12vh;
+}
+.current-players-item {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	flex-direction: column;
+}
+.current-players-item-top {
+
+}
+.current-players-item-mid {
+	color: #2952a3;
+	padding: 10px;
+}
+.brackets-filled-item {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	flex-direction: column;
+}
+.brackets-filled-item-top {
+
+}
+.brackets-filled-item-mid {
+	color: #339966;
+	padding: 10px;
+}
+
+// INFORMATION 
+.information-section {
+	// background-image: image-url("background3.jpg");
+	background-color: #333;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	min-height: 65vh;
+	color: #fff;
+}
+
+.info-section-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.5em;
+}
+
+.info-section-item-header {
+	color: #000;
+	border: 2px solid #336699;
+	border-left: 25px solid #336699;
+	padding: 10px 25px;
+}
+
+.info-list-group {
+	border: 2px solid #000;
+	margin: 10px 0px;
+	padding: 10px;
+	min-height: 25vh;
+}
+
+.info-list-header {
+	color: #000;
+	font-size: 18px;
+	border: 2px solid #336699;
+	border-left: 25px solid #336699;
+	padding: 5px 15px;
+	list-style: none;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+}
+
+.info-list-item {
+	margin-left: 25px;
 }
 
