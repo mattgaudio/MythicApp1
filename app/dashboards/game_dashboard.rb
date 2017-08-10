@@ -13,6 +13,7 @@ class GameDashboard < Administrate::BaseDashboard
     long_title: Field::String,
     game_type: Field::String,
     game_group: Field::String,
+    active: Field::Boolean,
     game_img: PaperclipField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -26,9 +27,10 @@ class GameDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :short_title,
-    :long_title,
+    # :long_title,
     :game_type,
     :game_img,
+    :active,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -39,6 +41,7 @@ class GameDashboard < Administrate::BaseDashboard
     :long_title,
     :game_type,
     :game_group,
+    :active,
     :game_img,
     :created_at,
     :updated_at,
@@ -52,6 +55,7 @@ class GameDashboard < Administrate::BaseDashboard
     :long_title,
     :game_type,
     :game_group,
+    :active,
     :game_img,
   ].freeze
 

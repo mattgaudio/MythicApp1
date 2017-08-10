@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170810015403) do
+ActiveRecord::Schema.define(version: 20170810033111) do
 
   create_table "games", force: :cascade do |t|
     t.string "short_title"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20170810015403) do
     t.string "game_img_content_type"
     t.integer "game_img_file_size"
     t.datetime "game_img_updated_at"
+    t.boolean "active"
   end
 
 end
