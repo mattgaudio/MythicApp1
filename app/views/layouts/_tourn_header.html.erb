@@ -1,8 +1,33 @@
 
-	<div class="row tourn-nav-row">
-		<div class="col-11 offset-1 tourn-nav">
-			<div class="tourn-nav-item"> Nightly Tournaments </div>
-			<div class="tourn-nav-item"> Weekly Tournaments </div>
-			
+<div class="row tourn-nav-row">
+	<div class="col-11 offset-1 tourn-nav">
+		<div class="tourn-nav-item"> Nightly Tournaments </div>
+		<div class="tourn-nav-item"> Weekly Tournaments </div>
+
+		<div class="tourn-nav-item">
+			<!--a link element to trigger the modal-->
+			<a class="button primary large" data-furatto="modal" data-target="#modal-1" data-transition="1" data-theme="alpha">Launch modal</a>
+
+			<!--the modal-->
+			<div class="modal" id="modal-1">
+			  <div class="modal-header">
+			    Modal Dialog
+			  </div>
+			  <div class="modal-content">
+			    <div>
+			      <p>This is a modal window. It has 3 main elements:</p>
+			      <ul>
+			        <li><strong>Header:</strong> The top text of the modal, could be used as a title.</li>
+			        <li><strong>Content:</strong> The actual content of the modal content.</li>
+			        <li><strong>Footer:</strong> Probably a bunch of actions, or just the close button.</li>
+			      </ul>
+			      <div class="modal-footer">
+			        <a class="modal-close button alpha primary">Close me!</a>
+			      </div>
+			    </div>
+			  </div>
+			</div>
 		</div>
+		
 	</div>
+</div>

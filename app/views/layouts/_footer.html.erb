@@ -6,16 +6,9 @@
 					FPS Games
 				</div>
 				<ul class="footer-list">
-					<li class="footer-list-item">Call of Duty: BO3</li>
-					<li class="footer-list-item">Call of Duty: MWR</li>
-					<li class="footer-list-item">Counter Strike: GO</li>
-					<li class="footer-list-item">Halo: MCC</li>
-					<li class="footer-list-item">Halo 5</li>
-					<li class="footer-list-item">Halo 3</li>
-					<li class="footer-list-item">Rainbow Six: Siege</li>
-					<li class="footer-list-item">Destiny</li>
-					<li class="footer-list-item">Gears of War 4</li>
-					<li class="footer-list-item">Doom</li>
+					<% Game.all.fps.each do |game| %>
+						<li class="footer-list-item"><%= game.long_title %></li>
+					<% end %>
 				</ul>
 			</div>
 			<div class="col-2 footer-col">
@@ -23,11 +16,9 @@
 					MOBA Games
 				</div>
 				<ul class="footer-list">
-					<li class="footer-list-item">League of Legends</li>
-					<li class="footer-list-item">DOTA 2</li>
-					<li class="footer-list-item">SMITE</li>
-					<li class="footer-list-item">Heroes of the Storm</li>
-					<li class="footer-list-item">Paragon</li>
+					<% Game.all.moba.each do |game| %>
+						<li class="footer-list-item"><%= game.long_title %></li>
+					<% end %>
 				</ul>
 			</div>
 			<div class="col-2 footer-col">
@@ -35,9 +26,9 @@
 					Hero Games
 				</div>
 				<ul class="footer-list">
-					<li class="footer-list-item">Overwatch</li>
-					<li class="footer-list-item">Lawbreakers</li>
-					<li class="footer-list-item">Quake Champions</li>
+					<% Game.all.hero.each do |game| %>
+						<li class="footer-list-item"><%= game.long_title %></li>
+					<% end %>
 				</ul>
 			</div>
 			<div class="col-2 footer-col">
@@ -45,7 +36,9 @@
 					More Games
 				</div>
 				<ul class="footer-list">
-					<li class="footer-list-item">Starcraft 2</li>
+					<% Game.all.more.each do |game| %>
+						<li class="footer-list-item"><%= game.long_title %></li>
+					<% end %>
 				</ul>
 			</div>
 			<div class="col-2 footer-col">

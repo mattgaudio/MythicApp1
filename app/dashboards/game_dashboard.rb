@@ -29,8 +29,9 @@ class GameDashboard < Administrate::BaseDashboard
     :short_title,
     # :long_title,
     :game_type,
-    :game_img,
     :active,
+    :game_img,
+ 
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES

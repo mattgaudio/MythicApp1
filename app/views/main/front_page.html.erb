@@ -36,73 +36,15 @@
     <div class="col-6 part-2">Join a Tournament</div>
   </div>
   <div class="row games-section fps-games-section">
-   <div class="col-3 game-items">
-      <div class="game-item fps-game-item">
-        <%= link_to tournaments_path, class: "game-link" do  %>
-          <%= image_tag "codbo3img1.jpg", class: "game-image" %>
-        <% end %> 
+  <% @games.fps.order(game_group: :asc).order(long_title: :asc).each do |game| %>
+     <div class="col-3 game-items">
+        <div class="game-item fps-game-item">
+          <%= link_to tournaments_path, class: "game-link" do  %>
+            <%= image_tag game.game_img.url(:l), class: "game-image" %>
+          <% end %> 
+        </div>
       </div>
-    </div>
-    <div class="col-3 game-items">
-      <div class="game-item fps-game-item">
-        <%= image_tag "codmwrimg1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-      <div class="game-item fps-game-item">
-        <%= image_tag "csgoimg1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-      <div class="game-item fps-game-item">
-        <%= image_tag "halomccimg1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-      <div class="game-item fps-game-item">
-        <%= image_tag "halo5img1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-      <div class="game-item fps-game-item">
-        <%= image_tag "halo3img1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-      <div class="game-item fps-game-item">
-        <%= image_tag "r6simg1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-      <div class="game-item fps-game-item">
-        <%= image_tag "destinyimg1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-      <div class="game-item fps-game-item">
-        <%= image_tag "destinyimg1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-      <div class="game-item fps-game-item">
-        <%= image_tag "gow4img1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-      <div class="game-item fps-game-item">
-        <%= image_tag "doomimg1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-      <div class="game-item fps-game-item">
-        <%= image_tag "codiwimg1.jpeg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-      <div class="game-item fps-game-item">
-        <%= image_tag "codbo2img1.jpg", class: "game-image" %>
-      </div>
-    </div>
+  <% end %>
   </div>
 </div>
 
@@ -113,31 +55,15 @@
     <div class="col-6 part-2">Join a Tournament</div>
   </div>
   <div class="row games-section moba-games-section">
-    <div class="col-3 game-items">
-       <div class="game-item moba-game-item">
-        <%= image_tag "lol1.jpg", class: "game-image" %>
+    <% @games.moba.each do |game| %>
+     <div class="col-3 game-items">
+        <div class="game-item fps-game-item">
+          <%= link_to tournaments_path, class: "game-link" do  %>
+            <%= image_tag game.game_img.url(:l), class: "game-image" %>
+          <% end %> 
+        </div>
       </div>
-    </div>
-    <div class="col-3 game-items">
-       <div class="game-item moba-game-item">
-        <%= image_tag "dota2img1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-       <div class="game-item moba-game-item">
-        <%= image_tag "smiteimg1.png", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-       <div class="game-item moba-game-item">
-        <%= image_tag "hotsimg1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-       <div class="game-item moba-game-item">
-        <%= image_tag "paragonimg1.jpeg", class: "game-image" %>
-      </div>
-    </div>
+    <% end %>
   </div>
 </div>
 
@@ -148,31 +74,15 @@
     <div class="col-6 part-2">Join a Tournament</div>
   </div>
   <div class="row games-section hero-games-section">
-    <div class="col-3 game-items">
-       <div class="game-item hero-game-item">
-        <%= image_tag "overwatchimg2.jpg", class: "game-image" %>
+    <% @games.hero.each do |game| %>
+     <div class="col-3 game-items">
+        <div class="game-item hero-game-item">
+          <%= link_to tournaments_path, class: "game-link" do  %>
+            <%= image_tag game.game_img.url(:l), class: "game-image" %>
+          <% end %> 
+        </div>
       </div>
-    </div>
-    <div class="col-3 game-items">
-       <div class="game-item hero-game-item">
-        <%= image_tag "lawbreakersimg1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-       <div class="game-item hero-game-item">
-        <%= image_tag "qcimg1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-       <div class="game-item hero-game-item">
-        <%= image_tag "tf2img1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-       <div class="game-item hero-game-item">
-        <%= image_tag "warframeimg1.jpg", class: "game-image" %>
-      </div>
-    </div>
+    <% end %>
   </div>
 </div>
 
@@ -183,31 +93,15 @@
     <div class="col-6 part-2">Join a Tournament</div>
   </div>
   <div class="row games-section more-games-section">
-    <div class="col-3 game-items">
-       <div class="game-item more-game-item">
-        <%= image_tag "starcraft2img1.jpg", class: "game-image" %>
+    <% @games.more.each do |game| %>
+     <div class="col-3 game-items">
+        <div class="game-item more-game-item">
+          <%= link_to tournaments_path, class: "game-link" do  %>
+            <%= image_tag game.game_img.url(:l), class: "game-image" %>
+          <% end %> 
+        </div>
       </div>
-    </div>
-    <div class="col-3 game-items">
-       <div class="game-item more-game-item">
-        <%= image_tag "wotimg1.jpeg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-       <div class="game-item more-game-item">
-        <%= image_tag "rlimg1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-       <div class="game-item more-game-item">
-        <%= image_tag "mkximg1.jpg", class: "game-image" %>
-      </div>
-    </div>
-    <div class="col-3 game-items">
-       <div class="game-item more-game-item">
-        <%= image_tag "xcom2.jpeg", class: "game-image" %>
-      </div>
-    </div>
+    <% end %>
   </div>
 </div>
 
