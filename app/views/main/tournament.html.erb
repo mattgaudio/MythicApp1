@@ -1,16 +1,42 @@
 <%= render "layouts/tourn_header" %>
 
 <div class="row">
-	<div class="col-1 side-nav">
-		<div class="side-navbar">
-			<ul class="navigation">
-      <li class="side-nav-item">FPS</li>
-      <li class="side-nav-item">MOBA</li>
-      <li class="side-nav-item">Hero</li>
-      <li class="side-nav-item">More</li>
-  </ul>
-		</div>
+	<div class="col-1">
+		<!-- <h3>Vert Nav</h3> -->
+		<nav class="tourn-vert-nav">
+		  <ul class="verticalnav">
+		    <li class="dropdown">
+		      <a href="#" class="active">FPS Games</a>
+		      <ul>
+		        <li><a href="#">MOBA Games</a></li>
+		        <li><a href="#">Hero Games</a></li>
+		        <li><a href="#">More Games</a></li>
+		      </ul>
+		    </li>
+		    <li><a href="#">MOBA Games</a></li>
+		    <li><a href="#">Hero Games</a></li>
+		    <li><a href="#">More Games</a></li>
+		    <li class="dropdown">
+		      <a href="#">Dolor sit</a>
+		      <ul>
+		        <li><a href="#">velit </a></li>
+		        <li><a href="#">Pulvinar </a></li>
+		        <li><a href="#">platea </a></li>
+		      </ul>
+		    </li>
+		  </ul>
+		</nav>
+		<script>
+				$(document).ready(function() {
+    $('.verticalnav > li > a').click(function(){
+      $(this).parent().toggleClass('open')
+		$(this).siblings().toggle();
+	});
+    	});
+		</script>
+	
 	</div>
+
 	<div class="col-11 tourn-main">
 		<div class="tourn-section tourn-fps-section">
 

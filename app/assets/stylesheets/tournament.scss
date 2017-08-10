@@ -195,3 +195,86 @@ padding: 8px;
 	color: #339966;
 	padding: 10px;
 }
+
+
+// TOURN SIDE NAV CSS
+
+/*customization*/
+
+$border-color:#e5e5e5;
+$border-radius:5px;
+$link-color :#666;
+$link-hover-color :#000;
+$link-hover-bg : #e5e5e5;
+
+.tourn-vert-nav {
+}
+
+
+nav{
+  > ul{
+    border:1px solid $border-color;
+    border-radius:$border-radius;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    max-width:200px;
+    > li{
+        a{
+        display:block;
+        text-decoration:none;
+        padding:10px;
+        color: $link-color;
+        }
+        > a{
+          border-bottom:1px solid $border-color;
+          &:hover{
+            color:$link-hover-color;
+            background: $link-hover-bg;
+          }
+          &.active{
+            background: $link-hover-bg;
+          }
+        }
+        ul{
+          display:none;
+          padding:10px 20px 10px 30px;
+          border:none;
+          border-bottom:1px solid $border-color;
+          li{
+            padding-left:5px;      
+            a{
+              border:0;
+              padding:5px 10px 5px 0;
+             &:hover{
+              color:$link-hover-color;
+            }
+            }
+          }
+        }
+      &.dropdown{
+        position: relative;
+        &:after{
+          content: "";
+          position: absolute;
+          right: 10px;
+          top: 14px;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid #686868; 
+        }
+        &.open{
+          &:after{
+                    content: "";
+          position: absolute;
+          right: 12px;
+          top: 17px;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #686868;           
+          }
+        }
+      }
+    }
+  }
+}

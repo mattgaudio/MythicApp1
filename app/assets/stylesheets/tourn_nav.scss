@@ -25,3 +25,38 @@
 	align-items: center;
 	padding: 20px;
 }
+
+.side-navbar {
+}
+.side-nav {
+	background-color: #333;
+	border: #fff;
+	color: #d2d2d2;
+	height: 100vh;
+	width: 100;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.side-nav {
+
+}
+
+.side-nav-list { 
+	list-style: none;
+
+}
+.side-nav-item {
+	color: #000;
+
+	a {
+		color: #000;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+}
