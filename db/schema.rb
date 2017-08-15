@@ -10,7 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170810033111) do
+ActiveRecord::Schema.define(version: 20170815034352) do
+
+  create_table "brackets", force: :cascade do |t|
+    t.datetime "event"
+    t.string "title"
+    t.integer "players"
+    t.integer "brackets_filled"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "game_id"
+    t.boolean "nightly_free", default: true
+    t.boolean "nightly_10", default: true
+    t.boolean "nightly_25", default: true
+    t.boolean "nightly_100"
+    t.boolean "weekly_free", default: true
+    t.boolean "weekly_10", default: true
+    t.boolean "weekly_25", default: true
+    t.boolean "weekly_100", default: true
+    t.boolean "weekly_250"
+    t.boolean "weekly_500"
+    t.integer "players_per_team"
+    t.integer "rounds"
+    t.string "tournament_type"
+    t.boolean "console_xbox"
+    t.boolean "console_ps4"
+    t.boolean "console_steam"
+    t.index ["game_id"], name: "index_brackets_on_game_id"
+  end
 
   create_table "games", force: :cascade do |t|
     t.string "short_title"
@@ -24,6 +51,16 @@ ActiveRecord::Schema.define(version: 20170810033111) do
     t.integer "game_img_file_size"
     t.datetime "game_img_updated_at"
     t.boolean "active"
+  end
+
+  create_table "tournaments", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "tournament_type"
+    t.string "url"
+    t.string "name"
+    t.string "description"
+    t.integer "tournament_id"
   end
 
 end

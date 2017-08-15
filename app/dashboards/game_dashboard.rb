@@ -11,12 +11,16 @@ class GameDashboard < Administrate::BaseDashboard
     id: Field::Number,
     short_title: Field::String,
     long_title: Field::String,
-    game_type: Field::String,
-    game_group: Field::String,
-    active: Field::Boolean,
-    game_img: PaperclipField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    game_type: Field::String,
+    game_group: Field::String,
+    game_img: PaperclipField,
+    game_img_file_name: Field::String,
+    game_img_content_type: Field::String,
+    game_img_file_size: Field::Number,
+    game_img_updated_at: Field::DateTime,
+    active: Field::Boolean,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -27,11 +31,9 @@ class GameDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :short_title,
-    # :long_title,
-    :game_type,
-    :active,
+    :long_title,
     :game_img,
- 
+    :created_at,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -40,12 +42,16 @@ class GameDashboard < Administrate::BaseDashboard
     :id,
     :short_title,
     :long_title,
-    :game_type,
-    :game_group,
-    :active,
-    :game_img,
     :created_at,
     :updated_at,
+    :game_type,
+    :game_group,
+    :game_img,
+    :game_img_file_name,
+    :game_img_content_type,
+    :game_img_file_size,
+    :game_img_updated_at,
+    :active,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -56,8 +62,9 @@ class GameDashboard < Administrate::BaseDashboard
     :long_title,
     :game_type,
     :game_group,
-    :active,
     :game_img,
+    :game_img_file_name,
+    :active,
   ].freeze
 
   # Overwrite this method to customize how games are displayed

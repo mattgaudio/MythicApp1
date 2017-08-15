@@ -5,7 +5,7 @@
 // HERO SECTION
 
 .hero-section {
-	height: 90vh;
+	min-height: 90vh;
 	background-color: #444;
 	background-image: image-url("image1.jpg");
 	background-image-width: 100vw;
@@ -50,13 +50,38 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 }
+
 .carousel-image {
 	height: 65vh;
 	width: 68vw;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+.wallop-item-box {
+	width: 30vw;
+	height: 20vh;
+	border: 2px solid #000;
+	background-color: rgba(#333, 0.9);
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: absolute;
+	top: 44vh;
+}
+.wallop-item-content {
+
+}
+.wallop-item-button {
+
+}
+
 .carousel-image-1 {
 	background-image: image-url("h1img1.jpg");
 }
@@ -70,12 +95,14 @@
 	background-image: image-url("h1img4.jpg");
 }
 .Wallop-buttonPrevious {
-	right: 32vw;
-	
+	position: absolute;
+	right: 63vw;
+	padding: 24px;
 }
 .Wallop-buttonNext {
-	left: 32vw;
-
+	position: absolute;
+	left: 63vw;
+	padding: 24px;
 }
 
 // GAMES SECTION

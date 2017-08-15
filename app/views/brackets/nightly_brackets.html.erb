@@ -1,156 +1,135 @@
-<%= render "layouts/tourn_header" %>
+<h2>Nightly Tournaments</h2>
 
-<div class="row">
-	<div class="col-1">
-		<!-- <h3>Vert Nav</h3> -->
-		<nav class="tourn-vert-nav">
-		  <ul class="verticalnav">
-		    <li class="dropdown">
-		      <a href="#" class="active">FPS Games</a>
-		      <ul>
-		        <li><a href="#">MOBA Games</a></li>
-		        <li><a href="#">Hero Games</a></li>
-		        <li><a href="#">More Games</a></li>
-		      </ul>
-		    </li>
-		    <li><a href="#">MOBA Games</a></li>
-		    <li><a href="#">Hero Games</a></li>
-		    <li><a href="#">More Games</a></li>
-		    <li class="dropdown">
-		      <a href="#">Dolor sit</a>
-		      <ul>
-		        <li><a href="#">velit </a></li>
-		        <li><a href="#">Pulvinar </a></li>
-		        <li><a href="#">platea </a></li>
-		      </ul>
-		    </li>
-		  </ul>
-		</nav>
-		<script>
-				$(document).ready(function() {
-    $('.verticalnav > li > a').click(function(){
-      $(this).parent().toggleClass('open')
-		$(this).siblings().toggle();
-	});
-    	});
-		</script>
-	
-	</div>
-
-	<div class="col-11 tourn-main">
-		<div class="tourn-section tourn-fps-section">
-
-			<div class="tourn-game-item tourn-fps-game-item">
-				<div class="row tourn-game-header tourn-fps-game-header">
-			    <div class="col-12 tourn-game-header-content">Halo:MCC | 4v4 MLG </div>
-			  </div>
-				<div class="row">
-					<div class="col-2 tourn-item tourn-item-label-box">
-						<div class="tourn-item-fps tourn-img-placing-fps tourn-item-1">
-							<%= image_tag "halomccimg1.jpg", class: "tourn-img" %>
-						</div>	
-						<div class="tourn-item-game-box">
-							Halo: MCC<br>
-							MLG 4v4
-						</div>
+<div class="tourn-section tourn-fps-section">
+	<% Bracket.all.each do |x| %>
+	<div class="tourn-game-item tourn-fps-game-item">
+		<div class="row tourn-game-header tourn-fps-game-header">
+	    <div class="col-12 tourn-game-header-content"><%= x.game.short_title %> | <%= x.tournament_type %> </div>
+	  </div>
+		<div class="row">
+			<div class="col-2 tourn-item tourn-item-label-box">
+				<div class="tourn-item-fps tourn-img-placing-fps tourn-item-1">
+					<%= image_tag "halomccimg1.jpg", class: "tourn-img" %>
+				</div>	
+				<div class="tourn-item-game-box">
+					<%= x.game.short_title %><br>
+					<%= x.title %>
+				</div>
+			</div>
+			<div class="col-2 tourn-item tourn-item-fps">
+				<div class="tourn-item-part1">
+					<div class="tourn-label">Free</div>
+				</div>
+				<div class="tourn-item-part2">
+					<div class="current-players-item">Current Players: <br>
+						<div class="current-players-total"><strong>Number</strong></div>
 					</div>
-					<div class="col-2 tourn-item tourn-item-fps">
-						<div class="tourn-item-part1">
-							<div class="tourn-label">Free</div>
-						</div>
-						<div class="tourn-item-part2">
-							<div class="current-players-item">Current Players: <br>
-								<div class="current-players-total"><strong>Number</strong></div>
-							</div>
-							<div class="brackets-filled-item">Brackets Filled: <br>
-								<div class="brackets-filled-total"><strong>Number</strong></div>
-							</div>
-							<div class="prize-pool"><button class="prize-pool-button fps-button"> Prize Pool </button></div>
-						</div>
+					<div class="brackets-filled-item">Brackets Filled: <br>
+						<div class="brackets-filled-total"><strong>Number</strong></div>
 					</div>
-					<div class="col-2 tourn-item tourn-item-fps">
-						<div class="tourn-item-part1">
-							<div class="tourn-label">$10</div>
-						</div>
-						<div class="tourn-item-part2">
-							<div class="current-players-item">Current Players: <br>
-								<div class="current-players-total"><strong>Number</strong></div>
-							</div>
-							<div class="brackets-filled-item">Brackets Filled: <br>
-								<div class="brackets-filled-total"><strong>Number</strong></div>
-							</div>
-							<div class="prize-pool"><button class="prize-pool-button fps-button"> Prize Pool </button></div>
-						</div>
+					<div class="prize-pool"><button class="prize-pool-button fps-button"> Prize Pool </button></div>
+				</div>
+			</div>
+			<div class="col-2 tourn-item tourn-item-fps">
+				<div class="tourn-item-part1">
+					<div class="tourn-label">$10</div>
+				</div>
+				<div class="tourn-item-part2">
+					<div class="current-players-item">Current Players: <br>
+						<div class="current-players-total"><strong>Number</strong></div>
 					</div>
-					<div class="col-2 tourn-item tourn-item-fps">
-						<div class="tourn-item-part1">
-							<div class="tourn-label">$25</div>
-						</div>
-						<div class="tourn-item-part2">
-							<div class="current-players-item">Current Players: <br>
-								<div class="current-players-total"><strong>Number</strong></div>
-							</div>
-							<div class="brackets-filled-item">Brackets Filled: <br>
-								<div class="brackets-filled-total"><strong>Number</strong></div>
-							</div>
-							<div class="prize-pool"><button class="prize-pool-button fps-button"> Prize Pool </button></div>
-						</div>
+					<div class="brackets-filled-item">Brackets Filled: <br>
+						<div class="brackets-filled-total"><strong>Number</strong></div>
 					</div>
-					<div class="col-2 tourn-item tourn-item-fps">
-						<div class="tourn-item-part1">
-							<div class="tourn-label">$100</div>
-						</div>
-						<div class="tourn-item-part2">
-							<div class="current-players-item">Current Players: <br>
-								<div class="current-players-total"><strong>Number</strong></div>
-							</div>
-							<div class="brackets-filled-item">Brackets Filled: <br>
-								<div class="brackets-filled-total"><strong>Number</strong></div>
-							</div>
-							<div class="prize-pool"><button class="prize-pool-button fps-button"> Prize Pool </button></div>
-						</div>
+					<div class="prize-pool"><button class="prize-pool-button fps-button"> Prize Pool </button></div>
+				</div>
+			</div>
+			<div class="col-2 tourn-item tourn-item-fps">
+				<div class="tourn-item-part1">
+					<div class="tourn-label">$25</div>
+				</div>
+				<div class="tourn-item-part2">
+					<div class="current-players-item">Current Players: <br>
+						<div class="current-players-total"><strong>Number</strong></div>
 					</div>
-					<div class="col-2 tourn-item tourn-item-fps">
-						<div class="tourn-item-part1">
-							<div class="tourn-label">Total Players</div>
-						</div>
-						<div class="tourn-item-part2">
-							<div class="current-players-item">Current Players: <br>
-								<div class="current-players-total"><strong>Number</strong></div>
-							</div>
-							<div class="brackets-filled-item">Brackets Filled: <br>
-								<div class="brackets-filled-total"><strong>Number</strong></div>
-							</div>
-						</div>
+					<div class="brackets-filled-item">Brackets Filled: <br>
+						<div class="brackets-filled-total"><strong>Number</strong></div>
+					</div>
+					<div class="prize-pool"><button class="prize-pool-button fps-button"> Prize Pool </button></div>
+				</div>
+			</div>
+			<div class="col-2 tourn-item tourn-item-fps">
+				<div class="tourn-item-part1">
+					<div class="tourn-label">$100</div>
+				</div>
+				<div class="tourn-item-part2">
+					<div class="current-players-item">Current Players: <br>
+						<div class="current-players-total"><strong>Number</strong></div>
+					</div>
+					<div class="brackets-filled-item">Brackets Filled: <br>
+						<div class="brackets-filled-total"><strong>Number</strong></div>
+					</div>
+					<div class="prize-pool"><button class="prize-pool-button fps-button"> Prize Pool </button></div>
+				</div>
+			</div>
+			<div class="col-2 tourn-item tourn-item-fps">
+				<div class="tourn-item-part1">
+					<div class="tourn-label">Total Players</div>
+				</div>
+				<div class="tourn-item-part2">
+					<div class="current-players-item">Current Players: <br>
+						<div class="current-players-total"><strong>Number</strong></div>
+					</div>
+					<div class="brackets-filled-item">Brackets Filled: <br>
+						<div class="brackets-filled-total"><strong>Number</strong></div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-2 tourn-item tourn-item-fps">
-						<div class="tourn-item-console-box">
-							Consoles: <br>
-							<%= image_tag("xb1img1.png", class: "tourn-console-img", height: "35", width: "35") %>
-							<%= image_tag("ps4svg1.svg", class: "tourn-console-img", height: "35", width: "35") %>
-							<i class="fa fa-steam fa-lg tourn-console-img" style="height: 20; width: 20;"></i>
-							<i class="fa fa-globe fa-lg tourn-console-img" style="height: 20; width: 20;"></i>
-						</div>
-					</div>
-					<div class="col-2 tourn-item tourn-item-fps">Free <br>
-						<button class="join-bracket-button fps-button">Join Bracket!</button>
-					</div>
-					<div class="col-2 tourn-item tourn-item-fps">$10 <br>
-						<button class="join-bracket-button fps-button">Join Bracket!</button>
-					</div>
-					<div class="col-2 tourn-item tourn-item-fps">$25 <br>
-						<button class="join-bracket-button fps-button">Join Bracket!</button>
-					</div>
-					<div class="col-2 tourn-item tourn-item-fps">$100 <br>
-						<button class="join-bracket-button fps-button">Join Bracket!</button>
-					</div>
-					<div class="col-2 tourn-item tourn-item-fps">Maps and Gametypes <br>
-						Rules and Settings
-					</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2 tourn-item tourn-item-fps">
+				<div class="tourn-item-console-box">
+					Consoles: <br>
+					<%= image_tag("xb1img1.png", class: "tourn-console-img", height: "35", width: "35") %>
+					<%= image_tag("ps4svg1.svg", class: "tourn-console-img", height: "35", width: "35") %>
+					<i class="fa fa-steam fa-lg tourn-console-img" style="height: 20; width: 20;"></i>
+					<i class="fa fa-globe fa-lg tourn-console-img" style="height: 20; width: 20;"></i>
 				</div>
-			</div><!-- tourn-section tourn-fps-section -->
+			</div>
+			<div class="col-2 tourn-item tourn-item-fps">Free <br>
+				<% if x.nightly_free %>
+					<button class="join-bracket-button fps-button">Join Bracket!</button>
+				<% else %>
+					<button class="join-bracket-button fps-button">Not Active</button>
+				<% end %>
+			</div>
+			<div class="col-2 tourn-item tourn-item-fps">$10 <br>
+				<% if x.nightly_10 %>
+					<button class="join-bracket-button fps-button">Join Bracket!</button>
+				<% else %>
+					<button class="join-bracket-button fps-button">Not Active</button>
+				<% end %>
+			</div>
+			<div class="col-2 tourn-item tourn-item-fps">$25 <br>
+				<% if x.nightly_25 %>
+					<button class="join-bracket-button fps-button">Join Bracket!</button>
+				<% else %>
+					<button class="join-bracket-button fps-button">Not Active</button>
+				<% end %>
+			</div>
+			<div class="col-2 tourn-item tourn-item-fps">$100 <br>
+				<% if x.nightly_100 %>
+					<button class="join-bracket-button fps-button">Join Bracket!</button>
+				<% else %>
+					<button class="join-bracket-button fps-button">Not Active</button>
+				<% end %>
+			</div>
+			<div class="col-2 tourn-item tourn-item-fps">Maps and Gametypes <br>
+				Rules and Settings
+			</div>
+		</div>
+	</div><!-- tourn-section tourn-fps-section -->
+	<% end %>
 
 
 			<div class="tourn-game-item tourn-fps-game-item">
@@ -266,7 +245,7 @@
 			</div>
 		</div><!-- tourn-section tourn-fps-section -->
 
-		<div class="tourn-section tourn-moba-section">
+		<!-- <div class="tourn-section tourn-moba-section">
 			<div class="tourn-game-item tourn-moba-game-item">
 				<div class="row tourn-game-header tourn-moba-game-header">
 			    <div class="col-12 tourn-game-header-content">Halo:MCC | 4v4 MLG </div>
@@ -377,10 +356,10 @@
 						Rules and Settings
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div><!-- tourn-section tourn-moba-section -->
 
-		<div class="tourn-section tourn-hero-section">
+		<!-- <div class="tourn-section tourn-hero-section">
 			<div class="tourn-game-item tourn-hero-game-item">
 				<div class="row tourn-game-header tourn-hero-game-header">
 			    <div class="col-12 tourn-game-header-content">Halo:MCC | 4v4 MLG </div>
@@ -491,9 +470,9 @@
 						Rules and Settings
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div><!-- tourn-section tourn-hero-section -->
-
+<!-- 
 		<div class="tourn-section tourn-more-section">
 			<div class="tourn-game-item tourn-more-game-item">
 				<div class="row tourn-game-header tourn-more-game-header">
@@ -605,7 +584,7 @@
 						Rules and Settings
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div><!-- tourn-section tourn-more-section -->
 
 		<!-- <div class="tourn-section tourn-more-section">
@@ -782,4 +761,3 @@
 
 
 	</div><!-- col-11 tourn-main -->
-</div><!-- row col-12 -->

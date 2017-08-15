@@ -1,0 +1,52 @@
+<div class="scores-and-results">
+	<ul class="list-of-rounds">
+		<li class="list-of-rounds-item">
+			<button class="accordion">Round 1</button>
+				<div class="panel">
+				  <%= render :template => "tournaments/scoreboard_box" %>
+				</div>
+		</li>
+		<li class="list-of-rounds-item">
+			<button class="accordion">Round 2</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+		</li>
+		<li class="list-of-rounds-item">
+			<button class="accordion">Round 3</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+		</li>
+		<li class="list-of-rounds-item">
+			<button class="accordion">Round 4</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+		</li>
+		<li class="list-of-rounds-item">
+			<button class="accordion">Round 5</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+		</li>
+		<li class="list-of-rounds-item"><a href="" class="list-of-rounds-link">Round </a></li>
+	</ul>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>

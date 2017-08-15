@@ -1,0 +1,55 @@
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'nightly')">Nightly Tournaments</button>
+  <button class="tablinks" onclick="openCity(event, 'weekly')">Weekly Tournaments</button>
+</div>
+
+<div id="nightly" class="tabcontent">
+	<div class="row sticky-row">
+		<div class="col-1 sticky-col">
+
+     <div class="side-nav-container">
+      <nav class="side-nav">
+        <div class="side-nav-item-header">FPS Games</div>
+        <% Game.fps.each do |game| %>
+        <ul class="side-nav-list">
+          <li class="side-nav-item"><%= game.short_title %></li>
+        </ul>
+        <% end %>
+        <div class="side-nav-item-header">MOBA Games</div>
+        <% Game.moba.each do |game| %>
+        <ul class="side-nav-list">
+          <li class="side-nav-item"><%= game.short_title %></li>
+        </ul>
+        <% end %>
+        <div class="side-nav-item-header">Hero Games</div>
+       <% Game.more.each do |game| %>
+        <ul class="side-nav-list">
+          <li class="side-nav-item"><%= game.short_title %></li>
+        </ul>
+        <% end %>
+        <div class="side-nav-item-header">More Games</div>
+        <% Game.hero.each do |game| %>
+        <ul class="side-nav-list">
+          <li class="side-nav-item"><%= game.short_title %></li>
+        </ul>
+        <% end %>
+      </nav>
+     </div>
+
+		</div>
+		<div class="col-11 sticky-col">
+			<%= render :template => "brackets/nightly_brackets" %>
+		</div>
+	</div>
+</div>
+
+<div id="weekly" class="tabcontent">
+	<div class="row sticky-row">
+		<div class="col-1 sticky-col">
+		</div>
+		<div class="col-11 sticky-col">
+			<%= render :template => "brackets/weekly_brackets" %>
+		</div>
+	</div>
+</div>
+

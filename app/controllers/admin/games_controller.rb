@@ -17,23 +17,5 @@ module Admin
 
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
     # for more information
-    def create
-      @game = Game.create( game_params )
-      if @game.save
-        redirect_to admin_games_path
-      end
-      
-    end
-
-    private
-
-    # Use strong_parameters for attribute whitelisting
-    # Be sure to update your create() and update() controller methods.
-
-    def game_params
-      params.require(:game).permit(:short_title, :long_title, :game_type, :game_group, 
-                                    :active, :game_img)
-    end
-
   end
 end

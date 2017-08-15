@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event: 2017-08-11 15:49:52
+  title: MyString
+  players: 1
+  brackets_filled: 1
+
+two:
+  event: 2017-08-11 15:49:52
+  title: MyString
+  players: 1
+  brackets_filled: 1

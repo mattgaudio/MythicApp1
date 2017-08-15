@@ -10,6 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require jquery-ui
+//= require jquery_ujs
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
@@ -20,3 +23,9 @@
  * Licensed under MIT (https://github.com/IcaliaLabs/furatto/blob/master/LICENSE)
  */
 
+
+$(document).on('click','.dropdown', function(e){
+	var thisDropContent = $(this).find('.drop-content');
+    $('.drop-content').not(thisDropContent).hide();
+    thisDropContent.toggle();
+})

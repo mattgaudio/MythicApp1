@@ -4,14 +4,14 @@
     <title>MythicApp1</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", params[:controller], :media => "all", 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
   <body>
   	<div class="full-body">
-  		<%= render 'layouts/header' %>
+  		<%= render 'layouts/newheader' %>
   		<div class="main-body">
     		<%= yield %>
     	</div>

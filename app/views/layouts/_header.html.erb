@@ -15,16 +15,9 @@
           FPS Games <i class="fa fa-caret-down"></i>
         </div>
         <div class="drop-content">
-          <div class="drop-item">Call of Duty: BO3</div>
-          <div class="drop-item">Call of Duty: MWR</div>
-          <div class="drop-item">Counter Strike: GO</div>
-          <div class="drop-item">Halo: MCC</div>
-          <div class="drop-item">Halo 5</div>
-          <div class="drop-item">Halo 3</div>
-          <div class="drop-item">Rainbow Six: Siege</div>
-          <div class="drop-item">Destiny</div>
-          <div class="drop-item">Gears of War 4</div>
-          <div class="drop-item">Doom</div>
+          <% @games.fps.each do |game| %>
+            <div class="drop-item"><%= link_to game.short_title, brackets_path, class: "drop-item" %></div>
+          <% end %>
         </div>
       </div>
       <div class="nav-item dropdown">
@@ -32,11 +25,9 @@
           MOBA Games <i class="fa fa-caret-down"></i>
         </div>
         <div class="drop-content">
-          <div class="drop-item">League of Legends</div>
-          <div class="drop-item">DOTA 2</div>
-          <div class="drop-item">SMITE</div>
-          <div class="drop-item">Heroes of the Storm</div>
-          <div class="drop-item">Paragon</div>
+          <% @games.moba.each do |game| %>
+            <div class="drop-item"><%= link_to game.short_title, brackets_path, class: "drop-item" %></div>
+          <% end %>
         </div>
       </div>
       <div class="nav-item dropdown">
@@ -44,9 +35,9 @@
           Hero Games <i class="fa fa-caret-down"></i>
         </div>
         <div class="drop-content">
-          <div class="drop-item">Overwatch</div>
-          <div class="drop-item">Lawbreakers</div>
-          <div class="drop-item">Quake Champions</div>
+          <% @games.hero.each do |game| %>
+            <div class="drop-item"><%= link_to game.short_title, brackets_path, class: "drop-item" %></div>
+          <% end %>
         </div>
       </div>
       <div class="nav-item dropdown">
@@ -54,7 +45,9 @@
           More Games <i class="fa fa-caret-down"></i>
         </div>
         <div class="drop-content">
-          <div class="drop-item">Starcraft 2</div>
+          <% @games.more.each do |game| %>
+            <div class="drop-item"><%= link_to game.short_title, brackets_path, class: "drop-item" %></div>
+          <% end %>
         </div>
       </div>
       <div class="nav-item dropdown">
@@ -62,8 +55,9 @@
           Information <i class="fa fa-caret-down"></i>
         </div>
         <div class="drop-content">
-          <div class="drop-item">Reddit</div>
-          <div class="drop-item">Pricing</div>
+          <div class="drop-item"><%= link_to "Reddit", "https://www.reddit.com/r/MythicGaming/" %></div>
+          <div class="drop-item"><%= link_to "FAQ", manager_path %></div>
+          <div class="drop-item"><%= link_to "Support", manager_path %></div>
         </div>
       </div>
       <div class="nav-item dropdown">
@@ -71,9 +65,8 @@
           More <i class="fa fa-caret-down"></i>
         </div>
         <div class="drop-content">
-          <div class="drop-item">Schedule</div>
-          <div class="drop-item">Find Teammates</div>
-          <div class="drop-item"><%= link_to "Admin", admin_root_path %></div>
+          <div class="drop-item"><%= link_to "Find Teammates", manager_path %></div>
+          <div class="drop-item"><%= link_to "Game Manager", manager_path %></div>
         </div>
       </div>
       <div class="nav-item dropdown">

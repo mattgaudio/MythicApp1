@@ -1,0 +1,54 @@
+<div class="box tab-nav-box">
+	<div class="tab-nav">
+	  <button class="tablinks active" onclick="openCity(event, 'brackets')">Bracket</button>
+	  <button class="tablinks" onclick="openCity(event, 'results')">Scores and Results</button>
+	   <button class="tablinks" onclick="openCity(event, 'maps')">Maps and Settings</button>
+	  <button class="tablinks" onclick="openCity(event, 'support')">Support</button>
+	  <button class="tablinks" onclick="openCity(event, 'find-teammates')">Find Teammates</button>
+	</div>
+</div>
+
+<div class="box manager-box">
+	<div id="brackets" class="tabcontent">
+		<div class="row">
+			<div class="live-game-box tournament-box">
+				<%= render :template => "tournaments/live_game_box" %>
+			</div>
+			<div class="live-tournament-box tournament-box">
+				<%= render :template => "tournaments/brackets" %>
+			</div>
+		</div>
+	</div>
+
+	<div id="results" class="tabcontent">
+		<div class="row">
+			<div class="tournament-box">
+				<%= render :template => "tournaments/scores_and_results" %>
+			</div>
+		</div>
+	</div>
+
+	<div id="maps" class="tabcontent tournament-box">
+		<div class="row">
+			<div class="tournament-box">
+				<%= render :template => "tournaments/maps_and_settings" %>
+			</div>
+		</div>
+	</div>
+
+	<div id="support" class="tabcontent tournament-box">
+		<div class="row">
+			<div class="tournament-box">
+				<%= render :template => "tournaments/support" %>
+			</div>
+		</div>
+	</div>
+
+	<div id="find-teammates" class="tabcontent tournament-box">
+		<div class="row">
+			<div class="tournament-box">
+				<%= render :template => "tournaments/find_teammates" %>
+			</div>
+		</div>
+	</div>
+</div>
