@@ -2,7 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// HERO SECTION
+
+// NEW HERO
 
 .hero-section {
 	min-height: 90vh;
@@ -16,94 +17,90 @@
 	justify-content: center;
 	align-items: center;
 }
+
 .hero-box {
-	height: 72vh;
-	width: 72vw;
-	background-color: #444;
-	opacity: 0.90;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
+	height: 80vh;
+	width: 80vw;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-// WALLOP AND CAROUSEL
-
-.carousel {
-	height: 65vh;
-	width: 68vw;
-	background-color: #444;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.Wallop {
-}
-.Wallop-list {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.Wallop-item, .Wallop-item--current {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
+.wallop-main {
+  height: 75vh;
+  width: 75vw;
 }
 
-.carousel-image {
-	height: 65vh;
-	width: 68vw;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.wallop-slide {
+  height: 75vh;
+  width: 75vw;
 }
-.wallop-item-box {
-	width: 30vw;
-	height: 20vh;
-	border: 2px solid #000;
-	background-color: rgba(#333, 0.9);
-	color: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	position: absolute;
-	top: 44vh;
-}
-.wallop-item-content {
 
+.carousel-slide-img {
+  background-position: center center;
+  background-size: 100% 100%;
 }
-.wallop-item-button {
+.carousel-first-slide {
+  background-image: image-url("h1img1.jpg");
+  background-position: center center;
+  background-size: 100% 100%;
+}
+.carousel-second-slide {
+  background-image: image-url("h1img2.jpg");
+  background-position: center center;
+  background-size: 100% 100%;
+}
+.carousel-third-slide {
+  background-image: image-url("h1img3.jpg");
+  background-position: center center;
+  background-size: 100% 100%;
+}
+.carousel-fourth-slide {
+  background-image: image-url("h1img4.jpg");
+  background-position: center center;
+  background-size: 100% 100%;
+}
+.carousel-fifth-slide {
+  background: url("https://img.washingtonpost.com/wp-apps/imrs.php?src=https://img.washingtonpost.com/blogs/capital-weather-gang/files/2014/05/JeffersonLightning4-lr.jpg&w=1484");
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+.wallop-buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 75vh;
+  width: 75vw;
 
 }
 
-.carousel-image-1 {
-	background-image: image-url("h1img1.jpg");
-}
-.carousel-image-2 {
-	background-image: image-url("h1img2.jpg");
-}
-.carousel-image-3 {
-	background-image: image-url("h1img3.jpg");
-}
-.carousel-image-4 {
-	background-image: image-url("h1img4.jpg");
-}
 .Wallop-buttonPrevious {
-	position: absolute;
-	right: 63vw;
-	padding: 24px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 75vh;
+  width: 12vw;
+  opacity: 0.15;
+  margin: 0;
+
 }
+
 .Wallop-buttonNext {
-	position: absolute;
-	left: 63vw;
-	padding: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 75vh;
+  width: 12vw;
+  opacity: 0.15;
+  margin: 0;
+
 }
+// HERO SECTION
+
+
+
 
 // GAMES SECTION
 

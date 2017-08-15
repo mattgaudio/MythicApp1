@@ -1,53 +1,44 @@
 <!-- HERO -->
 <div class="hero-section">
+  <!-- CAROUSEL -->
   <div class="hero-box">
-    <!-- CAROUSEL -->
-    <div class="carousel Wallop">
-      <div class="Wallop-list">
-        <div class="Wallop-item">
-          <div class="carousel-image carousel-image-1">
-            <div class="wallop-item-box">
-              <div class="wallop-item-content">Welcome to MythicGaming.com!</div>
-              <div class="wallop-item-button"><button>Join a Tournament</button></div>
-            </div>
+    <div class="Wallop">
+      <div class="wallop-main">
+        <div class="Wallop-list">
+          <div class="Wallop-item">
+            <div class="wallop-slide carousel-first-slide carousel-slide-img" alt="First slide"></div>
+          </div>
+          <div class="Wallop-item">
+            <div class="wallop-slide carousel-second-slide carousel-slide-img" alt="First slide"></div>
+          </div>
+          <div class="Wallop-item">
+            <div class="wallop-slide carousel-third-slide carousel-slide-img" alt="First slide"></div>
+          </div>
+          <div class="Wallop-item">
+           <div class="wallop-slide carousel-fourth-slide carousel-slide-img" alt="First slide"></div>
+          </div>
+          <div class="Wallop-item">
+            <div class="wallop-slide carousel-fifth-slide carousel-slide-img" alt="First slide"></div>
           </div>
         </div>
-        <div class="Wallop-item">
-          <div class="carousel-image carousel-image-2">
-            <div class="wallop-item-box">
-              <div class="wallop-item-content">Hello World</div>
-              <div class="wallop-item-button"><button>Hello World</button></div>
-            </div>
-          </div>
-        </div>
-        <div class="Wallop-item">
-          <div class="carousel-image carousel-image-3">
-            <div class="wallop-item-box">
-              <div class="wallop-item-content">Hello World</div>
-              <div class="wallop-item-button"><button>Hello World</button></div>
-            </div>
-          </div>
-        </div>
-        <div class="Wallop-item">
-          <div class="carousel-image carousel-image-4">
-            <div class="wallop-item-box">
-              <div class="wallop-item-content">Hello World</div>
-              <div class="wallop-item-button"><button>Hello World</button></div>
-            </div>
-          </div>
-        </div>
-        <button class="Wallop-buttonPrevious"> << </button>
-        <button class="Wallop-buttonNext"> >> </button>
-      </div> 
-    </div>
+      </div>
 
-    <script>
-      var wallopEl = document.querySelector('.Wallop');
-      var wallop = new Wallop(wallopEl);
-    </script>
-    
+      <div class="wallop-buttons">
+        <button class="Wallop-buttonPrevious">Previous <<</button>
+        <button class="Wallop-buttonNext">Next >></button>
+      </div>
+
+    </div>
   </div>
+
+<script>
+  var wallopEl = document.querySelector('.Wallop');
+  var slider = new Wallop(wallopEl);
+</script>
+    
 </div>
+
+
 
 
 <!-- FPS GAMES -->
