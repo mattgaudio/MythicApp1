@@ -9,7 +9,7 @@
 		<div class="row">
 			<div class="col-2 tourn-item tourn-item-label-box">
 				<div class="tourn-item-fps tourn-img-placing-fps tourn-item-1">
-					<%= image_tag "halomccimg1.jpg", class: "tourn-img" %>
+					<%= image_tag x.game.game_img.url(:l), class: "tourn-img" %>
 				</div>	
 				<div class="tourn-item-game-box">
 					<%= x.game.short_title %><br>
@@ -27,7 +27,8 @@
 					<div class="brackets-filled-item">Brackets Filled: <br>
 						<div class="brackets-filled-total"><strong>Number</strong></div>
 					</div>
-					<div class="prize-pool"><button class="prize-pool-button fps-button"> Prize Pool </button></div>
+					<div class="prize-pool"><button class="prize-pool-button fps-button"> Prize Pool </button>
+					</div>
 				</div>
 			</div>
 			<div class="col-2 tourn-item tourn-item-fps">

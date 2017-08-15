@@ -19,25 +19,45 @@
 	        	<div class="col-3">
 	        		<li class="nav-list-item nav-list-item-header">FPS Games</li>
 	        		<% Game.fps.each do |game| %>
-	          		<li class="nav-list-item"><%= link_to brackets_path, class: "nav-list-item-link" do %><%= game.short_title  %><% end %></li>
+	          		<li class="nav-list-item">
+                  <%= link_to brackets_path, class: "nav-list-item-link" do %>
+                    <%= image_tag(game.game_img.url(:xs)) %>
+                    <%= game.short_title %>
+                  <% end %>
+                </li>
 	        		<% end %>
 	        	</div>
 	        	<div class="col-3">
 	        	<li class="nav-list-item nav-list-item-header">MOBA Games</li>
         		<% Game.moba.each do |game| %>
-          		<li class="nav-list-item"><%= link_to game.short_title, brackets_path, class: "nav-list-item-link" %></li>
+          		<li class="nav-list-item">
+                  <%= link_to brackets_path, class: "nav-list-item-link" do %>
+                    <%= image_tag(game.game_img.url(:xs)) %>
+                    <%= game.short_title %>
+                  <% end %>
+                </li>
         		<% end %>
         	</div>
         	<div class="col-3">
         		<li class="nav-list-item nav-list-item-header">Hero Games</li>
         		<% Game.hero.each do |game| %>
-          		<li class="nav-list-item"><%= link_to game.short_title, brackets_path, class: "nav-list-item-link" %></li>
+          		<li class="nav-list-item">
+                  <%= link_to brackets_path, class: "nav-list-item-link" do %>
+                    <%= image_tag(game.game_img.url(:xs)) %>
+                    <%= game.short_title %>
+                  <% end %>
+                </li>
         		<% end %>
         	</div>
         	<div class="col-3">
         		<li class="nav-list-item nav-list-item-header">More Games</li>
         		<% Game.more.each do |game| %>
-          		<li class="nav-list-item"><%= link_to game.short_title, brackets_path, class: "nav-list-item-link" %></li>
+          		<li class="nav-list-item">
+                  <%= link_to brackets_path, class: "nav-list-item-link" do %>
+                    <%= image_tag(game.game_img.url(:xs)) %>
+                    <%= game.short_title %>
+                  <% end %>
+                </li>
         		<% end %>
         	</div>
 	        </div>
