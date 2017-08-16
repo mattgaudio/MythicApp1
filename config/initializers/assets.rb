@@ -13,5 +13,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( application.css.scss )
 
-Rails.application.config.assets.precompile += %w( application.css.scss main.scss main.js brackets.scss brackets.js 
-tournaments.scss tournaments.js )
+Rails.application.config.assets.precompile += %w( application.css.scss main.scss main.js brackets.scss brackets.js tournaments.scss tournaments.js charges.css charges.js devise/sessions.css devise/registrations.css)

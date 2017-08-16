@@ -16,6 +16,10 @@ class TournamentDashboard < Administrate::BaseDashboard
     name: Field::String,
     description: Field::String,
     tournament_id: Field::Number,
+    open_signup: Field::Boolean,
+    show_rounds: Field::Boolean,
+    private: Field::Boolean,
+    start_at: Field::DateTime,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -28,20 +32,24 @@ class TournamentDashboard < Administrate::BaseDashboard
     # :game,
     # :bracket,
     :name,
-    :tournament_id
+    :tournament_id,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
+    :tournament_id,
     :created_at,
     :updated_at,
     :tournament_type,
     :url,
     :name,
     :description,
-    :tournament_id
+    :open_signup,
+    :show_rounds,
+    :private,
+    :start_at,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -52,6 +60,10 @@ class TournamentDashboard < Administrate::BaseDashboard
     :url,
     :name,
     :description,
+    :open_signup,
+    :show_rounds,
+    :private,
+    :start_at,
   ].freeze
 
   # Overwrite this method to customize how tournaments are displayed

@@ -1,25 +1,21 @@
 class TournamentsController < ApplicationController
 
-	def tournaments_challonge
-		# main = Tournaments::Main.new(Tournaments::ChallongeClient.new)
-		# main.create_tournament({name: "testing_name", url: "testing_url", tournament_type: "single elimination"})
-		# Challonge::Tournament.find(:all)
-		# Challonge::Tournament.find(:all)
 
-		# Tournament.last
-		# Tournament.last.challonge_payload
-		# JSON.parse Tournament.last.challonge_payload
+	def index
+		@tournaments = Tournament.all
 	end
 
-	def create 
-	end
-	
-
-
-	def tournament_manager_page 
+	def show
+		@tournament = Tournament.find(params[:id])
+		@challonge_tournament = Challonge::Tournament.find(:all, :params => {:id => @tournament.tournament_id})
+		@quickvar = name_pool
 	end
 
-	def brackets 
+
+	def tournament_manager_page
+	end
+
+	def brackets
 	end
 
 	def live_game_box
@@ -32,11 +28,11 @@ class TournamentsController < ApplicationController
 	def maps_and_settings
 	end
 
-	def support 
+	def support
 	end
 
 	def find_teammates
 	end
-	
-	
+
+
 end

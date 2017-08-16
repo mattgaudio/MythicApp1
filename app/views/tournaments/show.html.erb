@@ -1,0 +1,14 @@
+
+<%= @tournament.attributes %> <br>
+
+<% value = @tournament.tournament_id %> <br>
+
+<% @challonge_tournament.each do |x| %>
+  <% if [x.attributes][0][:id] == value %>
+    <%= [x.attributes][0] %>
+  <% end %>
+<% end %>
+
+<%= @quickvar %>
+
+<%= name_pool %>

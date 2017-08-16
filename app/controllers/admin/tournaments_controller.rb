@@ -1,19 +1,23 @@
 module Admin
   class TournamentsController < Admin::ApplicationController
+    include TournamentsHelper
 
-    def create 
-        puts "PARAMS: #{params.inspect}"
-        tournament = Challonge::Tournament.create(tournament_params)
-        @tournament = Tournament.create(tournament_params.merge(tournament_id: tournament.id))
-        # @tournament = Tournament.create(tournament_params.merge(tournament_id: tournament.id, tournament_paylod: tournament.id))
-
-        # payload: tournament.attributes
-        redirect_to admin_tournament_path(@tournament)
+    def create
+        @tournament = Tournament.create(tournament_params)
+        challonge_tournament = Challonge::Tournament.create(tournament_params)
+        @tournament.update!(tournament_id: challonge_tournament.id, )
+        redirect_to admin_tournament_path(@tournament.id)
     end
+
 
     def tournament_params
-        params.require(:tournament).permit(:name, :tournament_type, :url, :description)
+        params.require(:tournament).permit(:name, :tournament_type, :url, :description,
+          :open_signup, :show_rounds, :private, :start_at)
     end
+
+    # def challonge_tournament_params
+    #   params.require(:tournament).permit( :allow_participant_match_reporting, :hide_seeds, :hold_third_place_match, :participants_count, :private, :start_at, :state, :teams, :game_name, :show_rounds, :open_signup )
+    # end
 
     # To customize the behavior of this controller,
     # you can overwrite any of the RESTful actions. For example:

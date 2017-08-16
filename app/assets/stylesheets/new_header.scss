@@ -31,6 +31,7 @@
 	font-weight: bold;
 	&:hover {
 		text-decoration: none;
+		color: #fff;
 	}
 
 }
@@ -64,16 +65,17 @@
 
 .nav-button {
 	margin: 17px 5px;
-	border: 1px solid #333;
 	position: relative;
+	&:hover {
+		color: #fff;
+	}
 
 }
 
 .nav-button-link {
 	padding: 15px;
-	border: 1px solid #333;
 		&:hover {
-		border: 1px solid #d3d3d3;
+		color: #fff;
 		cursor: pointer;
 		text-decoration: none;
 	}
