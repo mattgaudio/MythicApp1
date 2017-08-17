@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class GameDashboard < Administrate::BaseDashboard
+class UserDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -9,19 +9,13 @@ class GameDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    brackets: Field::HasMany,
-    short_title: Field::String,
-    long_title: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    game_type: Field::String,
-    game_group: Field::String,
-    game_img: PaperclipField,
-    game_img_file_name: Field::String,
-    game_img_content_type: Field::String,
-    game_img_file_size: Field::Number,
-    game_img_updated_at: Field::DateTime,
-    active: Field::Boolean,
+    email: Field::String,
+    encrypted_password: Field::String,
+    confirmation_token: Field::String,
+    remember_token: Field::String,
+    nickname: Field::String,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -31,47 +25,40 @@ class GameDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
-    :short_title,
-    :long_title,
-    :game_img,
+    :nickname,
     :created_at,
+    :updated_at,
+    :email,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
-    :short_title,
-    :long_title,
+    :nickname,
     :created_at,
     :updated_at,
-    :game_type,
-    :game_group,
-    :game_img,
-    :game_img_file_name,
-    :game_img_content_type,
-    :game_img_file_size,
-    :game_img_updated_at,
-    :active,
-    :brackets,
+    :email,
+    :encrypted_password,
+    :confirmation_token,
+    :remember_token,
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :short_title,
-    :long_title,
-    :game_type,
-    :game_group,
-    :game_img,
-    :active,
+    :email,
+    :nickname,
+    :encrypted_password,
+    :confirmation_token,
+    :remember_token,
   ].freeze
 
-  # Overwrite this method to customize how games are displayed
+  # Overwrite this method to customize how users are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(game)
-  #   "Game ##{game.id}"
+  # def display_resource(user)
+  #   "User ##{user.id}"
   # end
 end

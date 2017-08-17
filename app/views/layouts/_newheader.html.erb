@@ -18,7 +18,7 @@
 	        <div class="row">
 	        	<div class="col-3">
 	        		<li class="nav-list-item nav-list-item-header">FPS Games</li>
-	        		<% Game.fps.each do |game| %>
+	        		<% (@fps_games || Game.fps).each do |game| %>
 	          		<li class="nav-list-item">
                   <%= link_to brackets_path, class: "nav-list-item-link" do %>
                     <%= image_tag(game.game_img.url(:xs)) %>
@@ -29,7 +29,7 @@
 	        	</div>
 	        	<div class="col-3">
 	        	<li class="nav-list-item nav-list-item-header">MOBA Games</li>
-        		<% Game.moba.each do |game| %>
+        		<% (@moba_games || Game.moba).each do |game| %>
           		<li class="nav-list-item">
                   <%= link_to brackets_path, class: "nav-list-item-link" do %>
                     <%= image_tag(game.game_img.url(:xs)) %>
@@ -40,7 +40,7 @@
         	</div>
         	<div class="col-3">
         		<li class="nav-list-item nav-list-item-header">Hero Games</li>
-        		<% Game.hero.each do |game| %>
+        		<% (@hero_games || Game.hero).each do |game| %>
           		<li class="nav-list-item">
                   <%= link_to brackets_path, class: "nav-list-item-link" do %>
                     <%= image_tag(game.game_img.url(:xs)) %>
@@ -51,7 +51,7 @@
         	</div>
         	<div class="col-3">
         		<li class="nav-list-item nav-list-item-header">More Games</li>
-        		<% Game.more.each do |game| %>
+        		<% (@more_games || Game.more).each do |game| %>
           		<li class="nav-list-item">
                   <%= link_to brackets_path, class: "nav-list-item-link" do %>
                     <%= image_tag(game.game_img.url(:xs)) %>
@@ -92,8 +92,16 @@
 
 
     <div class="nav-right">
-    <div class="nav-grouping">
-    	<div class="nav-button"><%= link_to "Sign in | Create Account", new_user_session_path, class: "nav-button-link" %></div>
+      <div class="nav-grouping">
+      	<div class="nav-button">
+          <% if signed_in? %>
+          <%= current_user.email %>
+          <%= button_to "Sign out", sign_out_path, method: :delete %>
+        <% else %>
+          <%= link_to "Sign in", sign_in_path %>
+        <% end %>
+      	</div>
+      </div>
     </div>
 
   </div>

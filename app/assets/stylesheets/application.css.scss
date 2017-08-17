@@ -11,23 +11,25 @@
  * It is generally better to create a new file per style scope.
  *
  *= require jquery-ui
-
  *= require_self
  */
 
-@import "font-awesome-sprockets";
-@import "font-awesome";
 
 // Import Files
-@import "global";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "furatto";
 @import "furatto_overrides";
-@import "header";
-@import "footer";
+
+// Vendor CSS
 @import "wallop";
-@import "new_header";
 
 // Application SCSS
+@import "global";
+@import "header";
+@import "footer";
+@import "new_header";
+
 
 
 * {

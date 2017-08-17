@@ -1,7 +1,7 @@
 require "administrate/base_dashboard"
 
 class BracketDashboard < Administrate::BaseDashboard
- 
+
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -24,12 +24,11 @@ class BracketDashboard < Administrate::BaseDashboard
     nightly_25: Field::Boolean,
     nightly_100: Field::Boolean,
     weekly_free: Field::Boolean,
-    weekly_10: Field::Boolean, 
+    weekly_10: Field::Boolean,
     weekly_25: Field::Boolean,
     weekly_100: Field::Boolean,
     weekly_250: Field::Boolean,
     weekly_500: Field::Boolean,
-    players: Field::Number,
     brackets_filled: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -45,7 +44,6 @@ class BracketDashboard < Administrate::BaseDashboard
     :game,
     :event,
     :title,
-    :players,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -66,12 +64,11 @@ class BracketDashboard < Administrate::BaseDashboard
     :nightly_25,
     :nightly_100,
     :weekly_free,
-    :weekly_10, 
+    :weekly_10,
     :weekly_25,
     :weekly_100,
     :weekly_250,
     :weekly_500,
-    :players,
     :brackets_filled,
     :created_at,
     :updated_at,
@@ -95,7 +92,7 @@ class BracketDashboard < Administrate::BaseDashboard
     :nightly_25,
     :nightly_100,
     :weekly_free,
-    :weekly_10, 
+    :weekly_10,
     :weekly_25,
     :weekly_100,
     :weekly_250,

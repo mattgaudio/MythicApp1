@@ -10,25 +10,25 @@
      <div class="side-nav-container">
       <nav class="side-nav">
         <div class="side-nav-item-header">FPS Games</div>
-        <% Game.fps.each do |game| %>
+        <% @fps_games.each do |game| %>
         <ul class="side-nav-list">
           <li class="side-nav-item"><%= game.short_title %></li>
         </ul>
         <% end %>
         <div class="side-nav-item-header">MOBA Games</div>
-        <% Game.moba.each do |game| %>
+        <% @moba_games.each do |game| %>
         <ul class="side-nav-list">
           <li class="side-nav-item"><%= game.short_title %></li>
         </ul>
         <% end %>
         <div class="side-nav-item-header">Hero Games</div>
-       <% Game.more.each do |game| %>
+       <% @more_games.each do |game| %>
         <ul class="side-nav-list">
           <li class="side-nav-item"><%= game.short_title %></li>
         </ul>
         <% end %>
         <div class="side-nav-item-header">More Games</div>
-        <% Game.hero.each do |game| %>
+        <% @hero_games.each do |game| %>
         <ul class="side-nav-list">
           <li class="side-nav-item"><%= game.short_title %></li>
         </ul>
@@ -52,4 +52,3 @@
 		</div>
 	</div>
 </div>
-

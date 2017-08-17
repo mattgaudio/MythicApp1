@@ -1,5 +1,4 @@
 class Tournament < ApplicationRecord
-	# belongs_to :brackets
-	# belongs_to :game
-	
+	belongs_to :bracket, optional: true
+
 end

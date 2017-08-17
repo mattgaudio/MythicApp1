@@ -16,6 +16,8 @@ class TournamentsController < ApplicationController
 	end
 
 	def brackets
+	  @bracket = Bracket.find(params[:bracket_id])
+	  @bracket_players = @bracket.bracket_players
 	end
 
 	def live_game_box

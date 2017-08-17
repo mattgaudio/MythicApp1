@@ -13,8 +13,12 @@
   	<div class="full-body">
   		<%= render 'layouts/newheader' %>
   		<div class="main-body">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+
+      <div id="flash">
+        <% flash.each do |key, value| %>
+          <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
+      </div>
     		<%= yield %>
     	</div>
     	<%= render 'layouts/footer' %>

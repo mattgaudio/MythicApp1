@@ -9,6 +9,7 @@ class TournamentDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    bracket: Field::BelongsTo,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     tournament_type: Field::String,
@@ -29,8 +30,7 @@ class TournamentDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
-    # :game,
-    # :bracket,
+    :bracket,
     :name,
     :tournament_id,
   ].freeze
@@ -39,6 +39,7 @@ class TournamentDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
+    :bracket,
     :tournament_id,
     :created_at,
     :updated_at,
@@ -56,6 +57,7 @@ class TournamentDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :bracket,
     :tournament_type,
     :url,
     :name,

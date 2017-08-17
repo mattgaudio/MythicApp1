@@ -1,0 +1,6 @@
+<h2> Bracket Players for Bracket <%= @bracket.title %>
+
+  <% @bracket_players.each do |bracket_player| %>
+    Nick Name: <%= bracket_player.id %>
+    <br/>
+  <% end %>

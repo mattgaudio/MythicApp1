@@ -1,0 +1,14 @@
+<%= button_to "Create Bracket Pools", action: :create %>
+
+
+<% Bracket.all.each do |x| %>
+<% x.bracket_pools.each do |y| %>
+
+<ul>
+  <li><%= x.game.short_title %></li>
+  <li><%= x.id %></li>
+  <li><%= x.title %></li>
+  <li><%= y.name %></li>
+</ul>
+<% end %>
+<% end %>

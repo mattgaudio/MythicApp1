@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170816151408) do
+ActiveRecord::Schema.define(version: 20170817060336) do
+
+  create_table "bracket_players", force: :cascade do |t|
+    t.integer "player_id"
+    t.integer "bracket_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bracket_id"], name: "index_bracket_players_on_bracket_id"
+    t.index ["player_id"], name: "index_bracket_players_on_player_id"
+  end
+
+  create_table "bracket_pools", force: :cascade do |t|
+    t.integer "bracket_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.integer "player_size"
+    t.index ["bracket_id"], name: "index_bracket_pools_on_bracket_id"
+  end
 
   create_table "brackets", force: :cascade do |t|
     t.datetime "event"
@@ -51,13 +69,16 @@ ActiveRecord::Schema.define(version: 20170816151408) do
     t.integer "game_img_file_size"
     t.datetime "game_img_updated_at"
     t.boolean "active"
+    t.index ["game_type"], name: "index_games_on_game_type"
   end
 
   create_table "players", force: :cascade do |t|
     t.integer "bracket_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
     t.index ["bracket_id"], name: "index_players_on_bracket_id"
+    t.index ["user_id"], name: "index_players_on_user_id"
   end
 
   create_table "tournaments", force: :cascade do |t|
@@ -72,23 +93,20 @@ ActiveRecord::Schema.define(version: 20170816151408) do
     t.boolean "show_rounds"
     t.boolean "private"
     t.datetime "start_at"
+    t.integer "bracket_id"
+    t.index ["bracket_id"], name: "index_tournaments_on_bracket_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string "current_sign_in_ip"
-    t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.string "email"
+    t.string "encrypted_password", limit: 128
+    t.string "confirmation_token", limit: 128
+    t.string "remember_token", limit: 128
+    t.string "nickname"
+    t.index ["email"], name: "index_users_on_email"
+    t.index ["remember_token"], name: "index_users_on_remember_token"
   end
 
 end
