@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BracketPlayersControllerTest < ActionDispatch::IntegrationTest
+class BracketPoolPlayerTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

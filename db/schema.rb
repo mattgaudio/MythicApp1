@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170817060336) do
+ActiveRecord::Schema.define(version: 20170818012002) do
 
   create_table "bracket_players", force: :cascade do |t|
     t.integer "player_id"
@@ -21,12 +21,26 @@ ActiveRecord::Schema.define(version: 20170817060336) do
     t.index ["player_id"], name: "index_bracket_players_on_player_id"
   end
 
+  create_table "bracket_pool_players", force: :cascade do |t|
+    t.integer "bracket_pool_id"
+    t.integer "player_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bracket_pool_id"], name: "index_bracket_pool_players_on_bracket_pool_id"
+    t.index ["player_id"], name: "index_bracket_pool_players_on_player_id"
+  end
+
   create_table "bracket_pools", force: :cascade do |t|
     t.integer "bracket_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
     t.integer "player_size"
+    t.string "title"
+    t.boolean "active"
+    t.datetime "activation_time"
+    t.datetime "end_time"
+    t.integer "duration"
     t.index ["bracket_id"], name: "index_bracket_pools_on_bracket_id"
   end
 
@@ -73,11 +87,10 @@ ActiveRecord::Schema.define(version: 20170817060336) do
   end
 
   create_table "players", force: :cascade do |t|
-    t.integer "bracket_id"
+    t.integer "user_id"
+    t.string "nickname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.index ["bracket_id"], name: "index_players_on_bracket_id"
     t.index ["user_id"], name: "index_players_on_user_id"
   end
 

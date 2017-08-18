@@ -1,14 +1,14 @@
 <%= button_to "Create Bracket Pools", action: :create %>
+<%= button_to "Bulk Delete Bracket Pools", action: :destroy %>
 
 
-<% Bracket.all.each do |x| %>
-<% x.bracket_pools.each do |y| %>
+<% Bracket.preload(:game).all.each do |x| %>
+  <%= x.title %>
 
-<ul>
-  <li><%= x.game.short_title %></li>
-  <li><%= x.id %></li>
-  <li><%= x.title %></li>
-  <li><%= y.name %></li>
-</ul>
-<% end %>
+
+  <% x.bracket_pools.where(title: "nightly_free").each do |y| %>
+    <%= y.title %> <br>
+    <%= button_to "Join Bracket", join_bracket_path(bracket_pool_id: y.id) %>
+  <% end %>
+  <br>
 <% end %>

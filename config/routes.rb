@@ -13,12 +13,16 @@ Rails.application.routes.draw do
   get 'manager' => "tournaments#tournament_manager_page"
 
   # Routes for other controllers
-  post 'bracket_pools/create'
   get "creator_button" => "bracket_pools#creator_button"
+  post "creator_button" => "bracket_pools#creator_button"
+
+  post 'bracket_pools/create'
+  post "bracket_pools/destroy"
+
+  post "bracket_pools/:bracket_pool_id/join", to: 'bracket_pools#join', as: 'join_bracket'
 
   # Resources
   resources :tournaments
-  resources :bracket_pools
   resources :brackets do
     resources :bracket_players
   end
@@ -34,6 +38,7 @@ Rails.application.routes.draw do
     resources :users
     resources :players
     resources :bracket_pools
+    resources :bracket_pool_players
 
     root to: "games#index"
   end

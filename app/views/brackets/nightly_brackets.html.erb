@@ -2,7 +2,6 @@
 
 <div class="tourn-section tourn-fps-section">
 	<% Bracket.preload(:game).all.each do |x| %>
-	<%= x.bracket_pools.each do |y| %>
 	<div class="tourn-game-item tourn-fps-game-item">
 		<div class="row tourn-game-header tourn-fps-game-header">
 	    <div class="col-12 tourn-game-header-content"><%= x.game.short_title %> | <%= x.tournament_type %> </div>
@@ -99,33 +98,29 @@
 				</div>
 			</div>
 			<div class="col-2 tourn-item tourn-item-fps">Free <br>
-				<% if x.nightly_free %>
 					<button class="join-bracket-button fps-button">
-						<%= button_to "Join Bracket", bracket_pools_path(bracket_pool_id: y.id) %>
+						<% x.bracket_pools.where(title: "nightly_free").each do |y| %>
+					    <%= y.title %> <br>
+					    <%= button_to "Join Bracket", join_bracket_path(bracket_pool_id: y.id) %>
+					  <% end %>
 					</button>
-				<% else %>
-					<button class="join-bracket-button fps-button">Not Active</button>
-				<% end %>
 			</div>
 			<div class="col-2 tourn-item tourn-item-fps">$10 <br>
-				<% if x.nightly_10 %>
-					<button class="join-bracket-button fps-button"><%= button_to "Join Bracket", bracket_pools_path(bracket_pool_id: y.id) %></button>
-				<% else %>
-					<button class="join-bracket-button fps-button">Not Active</button>
+				<% x.bracket_pools.where(title: "nightly_10").each do |y| %>
+					<%= y.title %> <br>
+					<%= button_to "Join Bracket", join_bracket_path(bracket_pool_id: y.id) %>
 				<% end %>
 			</div>
 			<div class="col-2 tourn-item tourn-item-fps">$25 <br>
-				<% if x.nightly_25 %>
-					<button class="join-bracket-button fps-button"><%= button_to "Join Bracket", bracket_pools_path(bracket_pool_id: y.id) %></button>
-				<% else %>
-					<button class="join-bracket-button fps-button">Not Active</button>
+				<% x.bracket_pools.where(title: "nightly_25").each do |y| %>
+					<%= y.title %> <br>
+					<%= button_to "Join Bracket", join_bracket_path(bracket_pool_id: y.id) %>
 				<% end %>
 			</div>
 			<div class="col-2 tourn-item tourn-item-fps">$100 <br>
-				<% if x.nightly_100 %>
-					<button class="join-bracket-button fps-button"><%= button_to "Join Bracket", bracket_pools_path(bracket_pool_id: y.id) %></button>
-				<% else %>
-					<button class="join-bracket-button fps-button">Not Active</button>
+				<% x.bracket_pools.where(title: "nightly_100").each do |y| %>
+					<%= y.title %> <br>
+					<%= button_to "Join Bracket", join_bracket_path(bracket_pool_id: y.id) %>
 				<% end %>
 			</div>
 			<div class="col-2 tourn-item tourn-item-fps">Maps and Gametypes <br>
@@ -133,5 +128,4 @@
 			</div>
 		</div>
 	</div><!-- tourn-section tourn-fps-section -->
-	<% end %>
 	<% end %>

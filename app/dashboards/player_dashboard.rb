@@ -9,10 +9,8 @@ class PlayerDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     user: Field::BelongsTo,
-    bracket_players: Field::HasMany,
-    brackets: Field::HasMany,
     id: Field::Number,
-    bracket_id: Field::Number,
+    nickname: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -24,19 +22,17 @@ class PlayerDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :user,
-    :bracket_players,
-    :brackets,
     :id,
+    :nickname,
+    :created_at,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :user,
-    :bracket_players,
-    :brackets,
     :id,
-    :bracket_id,
+    :nickname,
     :created_at,
     :updated_at,
   ].freeze
@@ -46,9 +42,7 @@ class PlayerDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :user,
-    # :bracket_players,
-    # :brackets,
-  #  :bracket_id,
+    :nickname,
   ].freeze
 
   # Overwrite this method to customize how players are displayed
