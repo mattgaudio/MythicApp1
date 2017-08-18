@@ -3,6 +3,22 @@ Rails.application.routes.draw do
 
 
 
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/edit'
+
+  get 'users/update'
+
+  get 'users/index'
+
+  get 'users/show'
+
+  get 'users/destroy'
+
+  get 'dashboards/main'
+
   # Routes for Main Controller
   root 'main#front_page'
 
@@ -23,9 +39,18 @@ Rails.application.routes.draw do
 
   # Resources
   resources :tournaments
+  resources :users
   resources :brackets do
     resources :bracket_players
   end
+
+  # Routes for Dashboard
+  get 'dash_index' => "dashboards#main"
+  get 'dash_gamertag' => "dashboards#gamertag"
+  get 'dash_history' => "dashboards#history"
+  get 'dash_payment' => "dashboards#payment"
+  get 'dash_settings' => 'dashboards#settings'
+  resources :dashboards
 
   # Stripe Routes
   resources :charges

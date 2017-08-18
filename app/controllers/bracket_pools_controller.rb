@@ -5,6 +5,7 @@ class BracketPoolsController < ApplicationController
   end
 
   def creator_button
+    @user = current_user
   end
 
   def join

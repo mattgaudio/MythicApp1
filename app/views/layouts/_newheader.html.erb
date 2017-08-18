@@ -93,14 +93,15 @@
 
     <div class="nav-right">
       <div class="nav-grouping">
-      	<div class="nav-button">
-          <% if signed_in? %>
-          <%= current_user.email %>
-          <%= button_to "Sign out", sign_out_path, method: :delete %>
+        <% if signed_in? %>
+          <div class="nav-button"><%= link_to dash_index_path, class: "nav-button-link" do %><%= current_user.email %><% end %></div>
         <% else %>
-          <%= link_to "Sign in", sign_in_path %>
+          <div class="nav-button"><%= link_to "Sign in", sign_in_path, class: "nav-button-link" %> %></div>
         <% end %>
-      	</div>
+        <ul class="nav-list">
+          <li class="nav-list-item"><%= link_to "Dashboard", dash_index_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Sign out", sign_out_path, method: :delete, class: "nav-list-item-link" %></li>
+        </ul>
       </div>
     </div>
 

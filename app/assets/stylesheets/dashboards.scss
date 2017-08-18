@@ -1,0 +1,68 @@
+// Place all the styles related to the Dashboards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.dashboard-container {
+  background-color: #333;
+  border: 1px solid #000;
+  margin-top: 1vh;
+}
+
+.dash-top-row {
+  height: 15vh;
+  border: 1px solid #000;
+}
+
+// Whole Dash
+
+.main-dash {
+  border-top: none;
+  background-color: #333;
+  min-height: 80vh;
+}
+
+// Side Nav
+
+.dash-side-nav {
+}
+
+.side-nav-list {
+  padding: 0;
+  margin: 0;
+
+}
+
+.side-nav-item {
+  display: flex;
+
+}
+
+.side-nav-link {
+  padding: 15px 30px;
+  width: 100%;
+  &:hover {
+    background-color: #d2d2d2;
+    color: #000;
+  }
+}
+
+// Main Body of Dash
+.dash-main-body {
+  background-color: #555;
+
+}
+
+.field {
+  display: flex;
+}
+
+.dash-label {
+  padding: 20px;
+  background-color: #555;
+
+}
+
+.label-response {
+  padding: 20px;
+
+}
