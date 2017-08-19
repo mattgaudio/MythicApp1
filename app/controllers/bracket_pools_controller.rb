@@ -4,6 +4,10 @@ class BracketPoolsController < ApplicationController
     generate_bracket_pools
   end
 
+  def show
+  end
+  
+
   def creator_button
     @user = current_user
   end
@@ -16,10 +20,6 @@ class BracketPoolsController < ApplicationController
     redirect_to manager_path
   end
 
-
-
-
-
   def generate_bracket_pools
     @brackets = Bracket.all
     @brackets.each do |x|
@@ -27,12 +27,6 @@ class BracketPoolsController < ApplicationController
       BracketPool.create(name: "#{x.title}_#{x.game.short_title}_'nightly_10' ", title: "nightly_10", bracket_id: x.id, end_time: 1.day.from_now, active: true, activation_time: DateTime.new(2017, 8, 17, 19, 00, 0))
       BracketPool.create(name: "#{x.title}_#{x.game.short_title}_'nightly_25' ", title: "nightly_25", bracket_id: x.id, end_time: 1.day.from_now, active: true, activation_time: DateTime.new(2017, 8, 17, 19, 00, 0))
       BracketPool.create(name: "#{x.title}_#{x.game.short_title}_'nightly_100' ", title: "nightly_100", bracket_id: x.id, end_time: 1.day.from_now, active: true, activation_time: DateTime.new(2017, 8, 17, 19, 00, 0))
-      BracketPool.create(name: "#{x.title}_#{x.game.short_title}_'weekly_free' ", title: "weekly_free", bracket_id: x.id, end_time: 1.day.from_now, active: true, activation_time: DateTime.new(2017, 8, 17, 19, 00, 0))
-      BracketPool.create(name: "#{x.title}_#{x.game.short_title}_'weekly_10' ", title: "weekly_10", bracket_id: x.id)
-      BracketPool.create(name: "#{x.title}_#{x.game.short_title}_'weekly_25' ", title: "weekly_25", bracket_id: x.id)
-      BracketPool.create(name: "#{x.title}_#{x.game.short_title}_'weekly_100' ", title: "weekly100", bracket_id: x.id)
-      BracketPool.create(name: "#{x.title}_#{x.game.short_title}_'weekly_250' ", title: "weekly_250", bracket_id: x.id)
-      BracketPool.create(name: "#{x.title}_#{x.game.short_title}_'weekly_500' ", title: "weekly_500", bracket_id: x.id)
     end
   end
 

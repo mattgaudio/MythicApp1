@@ -12,19 +12,23 @@
         <%= render "dashboards/side_nav" %>
       </div>
       <div class="col-9 dash-main-body">
-      <%= @user %>
-      <%= @user.class %>
-      <%= @user.id %>  <br> <br>
-      <%= @person %>
-      <%= @person.class %>
-      <%= @person.id %>  <br> <br>
+      <%= current_user %>
+      <%= current_user.id %>
+      <%= current_user.email %>
+
 
       <%= form_for(@person) do |f| %>
-        <%= f.label :email %>
-        <%= f.email_field :email %>
 
-        <%= f.label :password %>
-        <%= f.password_field :password %>
+        <div class="field">
+          <div class="dash-label"><%= f.label :email, class: "dash-label" %></div>
+          <div class="dash-value"><%= f.email_field :email, class: "dash-input" %></div>
+        </div>
+
+        <div class="field">
+          <div class="dash-label"><%= f.label :password, class: "dash-label" %></div>
+          <div class="dash-value"><%= f.password_field :password, class: "dash-input" %></div>
+        </div>
+
 
         <%= f.submit %>
       <% end %>

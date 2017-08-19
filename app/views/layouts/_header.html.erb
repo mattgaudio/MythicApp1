@@ -1,88 +1,113 @@
 <nav class="navbar">
-  <div class="inner-nav">
+  <div class="nav-container">
 
     <div class="nav-left">
-      <div class="nav-item logo-box">
-        <%= link_to root_path, :class => "logo-link" do %>
-          <i class="fa fa-cubes"></i> Mythic Gaming
+      <div class="nav-grouping">
+        <div class="nav-button logo-link"><%= link_to root_path, class: "logo-link" do %>
+        	<i class="fa fa-cubes"></i> Mythic Gaming
         <% end %>
+        </div>
       </div>
     </div>
 
     <div class="nav-middle">
-      <div class="nav-item dropdown">
-        <div class="drop-btn">
-          FPS Games <i class="fa fa-caret-down"></i>
-        </div>
-        <div class="drop-content">
-          <% @games.fps.each do |game| %>
-            <div class="drop-item"><%= link_to game.short_title, brackets_path, class: "drop-item" %></div>
-          <% end %>
-        </div>
-      </div>
-      <div class="nav-item dropdown">
-        <div class="drop-btn">
-          MOBA Games <i class="fa fa-caret-down"></i>
-        </div>
-        <div class="drop-content">
-          <% @games.moba.each do |game| %>
-            <div class="drop-item"><%= link_to game.short_title, brackets_path, class: "drop-item" %></div>
-          <% end %>
-        </div>
-      </div>
-      <div class="nav-item dropdown">
-        <div class="drop-btn">
-          Hero Games <i class="fa fa-caret-down"></i>
-        </div>
-        <div class="drop-content">
-          <% @games.hero.each do |game| %>
-            <div class="drop-item"><%= link_to game.short_title, brackets_path, class: "drop-item" %></div>
-          <% end %>
-        </div>
-      </div>
-      <div class="nav-item dropdown">
-        <div class="drop-btn">
-          More Games <i class="fa fa-caret-down"></i>
-        </div>
-        <div class="drop-content">
-          <% @games.more.each do |game| %>
-            <div class="drop-item"><%= link_to game.short_title, brackets_path, class: "drop-item" %></div>
-          <% end %>
-        </div>
-      </div>
-      <div class="nav-item dropdown">
-        <div class="drop-btn">
-          Information <i class="fa fa-caret-down"></i>
-        </div>
-        <div class="drop-content">
-          <div class="drop-item"><%= link_to "Reddit", "https://www.reddit.com/r/MythicGaming/" %></div>
-          <div class="drop-item"><%= link_to "FAQ", manager_path %></div>
-          <div class="drop-item"><%= link_to "Support", manager_path %></div>
-        </div>
-      </div>
-      <div class="nav-item dropdown">
-        <div class="drop-btn">
-          More <i class="fa fa-caret-down"></i>
-        </div>
-        <div class="drop-content">
-          <div class="drop-item"><%= link_to "Find Teammates", manager_path %></div>
-          <div class="drop-item"><%= link_to "Game Manager", manager_path %></div>
-        </div>
-      </div>
-      <div class="nav-item dropdown">
-        <div class="drop-btn">
-          <%= link_to "Admin", admin_root_path %>
-        </div>
-        <div class="drop-content">
-          <div class="drop-item">Schedule</div>
-        </div>
+
+     	<div class="nav-grouping">
+        <div class="nav-button"><%= link_to root_path, class: "nav-button-link" do %> Games <i class="fa fa-caret-down"></i><% end %></div>
+        <ul class="nav-list nav-list-mega-dropdown">
+	        <div class="row">
+	        	<div class="col-3">
+	        		<li class="nav-list-item nav-list-item-header">FPS Games</li>
+	        		<% (@fps_games || Game.fps).each do |game| %>
+	          		<li class="nav-list-item">
+                  <%= link_to brackets_path, class: "nav-list-item-link" do %>
+                    <%= image_tag(game.game_img.url(:xs)) %>
+                    <%= game.short_title %>
+                  <% end %>
+                </li>
+	        		<% end %>
+	        	</div>
+	        	<div class="col-3">
+	        	<li class="nav-list-item nav-list-item-header">MOBA Games</li>
+        		<% (@moba_games || Game.moba).each do |game| %>
+          		<li class="nav-list-item">
+                  <%= link_to brackets_path, class: "nav-list-item-link" do %>
+                    <%= image_tag(game.game_img.url(:xs)) %>
+                    <%= game.short_title %>
+                  <% end %>
+                </li>
+        		<% end %>
+        	</div>
+        	<div class="col-3">
+        		<li class="nav-list-item nav-list-item-header">Hero Games</li>
+        		<% (@hero_games || Game.hero).each do |game| %>
+          		<li class="nav-list-item">
+                  <%= link_to brackets_path, class: "nav-list-item-link" do %>
+                    <%= image_tag(game.game_img.url(:xs)) %>
+                    <%= game.short_title %>
+                  <% end %>
+                </li>
+        		<% end %>
+        	</div>
+        	<div class="col-3">
+        		<li class="nav-list-item nav-list-item-header">More Games</li>
+        		<% (@more_games || Game.more).each do |game| %>
+          		<li class="nav-list-item">
+                  <%= link_to brackets_path, class: "nav-list-item-link" do %>
+                    <%= image_tag(game.game_img.url(:xs)) %>
+                    <%= game.short_title %>
+                  <% end %>
+                </li>
+        		<% end %>
+        	</div>
+	        </div>
+        </ul>
       </div>
 
+    <% if joined_bracket %>
+    <div class="nav-grouping">
+      <div class="nav-button"><%= link_to manager_path, class: "nav-button-link" do %>Manager<% end %></div>
+    </div>
+    <% end %>
+
+      <div class="nav-grouping">
+        <div class="nav-button"><%= link_to root_path, class: "nav-button-link" do %>Information <i class="fa fa-caret-down"></i><% end %></div>
+        <ul class="nav-list">
+        	<li class="nav-list-item"><%= link_to "Tournament Basics", manager_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Manager Page", manager_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Reddit", manager_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "FAQ", manager_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Support", manager_path, class: "nav-list-item-link" %></li>
+        </ul>
+      </div>
+      <div class="nav-grouping">
+        <div class="nav-button"><%= link_to root_path, class: "nav-button-link" do %>More <i class="fa fa-caret-down"></i><% end %></div>
+        <ul class="nav-list">
+          <li class="nav-list-item"><%= link_to "Statistics", manager_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Mythic Halo", manager_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "About us", manager_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Support", manager_path, class: "nav-list-item-link" %></li>
+        </ul>
+      </div>
+      <div class="nav-grouping">
+        <%# if current_user && current_user.admin == true %>
+          <div class="nav-button"><%= link_to "Admin", admin_root_path, class: "nav-button-link" %></div>
+        <%# end %>
+      </div>
     </div>
 
+
     <div class="nav-right">
-      <div class="nav-item">
-        Sign In | Create Account
+      <div class="nav-grouping">
+        <% if signed_in? %>
+          <div class="nav-button"><%= link_to dash_main_path, class: "nav-button-link" do %><%= current_user.email %><% end %></div>
+          <ul class="nav-list">
+            <li class="nav-list-item"><%= link_to "Dashboard", dash_main_path, class: "nav-list-item-link" %></li>
+            <li class="nav-list-item"><%= link_to "Sign out", sign_out_path, method: :delete, class: "nav-list-item-link" %></li>
+          </ul>
+        <% else %>
+          <div class="nav-button"><%= link_to "Sign in", sign_in_path, class: "nav-button-link" %></div>
+        <% end %>
       </div>
     </div>
 

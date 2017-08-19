@@ -11,6 +11,7 @@ class PlayerDashboard < Administrate::BaseDashboard
     user: Field::BelongsTo,
     id: Field::Number,
     nickname: Field::String,
+    points: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -33,6 +34,7 @@ class PlayerDashboard < Administrate::BaseDashboard
     :user,
     :id,
     :nickname,
+    :points,
     :created_at,
     :updated_at,
   ].freeze
@@ -43,6 +45,7 @@ class PlayerDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :user,
     :nickname,
+    :points,
   ].freeze
 
   # Overwrite this method to customize how players are displayed

@@ -1,10 +1,12 @@
 class DashboardsController < ApplicationController
+
+  before_action :require_login
+
   def main
   end
 
   def settings
-    @user = current_user
-    @person = User.find_by(id: current_user.id)
+    @person = current_user
   end
 
   def payment
@@ -14,7 +16,10 @@ class DashboardsController < ApplicationController
   end
 
   def gamertag
-    @person = User.find_by(id: current_user.id)
+    @person = current_user
+  end
+
+  def payouts
   end
 
   def create

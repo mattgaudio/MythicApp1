@@ -14,11 +14,35 @@
       <div class="col-9 dash-main-body">
         <div class="field">
           <div class="dash-label">Email: </div>
-          <div class="label-response"><%= current_user.email %></div>
+          <div class="label-response"><%= current_user.email ? current_user.email : "email" %></div>
+          <div><%= button_to "View Settings", dashboards_path, class: "dash-button" %></div>
         </div>
         <div class="field">
           <div class="dash-label">Nickname: </div>
-          <div class="label-response"><%= current_user.nickname %></div>
+          <div class="label-response"><%= current_user.nickname ? current_user.nickname : "nickname" %></div>
+          <div class="dash-button"><%= button_to "View Player", dashboards_path, class: "dash-button" %></div>
+        </div>
+        <div class="field">
+          <div class="dash-label">Pools Joined: </div>
+          <div class="label-response"><%= current_user.player.bracket_pools.count  %></div>
+          <div class="dash-button"><%= button_to "View History", dashboards_path, class: "dash-button" %></div>
+        </div>
+        <div class="field">
+          <div class="dash-label">Top 8 Placings: </div>
+          <div class="label-response"><%= current_user.player.bracket_pools %></div>
+          <div class="dash-button"><%= button_to "View Results", dashboards_path, class: "dash-button" %></div>
+        </div>
+        <div class="field">
+          <div class="dash-label">Points </div>
+          <div class="label-response"><%= current_user.player.bracket_pools %></div>
+          <div class="dash-button"><%= button_to "View Point Totals", dashboards_path, class: "dash-button" %></div>
+
+        </div>
+        <div class="field">
+          <div class="dash-label">Payouts </div>
+          <div class="label-response"><%= current_user.player.bracket_pools %></div>
+          <div class="dash-button"><%= button_to "View Payouts", dashboards_path, class: "dash-button" %></div>
+
         </div>
       </div>
     </div>

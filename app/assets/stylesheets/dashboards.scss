@@ -4,13 +4,13 @@
 
 .dashboard-container {
   background-color: #333;
-  border: 1px solid #000;
-  margin-top: 1vh;
+  border-top: 1px solid #000;
+
 }
 
 .dash-top-row {
   height: 15vh;
-  border: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 // Whole Dash
@@ -18,7 +18,7 @@
 .main-dash {
   border-top: none;
   background-color: #333;
-  min-height: 80vh;
+
 }
 
 // Side Nav
@@ -48,21 +48,52 @@
 
 // Main Body of Dash
 .dash-main-body {
-  background-color: #555;
+  background-color: #444;
+  color: #d2d2d2;
+  min-height: 80vh;
 
 }
 
 .field {
   display: flex;
+  margin-bottom: 1vh;
 }
 
 .dash-label {
   padding: 20px;
   background-color: #555;
+  color: #fff;
+  margin: 0 20px;
+  min-width: 12vw;
+  font-size: 16px;
 
+}
+
+.dash-value {
+  padding: 20px;
+  background-color: #555;
+  color: #fff;
+  margin: 0 20px;
+}
+
+.dash-button {
+  a {
+    padding: 20px;
+    background-color: #555;
+    color: #fff;
+    margin: 0 20px;
+    min-width: 12vw;
+    font-size: 16px;
+  }
+}
+
+.dash-input {
+  min-width: 300px;
 }
 
 .label-response {
   padding: 20px;
+  background-color: #555;
+  min-width: 20vw;
 
 }

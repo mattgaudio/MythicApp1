@@ -1,0 +1,18 @@
+<% user = User.find_by(params[:id]) %>
+<%= user %>
+
+
+<% user.player.bracket_pools.all.each do |x| %>
+  Bracket Pool title: <%= x.title %> <br>
+  Bracket Pool name: <%= x.name %> <br>
+  Bracket Pool ID: <%= x.id %> <br>
+  Bracket Title: <%= x.bracket.title %> <br>
+  Bracket ID: <%= x.bracket.id %> <br>
+  <% x.bracket_pool_players.each do |y| %>
+    <em> Bracket Pool Player ID: <%= y.id %> </em> <br>
+    <em> Player nickname: <%= y.nickname %> </em> <br>
+    <em> Player points: <%= y.points %> </em> <br>
+  <% end %>
+  <br>
+<% end %>
+<br>

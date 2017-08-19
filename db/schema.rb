@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170818012002) do
+ActiveRecord::Schema.define(version: 20170818220857) do
 
   create_table "bracket_players", force: :cascade do |t|
     t.integer "player_id"
@@ -91,6 +91,8 @@ ActiveRecord::Schema.define(version: 20170818012002) do
     t.string "nickname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "active_player"
+    t.integer "points"
     t.index ["user_id"], name: "index_players_on_user_id"
   end
 
@@ -118,6 +120,8 @@ ActiveRecord::Schema.define(version: 20170818012002) do
     t.string "confirmation_token", limit: 128
     t.string "remember_token", limit: 128
     t.string "nickname"
+    t.boolean "admin"
+    t.boolean "staff"
     t.index ["email"], name: "index_users_on_email"
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end

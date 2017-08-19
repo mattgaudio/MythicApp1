@@ -8,10 +8,12 @@
 # you're free to overwrite the RESTful controller actions.
 module Admin
   class ApplicationController < Administrate::ApplicationController
+
     before_action :authenticate_admin
 
     def authenticate_admin
-      # TODO Add authentication logic here.
+      current_user = User.find_by(session[:user_id])
+      redirect_to root_path unless current_user.admin?
     end
 
     # Override this value to specify the number of elements to display at a time
@@ -19,5 +21,6 @@ module Admin
     def records_per_page
       params[:per_page] || 20
     end
+
   end
 end
