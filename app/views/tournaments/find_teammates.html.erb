@@ -1,2 +1,74 @@
-<%= render :template => "tournaments/live_game_box" %>
-<%= render :template => "bracket_pools/show" %>
+<%= render :template => "tournaments/find_teammates_box" %>
+
+
+<table class="join-teammates-table">
+   <thead>
+     <tr>
+       <th>Join Teammates Table</th>
+     </tr>
+     <tr>
+       <th>Bracket Pool Player ID: </th>
+       <th>Player nickname: </th>
+       <th>Player points: </th>
+       <th>Invite</th>
+     </tr>
+   </thead>
+   <tbody>
+     <% current_user.player.bracket_pools.all.each do |x| %>
+     <% x.bracket_pool_players.each do |y| %>
+     <tr>
+       <td>
+         <div class="join-teammates-item-category">  <em> <%= y.id %></em> </div>
+       </td>
+       <td>
+         <div class="join-teammates-item-category">  <em> <%= y.player.user.nickname %> </em> </div>
+       </td>
+       <td>
+         <div class="join-teammates-item-category">  <em> <%= y.player.points %> </em> </div>
+       </td>
+       <td>
+        <div class="join-teammates-item-category">
+          <%= button_to "Join", { remote: true}, {class: 'join-teammates-btn'} %>
+        </div>
+       </td>
+     </tr>
+     <% end %>
+     <% end %>
+   </tbody>
+</table>
+
+<table class="find-teammates-table">
+   <thead>
+     <tr>
+       <th>Find Teammates Table</th>
+     </tr>
+     <tr>
+       <th>Bracket Pool Player ID: </th>
+       <th>Player nickname: </th>
+       <th>Player points: </th>
+       <th>Invite</th>
+     </tr>
+   </thead>
+   <tbody>
+     <% current_user.player.bracket_pools.all.each do |x| %>
+     <% x.bracket_pool_players.each do |y| %>
+     <tr>
+       <td>
+         <div class="find-teammates-item-category">  <em> <%= y.id %></em> </div>
+       </td>
+       <td>
+         <div class="find-teammates-item-category">  <em> <%= y.player.user.nickname %> </em> </div>
+       </td>
+       <td>
+         <div class="find-teammates-item-category">  <em> <%= y.player.points %> </em> </div>
+       </td>
+       <td>
+        <div class="find-teammates-item-category">
+          <%= button_to "Invite", { remote: true}, {class: 'invite-teammates-btn'} %>
+        </div>
+       </td>
+     </tr>
+     <% end %>
+     <% end %>
+   </tbody>
+</table>

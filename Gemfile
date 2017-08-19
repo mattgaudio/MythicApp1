@@ -34,17 +34,19 @@ gem 'jbuilder', '~> 2.5'
 # gem 'furatto'
 
 gem 'font-awesome-sass', "~> 4.7.0"
-# gem 'compass-rails'
 gem 'administrate'
 gem "paperclip", "~> 5.0.0"
 gem "aws-sdk"
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'challonge-api'
-gem 'stripe'
 gem 'clearance'
-gem 'cancancan'
 gem 'chronic'
+
+# Future Gems
+gem 'stripe'
+gem 'cancancan'
+gem 'ransack'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

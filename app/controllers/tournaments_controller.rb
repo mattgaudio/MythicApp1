@@ -36,5 +36,9 @@ class TournamentsController < ApplicationController
 	def find_teammates
 	end
 
+	def find_teammates_box
+	end
+	
+
 
 end

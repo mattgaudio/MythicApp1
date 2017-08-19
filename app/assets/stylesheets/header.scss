@@ -82,6 +82,13 @@
 
 }
 
+.nav-button-manager-link {
+	color: #006699;
+	&:hover {
+		color: #003399;
+	}
+}
+
 .nav-list {
 	list-style-type: none;
 	position: absolute;

@@ -1,0 +1,29 @@
+
+<div class="find-teammates-box">
+  <% current_user.player.bracket_pools.all.each do |x| %>
+  <div class="find-teammates-box-item">
+    <div class="find-teammates-box-item-label">Game:</div>
+    <div class="find-teammates-box-item-value"><%= x.bracket.game.long_title %></div>
+  </div>
+  <div class="find-teammates-box-item">
+    <div class="find-teammates-box-item-label">Bracket Title:</div>
+    <div class="find-teammates-box-item-value"><%= x.bracket.title %></div>
+  </div>
+  <div class="find-teammates-box-item">
+    <div class="find-teammates-box-item-label">Bracket Pool title:</div>
+    <div class="find-teammates-box-item-value"><%= x.title %></div>
+  </div>
+  <div class="find-teammates-box-item">
+    <% if Rails.env.development? %>
+      <div class="find-teammates-box-item-label">Bracket ID: </div>
+      <div class="find-teammates-box-item-value">  <%= x.bracket.id %> </div>
+    <% end %>
+  </div>
+  <div class="find-teammates-box-item">
+    <% if Rails.env.development? %>
+      <div class="find-teammates-box-item-label">Bracket Pool ID:</div>
+      <div class="find-teammates-box-item-value"><%= x.id %></div>
+    <% end %>
+  </div>
+  <% end %>
+</div>

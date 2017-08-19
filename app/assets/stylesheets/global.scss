@@ -3,3 +3,12 @@
 	width: 96vw;
 	margin: 0 auto;
 }
+
+button {
+	border: 2px solid #000;
+	color: #d2d2d2;
+	background-color: #009966;
+	&:hover {
+		color: #fff;
+	}
+}
