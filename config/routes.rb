@@ -46,6 +46,7 @@ Rails.application.routes.draw do
     resources :players
     resources :bracket_pools
     resources :bracket_pool_players
+    resources :teams
 
     root to: "games#index"
   end
