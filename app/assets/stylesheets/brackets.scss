@@ -166,28 +166,33 @@ padding: 8px;
 .prize-pool-button {
 	padding: 10px 20px;
 	border: 2px solid #000;
-	
-}
-.join-bracket-button {
-	padding: 10px 25px;
-	border: 2px solid #000;
+	-webkit-appearance: button;
+	-webkit-appearance: push-button;
+	background-color: #004466;
 
 }
 
-.not-active {
-	background-color: #993333;
+.bracket-button {
+	padding: 20px;
+	color: #fff;
+	background-color: #009966;
 }
-.fps-button {
-	// background-color: #6600ff
+
+.bracket-button-join {
+	background-color: #004466;
 }
-.moba-button {
-	// background-color: #ff8533;
+
+.bracket-button-switch {
+	background-color: #00334d;
 }
-.hero-button {
-	// background-color: #0066cc;
+
+.bracket-button-leave {
+	background-color: #206040;
+
 }
-.more-button {
-	// background-color: #00b386;
+
+.bracket-button-not-active {
+	background-color: #732626;
 }
 
 .tourn-label {
@@ -205,7 +210,7 @@ padding: 8px;
 	padding: 10px;
 }
 
-// Tourn Tabs 
+// Tourn Tabs
 /* Style the tab */
 div.tab {
     overflow: hidden;
@@ -305,7 +310,7 @@ ul.side-nav-list {
 	&:hover {
 		color: #111;
 	}
-	
+
 }
 
 // sticky tryout
@@ -320,4 +325,3 @@ ul.side-nav-list {
 	height: 100%;
 	overflow-y: auto;
 }
-

@@ -16,6 +16,8 @@ class BracketDashboard < Administrate::BaseDashboard
     tournament_type: Field::String,
     players_per_team: Field::Number,
     rounds: Field::Number,
+    bracket_pools: Field::HasMany,
+    bracket_pool_players: Field::HasMany,
     console_xbox: Field::Boolean,
     console_ps4: Field::Boolean,
     console_steam: Field::Boolean,
@@ -70,6 +72,8 @@ class BracketDashboard < Administrate::BaseDashboard
     :weekly_250,
     :weekly_500,
     :brackets_filled,
+    :bracket_pools,
+    :bracket_pool_players,
     :created_at,
     :updated_at,
   ].freeze

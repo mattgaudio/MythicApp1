@@ -1,19 +1,20 @@
 <h2>Nightly Tournaments</h2>
 
 <div class="tourn-section tourn-fps-section">
-	<% Bracket.preload(:game).all.each do |x| %>
+	<% Game.all.preload(:brackets).each do |x| %>
+	  <% x.brackets.each do |y| %>
 	<div class="tourn-game-item tourn-fps-game-item">
 		<div class="row tourn-game-header tourn-fps-game-header">
-	    <div class="col-12 tourn-game-header-content"><%= x.game.short_title %> | <%= x.tournament_type %> </div>
+	    <div class="col-12 tourn-game-header-content"><%= y.game.long_title %> | <%= y.tournament_type %> </div>
 	  </div>
 		<div class="row">
 			<div class="col-2 tourn-item tourn-item-label-box">
 				<div class="tourn-item-fps tourn-img-placing-fps tourn-item-1">
-					<%= image_tag x.game.game_img.url(:l), class: "tourn-img" %>
+					<%= image_tag y.game.game_img.url(:l), class: "tourn-img" %>
 				</div>
 				<div class="tourn-item-game-box">
-					<%= x.game.short_title %><br>
-					<%= x.title %>
+					<%= y.game.short_title %><br>
+					<%= y.title %>
 				</div>
 			</div>
 			<div class="col-2 tourn-item tourn-item-fps">
@@ -98,30 +99,72 @@
 				</div>
 			</div>
 			<div class="col-2 tourn-item tourn-item-fps">Free <br>
-					<button class="join-bracket-button fps-button">
-						<% x.bracket_pools.where(title: "nightly_free").each do |y| %>
-					    <%= y.title %> <br>
-					    <%= button_to "Join Bracket", join_bracket_path(bracket_pool_id: y.id) %>
-					  <% end %>
-					</button>
+				<% y.bracket_pools.where(title: "Nightly Free").each do  |z| %>
+		      <% if z.active && (current_user.player.bracket_pools.where(nightly: true).present?) && (z.players.include? current_user.player) %>
+		        <%= z.title %>
+		        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
+		      <% elsif z.active && (current_user.player.bracket_pools.where(nightly: true).present?) %>
+		          <%= z.title %>
+		          <%= button_to "Switch Bracket", brackets_path, class: "bracket-button bracket-button-switch" %>
+		      <% elsif z.active %>
+		          <%= z.title %>
+		          <%= button_to "Join Bracket", join_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-join" %>
+		      <% elsif z.active == false %>
+		        <%= z.title %>
+		        <%= button_to "Not Active bracket-button-not-active", brackets_path, class: "bracket-button" %>
+		      <% end %>
+		    <% end %>
 			</div>
 			<div class="col-2 tourn-item tourn-item-fps">$10 <br>
-				<% x.bracket_pools.where(title: "nightly_10").each do |y| %>
-					<%= y.title %> <br>
-					<%= button_to "Join Bracket", join_bracket_path(bracket_pool_id: y.id) %>
-				<% end %>
+				<% y.bracket_pools.where(title: "Nightly 10").each do  |z| %>
+		      <% if z.active && (current_user.player.bracket_pools.where(nightly: true).present?) && (z.players.include? current_user.player) %>
+		        <%= z.title %>
+		        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
+		      <% elsif z.active && (current_user.player.bracket_pools.where(nightly: true).present?) %>
+		          <%= z.title %>
+		          <%= button_to "Switch Bracket", brackets_path, class: "bracket-button bracket-button-switch" %>
+		      <% elsif z.active %>
+		          <%= z.title %>
+		          <%= button_to "Join Bracket", join_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-join" %>
+		      <% elsif z.active == false %>
+		        <%= z.title %>
+		        <%= button_to "Not Active bracket-button-not-active", brackets_path, class: "bracket-button" %>
+		      <% end %>
+		    <% end %>
 			</div>
 			<div class="col-2 tourn-item tourn-item-fps">$25 <br>
-				<% x.bracket_pools.where(title: "nightly_25").each do |y| %>
-					<%= y.title %> <br>
-					<%= button_to "Join Bracket", join_bracket_path(bracket_pool_id: y.id) %>
-				<% end %>
+				<% y.bracket_pools.where(title: "Nightly 25").each do  |z| %>
+		      <% if z.active && (current_user.player.bracket_pools.where(nightly: true).present?) && (z.players.include? current_user.player) %>
+		        <%= z.title %>
+		        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
+		      <% elsif z.active && (current_user.player.bracket_pools.where(nightly: true).present?) %>
+		          <%= z.title %>
+		          <%= button_to "Switch Bracket", brackets_path, class: "bracket-button bracket-button-switch" %>
+		      <% elsif z.active %>
+		          <%= z.title %>
+		          <%= button_to "Join Bracket", join_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-join" %>
+		      <% elsif z.active == false %>
+		        <%= z.title %>
+		        <%= button_to "Not Active", brackets_path, class: "bracket-button bracket-button-not-active" %>
+		      <% end %>
+		    <% end %>
 			</div>
 			<div class="col-2 tourn-item tourn-item-fps">$100 <br>
-				<% x.bracket_pools.where(title: "nightly_100").each do |y| %>
-					<%= y.title %> <br>
-					<%= button_to "Join Bracket", join_bracket_path(bracket_pool_id: y.id) %>
-				<% end %>
+				<% y.bracket_pools.where(title: "Nightly 100").each do  |z| %>
+		      <% if z.active && (current_user.player.bracket_pools.where(nightly: true).present?) && (z.players.include? current_user.player) %>
+		        <%= z.title %>
+		        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
+		      <% elsif z.active && (current_user.player.bracket_pools.where(nightly: true).present?) %>
+		          <%= z.title %>
+		          <%= button_to "Switch Bracket", brackets_path, class: "bracket-button bracket-button-switch" %>
+		      <% elsif z.active %>
+		          <%= z.title %>
+		          <%= button_to "Join Bracket", join_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-join" %>
+		      <% elsif z.active == false %>
+		        <%= z.title %>
+		        <%= button_to "Not Active", brackets_path, class: "bracket-button bracket-button-not-active" %>
+		      <% end %>
+		    <% end %>
 			</div>
 			<div class="col-2 tourn-item tourn-item-fps">Maps and Gametypes <br>
 				Rules and Settings
@@ -129,3 +172,4 @@
 		</div>
 	</div><!-- tourn-section tourn-fps-section -->
 	<% end %>
+<% end %>

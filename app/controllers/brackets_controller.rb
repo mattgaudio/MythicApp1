@@ -19,4 +19,8 @@ class BracketsController < ApplicationController
 		BracketPlayer.create(player_id: @user.id, bracket_id: @bracket.id)
 	end
 
+	def destroy
+	puts "hello"
+	end
+
 end

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :products
   # Routes for Main Controller
   root 'main#front_page'
 
@@ -15,8 +16,12 @@ Rails.application.routes.draw do
 
   post 'bracket_pools/create'
   post "bracket_pools/destroy"
+  post "bracket_pools/destroy_bracket_pool_player"
 
   post "bracket_pools/:bracket_pool_id/join", to: 'bracket_pools#join', as: 'join_bracket'
+  post "bracket_pool_players/destroy", to: 'bracket_pool_players#destroy', as: 'leave_bracket'
+  get "manager", to: "bracket_pools#switch", as: 'switch_bracket'
+
 
   # Resources
   resources :tournaments

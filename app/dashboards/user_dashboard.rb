@@ -8,6 +8,7 @@ class UserDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
+    player: Field::HasOne,
     id: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -16,6 +17,8 @@ class UserDashboard < Administrate::BaseDashboard
     confirmation_token: Field::String,
     remember_token: Field::String,
     nickname: Field::String,
+    admin: Field::Boolean,
+    staff: Field::Boolean,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -25,34 +28,40 @@ class UserDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
+    :player,
     :nickname,
     :created_at,
     :updated_at,
-    :email,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
+    :player,
     :id,
-    :nickname,
     :created_at,
     :updated_at,
     :email,
     :encrypted_password,
     :confirmation_token,
     :remember_token,
+    :nickname,
+    :admin,
+    :staff,
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :player,
     :email,
-    :nickname,
     :encrypted_password,
     :confirmation_token,
     :remember_token,
+    :nickname,
+    :admin,
+    :staff,
   ].freeze
 
   # Overwrite this method to customize how users are displayed

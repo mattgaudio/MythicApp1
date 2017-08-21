@@ -9,5 +9,5 @@ class Game < ApplicationRecord
   scope :moba, -> { where(game_type: "moba") }
   scope :hero, -> { where(game_type: "hero") }
   scope :more, -> { where(game_type: "more") }
-  
+
 end

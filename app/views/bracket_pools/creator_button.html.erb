@@ -1,14 +1,82 @@
 <%= button_to "Create Bracket Pools", action: :create %>
 <%= button_to "Bulk Delete Bracket Pools", action: :destroy %>
 
+<%= current_user %>
+<%= current_user.player %>
+<%= current_user.player.id %>
+<%= BracketPoolPlayer.find_by(player: current_user.player) %> <br>
 
-<% Bracket.preload(:game).all.each do |x| %>
-  <%= x.title %>
+<%= button_to "Delete BracketPoolPlayer", action: :destroy_bracket_pool_player %>
 
 
-  <% x.bracket_pools.where(title: "nightly_free").each do |y| %>
+<% Game.all.preload(:brackets).each do |x| %>
+  <% x.brackets.each do |y| %>
+    <%= y.game.short_title %> <br>
     <%= y.title %> <br>
-    <%= button_to "Join Bracket", join_bracket_path(bracket_pool_id: y.id) %>
-  <% end %>
-  <br>
+
+    <% y.bracket_pools.where(title: "Nightly Free").each do  |z| %>
+      <% if z.active && (current_user.player.bracket_pools.where(nightly: true).present?) && (z.players.include? current_user.player) %>
+        <%= z.title %>
+        <%= button_to "Leave Bracket", brackets_path %>
+      <% elsif z.active && (current_user.player.bracket_pools.where(nightly: true).present?) %>
+          <%= z.title %>
+          <%= button_to "Switch Bracket", brackets_path %>
+      <% elsif z.active %>
+          <%= z.title %>
+          <%= button_to "Join Bracket", brackets_path %>
+      <% elsif z.active == false %>
+        <%= z.title %>
+        <%= button_to "Not Active", brackets_path %>
+      <% end %>
+    <% end %>
+    <% y.bracket_pools.where(title: "Nightly 10").each do  |z| %>
+      <% if z.active && (current_user.player.bracket_pools.where(nightly: true).present?) && (z.players.include? current_user.player) %>
+        <%= z.title %>
+        <%= button_to "Leave Bracket", brackets_path %>
+      <% elsif z.active && (current_user.player.bracket_pools.where(nightly: true).present?) %>
+          <%= z.title %>
+          <%= button_to "Switch Bracket", brackets_path %>
+      <% elsif z.active %>
+          <%= z.title %>
+          <%= button_to "Join Bracket", brackets_path %>
+      <% elsif z.active == false %>
+        <%= z.title %>
+        <%= button_to "Not Active", brackets_path %>
+      <% end %>
+    <% end %>
+    <% y.bracket_pools.where(title: "Nightly 25").each do  |z| %>
+      <% if z.active && (current_user.player.bracket_pools.where(nightly: true).present?) && (z.players.include? current_user.player) %>
+        <%= z.title %>
+        <%= button_to "Leave Bracket", brackets_path %>
+      <% elsif z.active && (current_user.player.bracket_pools.where(nightly: true).present?) %>
+          <%= z.title %>
+          <%= button_to "Switch Bracket", brackets_path %>
+      <% elsif z.active %>
+          <%= z.title %>
+          <%= button_to "Join Bracket", brackets_path %>
+      <% elsif z.active == false %>
+        <%= z.title %>
+        <%= button_to "Not Active", brackets_path %>
+      <% end %>
+    <% end %>
+    <% y.bracket_pools.where(title: "Nightly 100").each do  |z| %>
+      <% if z.active && (current_user.player.bracket_pools.where(nightly: true).present?) && (z.players.include? current_user.player) %>
+        <%= z.title %>
+        <%= button_to "Leave Bracket", brackets_path %>
+      <% elsif z.active && (current_user.player.bracket_pools.where(nightly: true).present?) %>
+          <%= z.title %>
+          <%= button_to "Switch Bracket", brackets_path %>
+      <% elsif z.active %>
+          <%= z.title %>
+          <%= button_to "Join Bracket", brackets_path %>
+      <% elsif z.active == false %>
+        <%= z.title %>
+        <%= button_to "Not Active", brackets_path %>
+      <% end %>
+    <% end %>
+
+  <% end %> <br>
+
+
+
 <% end %>

@@ -10,6 +10,7 @@ class BracketPoolPlayerDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     bracket_pool: Field::BelongsTo,
     player: Field::BelongsTo,
+    team: Field::BelongsTo,
     id: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -23,8 +24,8 @@ class BracketPoolPlayerDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :bracket_pool,
     :player,
+    :team,
     :id,
-    :created_at,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -32,6 +33,7 @@ class BracketPoolPlayerDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :bracket_pool,
     :player,
+    :team,
     :id,
     :created_at,
     :updated_at,
@@ -43,6 +45,7 @@ class BracketPoolPlayerDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :bracket_pool,
     :player,
+    :team,
   ].freeze
 
   # Overwrite this method to customize how bracket pool players are displayed

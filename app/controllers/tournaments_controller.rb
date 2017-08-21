@@ -6,8 +6,7 @@ class TournamentsController < ApplicationController
 	end
 
 	def show
-		@tournament = Tournament.find(params[:id])
-		@challonge_tournament = Challonge::Tournament.find(:all, :params => {:id => @tournament.tournament_id})
+
 		@quickvar = name_pool
 	end
 
@@ -38,7 +37,7 @@ class TournamentsController < ApplicationController
 
 	def find_teammates_box
 	end
-	
+
 
 
 end

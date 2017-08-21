@@ -6,16 +6,31 @@
   padding: 0;
 }
 
+.current-team-table {
+  background-color: #333;
+  color: #d2d2d2;
+  form {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.current-team-item-category {
+  padding: 20px;
+  background-color: #555;
+  margin: 0px 10px;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
 .find-teammates-table {
   background-color: #333;
   color: #d2d2d2;
-
-}
-
-.find-teammates-item {
-  display: flex;
-  width: 100%;
-  padding: 10px;
+  form {
+    display: flex;
+    justify-content: center;
+  }
 
 }
 
@@ -23,6 +38,9 @@
   padding: 20px;
   background-color: #555;
   margin: 0px 10px;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
 
 }
 
@@ -36,13 +54,10 @@
 .join-teammates-table {
   background-color: #204060;
   color: #d2d2d2;
-
-}
-
-.join-teammates-item {
-  display: flex;
-  width: 100%;
-  padding: 10px;
+  form {
+    display: flex;
+    justify-content: center;
+  }
 
 }
 
@@ -50,6 +65,9 @@
   padding: 20px;
   background-color: #264d73;
   margin: 0px 10px;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
 }
 
 .join-teammates-btn {

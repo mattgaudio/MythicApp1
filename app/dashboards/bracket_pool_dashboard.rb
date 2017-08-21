@@ -9,16 +9,22 @@ class BracketPoolDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     bracket: Field::BelongsTo,
+    bracket_pool_players: Field::HasMany,
+    players: Field::HasMany,
+    teams: Field::HasMany,
     id: Field::Number,
+    created_at: Field::DateTime,
+    updated_at: Field::DateTime,
     name: Field::String,
+    console: Field::String,
     player_size: Field::Number,
     title: Field::String,
     active: Field::Boolean,
     activation_time: Field::DateTime,
     end_time: Field::DateTime,
     duration: Field::Number,
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    weekly: Field::Boolean,
+    nightly: Field::Boolean,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -28,29 +34,35 @@ class BracketPoolDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :bracket,
-    :id,
-    :name,
-    :title,
-    :player_size,
-    :created_at,
-    :updated_at,
+    :bracket_pool_players,
+    :players,
+    :teams,
+    :nightly,
+    :weekly,
+    :console,
+    :active,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :bracket,
+    :bracket_pool_players,
+    :players,
+    :teams,
     :id,
+    :created_at,
+    :updated_at,
     :name,
-    :title,
     :player_size,
     :title,
     :active,
     :activation_time,
     :end_time,
     :duration,
-    :created_at,
-    :updated_at,
+    :weekly,
+    :nightly,
+    :console,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -58,12 +70,19 @@ class BracketPoolDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :bracket,
+    :bracket_pool_players,
+    :players,
+    :teams,
     :name,
+    :player_size,
     :title,
     :active,
     :activation_time,
     :end_time,
     :duration,
+    :weekly,
+    :nightly,
+    :console,
   ].freeze
 
   # Overwrite this method to customize how bracket pools are displayed

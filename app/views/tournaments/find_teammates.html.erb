@@ -1,7 +1,41 @@
-<%= render :template => "tournaments/find_teammates_box" %>
+<table class="current-team-table responsive">
+   <thead>
+     <tr>
+       <th>Current Team Table</th>
+       <% current_user.player.bracket_pool_players.each do |x| %>
+        <th>
+          Team Name: <%= x.team.team_name %>
+        </th>
+       <% end %>
+     </tr>
+     <tr>
+       <th>Player nickname: </th>
+       <th>Player points: </th>
+       <th>Invite</th>
+     </tr>
+   </thead>
+   <tbody>
+     <% current_user.player.bracket_pool_players.each do |x| %>
+       <% x.team.bracket_pool_players.each do |y| %>
+     <tr>
+       <td>
+         <div class="current-team-item-category">  <em> <%= y.player.nickname %></em> </div>
+       </td>
+       <td>
+         <div class="current-team-item-category">  <em> <%= y.player.points %> </em> </div>
+       </td>
+       <td>
+        <div class="current-team-item-category">
+          <%= button_to "kick", { remote: true}, {class: 'invite-teammates-btn'} %>
+        </div>
+       </td>
+     </tr>
+     <% end %>
+     <% end %>
+   </tbody>
+</table>
 
-
-<table class="join-teammates-table">
+<table class="join-teammates-table responsive">
    <thead>
      <tr>
        <th>Join Teammates Table</th>
@@ -37,7 +71,7 @@
    </tbody>
 </table>
 
-<table class="find-teammates-table">
+<table class="find-teammates-table responsive">
    <thead>
      <tr>
        <th>Find Teammates Table</th>

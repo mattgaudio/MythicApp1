@@ -2,11 +2,12 @@ class BracketPoolsController < ApplicationController
 
   def create
     generate_bracket_pools
+    redirect_to action: :creator_button
   end
 
   def show
   end
-  
+
 
   def creator_button
     @user = current_user
@@ -15,18 +16,21 @@ class BracketPoolsController < ApplicationController
   def join
     @bracket_pool = BracketPool.find(params[:bracket_pool_id])
     @player = current_user.player
-    BracketPoolPlayer.create(player: @player, bracket_pool: @bracket_pool)
+    @team = Team.create(team_name: "#{name_pool}", bracket_pool: @bracket_pool)
+    BracketPoolPlayer.create(player: @player, bracket_pool: @bracket_pool, team: @team)
     @bracket_pool.update_attributes(player_size: @bracket_pool.players.count)
     redirect_to manager_path
   end
 
   def generate_bracket_pools
+    Time.zone = "Pacific Time (US & Canada)"
+    Chronic.time_class = Time.zone
     @brackets = Bracket.all
     @brackets.each do |x|
-      BracketPool.create(name: "#{x.title}_#{x.game.short_title}_'nightly_free' ", title: "nightly_free", bracket_id: x.id, end_time: 1.day.from_now, active: true, activation_time: DateTime.new(2017, 8, 17, 19, 00, 0))
-      BracketPool.create(name: "#{x.title}_#{x.game.short_title}_'nightly_10' ", title: "nightly_10", bracket_id: x.id, end_time: 1.day.from_now, active: true, activation_time: DateTime.new(2017, 8, 17, 19, 00, 0))
-      BracketPool.create(name: "#{x.title}_#{x.game.short_title}_'nightly_25' ", title: "nightly_25", bracket_id: x.id, end_time: 1.day.from_now, active: true, activation_time: DateTime.new(2017, 8, 17, 19, 00, 0))
-      BracketPool.create(name: "#{x.title}_#{x.game.short_title}_'nightly_100' ", title: "nightly_100", bracket_id: x.id, end_time: 1.day.from_now, active: true, activation_time: DateTime.new(2017, 8, 17, 19, 00, 0))
+      BracketPool.create(name: "", title: "Nightly Free", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
+      BracketPool.create(name: "", title: "Nightly 10", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
+      BracketPool.create(name: "", title: "Nightly 25", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
+      BracketPool.create(name: "", title: "Nightly 100", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
     end
   end
 
@@ -42,6 +46,11 @@ class BracketPoolsController < ApplicationController
     @bracket_pools.delete_all
   end
 
+  def destroy_bracket_pool_player
+
+  end
+
+
   def destroy
     delete_bracket_pools
     redirect_to action: :creator_button
@@ -50,7 +59,7 @@ class BracketPoolsController < ApplicationController
 
 
   def bracket_pool_params
-    params.require(:bracket_pool).permit(:name)
+    params.require(:bracket_pool).permit(:name, :player, :team)
   end
 
 end
