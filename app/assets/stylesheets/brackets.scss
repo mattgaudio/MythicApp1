@@ -94,15 +94,7 @@ padding: 8px;
 	width: 20vw;
 }
 
-.tourn-console-img {
-	border: 2px solid #333;
-	padding: 4px;
-	color: #000;
-	margin: 2px;
-	&:hover {
-		border: 2px solid #000
-	}
-}
+
 .tourn-square {
 	background-color: #444;
 }
@@ -324,4 +316,30 @@ ul.side-nav-list {
 .sticky-col {
 	height: 100%;
 	overflow-y: auto;
+}
+
+// Console box
+
+.tourn-item-console-box {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.console-img {
+
+}
+
+.console-img-active {
+	border: 1px solid #000;
+}
+
+.tourn-console-img {
+	border: 2px solid #333;
+	padding: 4px;
+	color: #000;
+	margin: 2px;
+	&:hover {
+		border: 2px solid #000
+	}
 }
