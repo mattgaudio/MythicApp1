@@ -42,6 +42,7 @@ gem 'jquery-ui-rails'
 gem 'challonge-api'
 gem 'clearance'
 gem 'chronic'
+gem 'rake'
 
 # Future Gems
 gem 'stripe'
@@ -68,7 +69,7 @@ group :development do
   gem 'pry'
 end
 
-group :production do 
+group :production do
 	gem 'pg'
 end
 
