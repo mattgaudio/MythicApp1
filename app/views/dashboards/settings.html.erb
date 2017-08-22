@@ -17,7 +17,7 @@
       <%= current_user.email %>
 
 
-      <%= form_for(@person) do |f| %>
+      <%= form_for(@person, url: user_password_path(@person.id), method: :put) do |f| %>
 
         <div class="field">
           <div class="dash-label"><%= f.label :email, class: "dash-label" %></div>

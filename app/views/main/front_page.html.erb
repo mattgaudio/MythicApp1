@@ -8,19 +8,19 @@
           <div class="Wallop-item">
             <div class="wallop-slide carousel-first-slide carousel-slide-img" alt="First slide">
               <div class="slide-box">
-                <div class="slide-box-header">This is a Header</div>
-                <div class="slide-box-button"><%= link_to "Join Bracket!", brackets_path %></div>              
+                <div class="slide-box-header">Welcome to MythicGaming!</div>
+                <div class="slide-box-button"><%= link_to "Join Bracket!", brackets_path %></div>
               </div>
             </div>
           </div>
-          <div class="Wallop-item">
+          <!-- <div class="Wallop-item">
             <div class="wallop-slide carousel-second-slide carousel-slide-img" alt="First slide">
               <div class="slide-box">
-                <div class="slide-box-header">This is a Header</div>
-                <div class="slide-box-button">Join Bracket!</div>
+                <div class="slide-box-header">Welcome to MythicGaming!</div>
+                <div class="slide-box-button"><%= link_to "Join Bracket!", brackets_path %></div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="Wallop-item">
             <div class="wallop-slide carousel-third-slide carousel-slide-img" alt="First slide">
               <div class="slide-box">
@@ -76,7 +76,7 @@
   <% @games.fps.order(game_group: :asc).order(long_title: :asc).each do |game| %>
      <div class="col-3 game-items">
         <div class="game-item fps-game-item">
-          <%= link_to brackets_path, class: "game-link" do  %>
+          <%= link_to brackets_path( (game.brackets.first.title if game.brackets.exists?) ), class: "game-link" do  %>
             <%= image_tag game.game_img.url(:l), class: "game-image" %>
           <% end %>
         </div>
@@ -143,43 +143,32 @@
 </div>
 
 <!-- SIGN IN & ACCOUNT CREATION -->
-<div class="box">
-  <div class="section-header">
-    <div class="section-header-content">Sign In | Account Creation</div>
-  </div>
-  <div class="row signup-section">
-    <div class="row">
-      <div class="col-6 sign-in-header">
-        <div class="sign-in-content"> Sign In </div>
-      </div>
-      <div class="col-6 create-account-header">
-        <div class="create-account-content"> Create Account </div>
-      </div>
+<% if signed_out? %>
+  <div class="box">
+    <div class="section-header">
+      <div class="section-header-content">Sign In | Account Creation</div>
     </div>
-    <div class="row">
-      <div class="col-6 sign-in-section">
-        <%= form_tag do %>
-          <%= label_tag(:email, "Email or Gamertag", class: "signin-email-label form-label") %>
-          <%= email_field(:user, :address, class: "signin-email-input medium form-input") %>
-          <%= label_tag(:password, "Password", class: "signin-password-label form-label") %>
-          <%= password_field_tag(:password, '', class: "signin-password-input medium form-input") %>
-          <%= submit_tag("Log in", class: "submit-btn") %>
-        <% end %>
+    <div class="row signup-section">
+      <div class="row">
+        <div class="col-6 sign-in-header">
+          <div class="sign-in-content"> Sign In </div>
+        </div>
+        <div class="col-6 create-account-header">
+          <div class="create-account-content"> Create Account </div>
+        </div>
       </div>
-      <div class="col-6 create-account-section">
-        <%= form_tag do %>
-          <%= label_tag(:email, "Email", class: "ca-email-label form-label") %>
-          <%= email_field(:user, :address, class: "ca-email-input medium form-input") %>
-          <%= label_tag(:password, "Password", class: "ca-password-label form-label") %>
-          <%= password_field_tag(:password, '', class: "ca-password-input medium form-input") %>
-          <%= label_tag(:confirm_password, "Confirm Password", class: "confirm-ca-password-label form-label") %>
-          <%= password_field_tag(:confirm_password, '', class: "confirm-ca-password-input medium form-input") %>
-          <%= submit_tag("Create Account", class: "submit-btn") %>
-        <% end %>
+      <div class="row">
+        <div class="col-6 sign-in-section">
+        <%= render :template => "sessions/new" %>
+
+        </div>
+        <div class="col-6 create-account-section">
+         <%= render :template => "users/new" %>
+        </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>
 
 <!-- STATISTICS -->
 <div class="box">
@@ -223,7 +212,19 @@
     <div class="row">
       <div class="col-3">
         <div class="current-players-item">
-          <div class="current-players-item-top"> Current Players:</div>
+          <div class="current-players-item-top"> Current Players xb1:</div>
+          <div class="current-players-item-mid">
+            <%= calculate_weekly_active_bracket_pools_count %>
+          </div>
+        </div>
+        <div class="brackets-filled-item">
+          <div class="brackets-filled-item-top"> Brackets Filled:</div>
+          <div class="brackets-filled-item-mid">NUMBER</div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="current-players-item">
+          <div class="current-players-item-top"> Current Players ps4:</div>
           <div class="current-players-item-mid">NUMBER</div>
         </div>
         <div class="brackets-filled-item">
@@ -233,7 +234,7 @@
       </div>
       <div class="col-3">
         <div class="current-players-item">
-          <div class="current-players-item-top"> Current Players:</div>
+          <div class="current-players-item-top"> Current Players steam:</div>
           <div class="current-players-item-mid">NUMBER</div>
         </div>
         <div class="brackets-filled-item">
@@ -243,17 +244,7 @@
       </div>
       <div class="col-3">
         <div class="current-players-item">
-          <div class="current-players-item-top"> Current Players:</div>
-          <div class="current-players-item-mid">NUMBER</div>
-        </div>
-        <div class="brackets-filled-item">
-          <div class="brackets-filled-item-top"> Brackets Filled:</div>
-          <div class="brackets-filled-item-mid">NUMBER</div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="current-players-item">
-          <div class="current-players-item-top"> Current Players:</div>
+          <div class="current-players-item-top"> Current Players all:</div>
           <div class="current-players-item-mid">NUMBER</div>
         </div>
         <div class="brackets-filled-item">

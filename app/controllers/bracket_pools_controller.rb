@@ -1,4 +1,5 @@
 class BracketPoolsController < ApplicationController
+  before_action :require_login
 
   def create
     generate_bracket_pools
@@ -27,10 +28,21 @@ class BracketPoolsController < ApplicationController
     Chronic.time_class = Time.zone
     @brackets = Bracket.all
     @brackets.each do |x|
-      BracketPool.create(name: "", title: "Nightly Free", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
-      BracketPool.create(name: "", title: "Nightly 10", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
-      BracketPool.create(name: "", title: "Nightly 25", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
-      BracketPool.create(name: "", title: "Nightly 100", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
+      BracketPool.create(name: "", title: "Nightly Free", console: "xb1", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
+      BracketPool.create(name: "", title: "Nightly Free", console: "ps4", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
+      BracketPool.create(name: "", title: "Nightly Free", console: "steam", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
+
+      BracketPool.create(name: "", title: "Nightly 10", console: "xb1", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
+      BracketPool.create(name: "", title: "Nightly 10", console: "ps4", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
+      BracketPool.create(name: "", title: "Nightly 10", console: "steam", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
+
+      BracketPool.create(name: "", title: "Nightly 25", console: "xb1", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
+      BracketPool.create(name: "", title: "Nightly 25", console: "ps4", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
+      BracketPool.create(name: "", title: "Nightly 25", console: "steam", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
+
+      BracketPool.create(name: "", title: "Nightly 100", console: "xb1", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
+      BracketPool.create(name: "", title: "Nightly 100", console: "ps4", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
+      BracketPool.create(name: "", title: "Nightly 100", console: "steam", bracket_id: x.id, end_time: Chronic.parse("tomorrow at 7pm"), active: true, activation_time: Chronic.parse("today at 8pm"), nightly: true)
     end
   end
 

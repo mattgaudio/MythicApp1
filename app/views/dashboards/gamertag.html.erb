@@ -14,13 +14,7 @@
       </div>
       <div class="col-9 dash-main-body">
 
-        <%= form_for(@person) do |f| %>
-          <%= f.label :nickname, class: "dash-label" %>
-          <div class="dash-value"><%= @person.nickname %></div>
-          <%= f.text_field :nickname %>
-          
-          <%= f.submit %>
-        <% end %>
+        <%= render :template => "players/edit" %>
 
       </div>
     </div>

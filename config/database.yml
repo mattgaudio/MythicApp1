@@ -19,10 +19,26 @@ development:
 test:
   <<: *default
   database: db/test.sqlite3
+#
+# production:
+#   <<: *default
+#   database: db/production.sqlite3
+# development:
+#   adapter: postgresql
+#   database: mythic_app1_development
+#   pool: 5
+#   timeout: 5000
+# test:
+#   adapter: postgresql
+#   database: mythic_app1_test
+#   pool: 5
+#   timeout: 5000
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: mythic_app1_production
+  pool: 5
+  timeout: 5000
 
 # PostgreSQL. Versions 9.1 and up are supported.
 #

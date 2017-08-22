@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170821031202) do
+ActiveRecord::Schema.define(version: 20170821232857) do
 
   create_table "bracket_pool_players", force: :cascade do |t|
     t.integer "bracket_pool_id"
@@ -89,11 +89,16 @@ ActiveRecord::Schema.define(version: 20170821031202) do
     t.boolean "active_player"
     t.integer "points"
     t.integer "team_id"
+    t.string "xb1_gamertag"
+    t.string "ps4_gamertag"
+    t.string "steam_username"
     t.index ["team_id"], name: "index_players_on_team_id"
     t.index ["user_id"], name: "index_players_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

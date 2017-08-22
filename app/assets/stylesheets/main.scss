@@ -367,10 +367,17 @@ form {
 .form-label {
 	color: #d2d2d2;
 	font-size: 18px;
+	min-width: 25vw !important;
+	text-align: center;
 }
 .form-input {
 	color: #d2d2d2;
 	font-size: 18px;
+	min-width: 25vw !important;
+}
+
+.other-links {
+	display: none;
 }
 
 // STATISTICS
@@ -388,6 +395,10 @@ form {
 	font-size: 18px;
 	color: #d2d2d2;
 	background-color: #333;
+	background-image: image-url("pattern2.jpg");
+	background-size: 100% 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 
 .statistics-catalogue-header {
@@ -458,7 +469,8 @@ form {
 	padding: 10px;
 }
 
-// INFORMATION
+// INFORMATION Section
+
 .information-section {
 	// background-image: image-url("background3.jpg");
 	background-color: #333;
@@ -466,6 +478,10 @@ form {
 	background-repeat: no-repeat;
 	min-height: 65vh;
 	color: #fff;
+	background-image: image-url("wallpaper14.jpg");
+	background-size: 100% 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 
 .info-section-header {
@@ -493,6 +509,8 @@ form {
 	margin: 10px 0px;
 	padding: 10px;
 	min-height: 25vh;
+	background-color: #000;
+	opacity: 0.7;
 }
 
 .info-list-header {

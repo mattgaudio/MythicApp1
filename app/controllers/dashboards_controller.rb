@@ -16,7 +16,6 @@ class DashboardsController < ApplicationController
   end
 
   def gamertag
-    @person = current_user
   end
 
   def payouts
@@ -36,6 +35,5 @@ class DashboardsController < ApplicationController
 
   def destroy
   end
-
 
 end

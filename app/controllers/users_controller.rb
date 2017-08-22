@@ -1,8 +1,16 @@
-class UsersController < ApplicationController
+class UsersController < Clearance::UsersController
   def new
   end
 
   def create
+    @user = user_from_params
+    if @user.save
+      sign_in @user
+      redirect_to new_player_path
+    else
+      flash.now[:error] = "Failed"
+      redirect_to sign_up_path
+    end
   end
 
   def edit
@@ -27,7 +35,23 @@ class UsersController < ApplicationController
   def destroy
   end
 
+  private
+
   def user_params
-    params.require(:user).permit(:nickname, :password, :email)
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
+
+ def user_from_params
+   email = user_params.delete(:email)
+   password = user_params.delete(:password)
+   password_confirmation = user_params.delete(:password_confirmation)
+
+   Clearance.configuration.user_model.new(user_params).tap do |user|
+     user.email = email
+     user.password = password
+     user.password_confirmation = password_confirmation
+   end
+ end
+
+
 end

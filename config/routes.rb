@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   # Resources
   resources :tournaments
   resources :users
+  resources :players
   resources :brackets do
     resources :bracket_players
   end

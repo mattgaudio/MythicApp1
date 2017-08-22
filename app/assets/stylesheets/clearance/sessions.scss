@@ -1,4 +1,4 @@
-.sign-up-form {
+.sign-in-form {
   border: 2px solid #000;
   width: 65vw;
   height: 75vh;
@@ -9,18 +9,59 @@
   align-items: center;
   flex-direction: column;
   background-image: image-url("wallpaper9.png");
-  background-color: #b3b3b3;
   background-position: center center;
   background-size: 100% 100%;
 
+  h2.other-links {
+    text-align: center;
+    margin-bottom: 10px;
+    border: 2px solid #000;
+    background-color: #555;
+    padding: 10px 25px;
+    color: #fff;
+  }
 }
 
-
-form.new_user {
+.form-field {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 10px 0;
+}
+
+.signin-email-label {
+  width: 35vw;
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+}
+.signin-email-input {
+  width: 35vw;
+  text-align: center;
+}
+
+.signin-password-label {
+  width: 35vw;
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+}
+.signin-password-input {
+  width: 35vw;
+  text-align: center;
+}
+
+.submit-btn {
+  border: 2px solid #000;
+  background-color: #555;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.other-links {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 h2.other-links {
@@ -32,50 +73,6 @@ h2.other-links {
   color: #fff;
   width: 65vw;
   margin: 0 auto;
-  margin-bottom: 10px;
-}
-
-
-.form-field {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-}
-
-.ca-email-label {
-  width: 35vw;
-  text-align: center;
-  color: #000;
-  font-size: 20px;
-}
-.ca-email-input {
-  width: 35vw;
-  text-align: center;
-}
-
-.ca-password-label {
-  width: 35vw;
-  text-align: center;
-  color: #000;
-  font-size: 20px;
-}
-.ca-password-input {
-  width: 35vw;
-  text-align: center;
-}
-
-.submit-btn {
-  border: 2px solid #000;
-  background-color: #555;
-  color: #fff;
-  padding: 10px 20px;
-  margin: 15px;
-}
-
-.other-links {
-  text-align: center;
   margin-bottom: 10px;
 }
 

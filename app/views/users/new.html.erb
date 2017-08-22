@@ -1,2 +1,16 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div id="clearance" class="sign-up">
+  <h2 class="other-links"><%= t(".title") %></h2>
+  <div class="sign-up-form">
+    <%= form_for @user, class: "sign-up-form" do |form| %>
+      <%= render partial: '/users/form', object: form %>
+
+      <div class="submit-field">
+        <%= form.submit class: "submit-btn" %>
+      </div>
+
+      <div class="other-links">
+        <%= link_to t(".sign_in"), sign_in_path %>
+      </div>
+    <% end %>
+  </div>
+</div>

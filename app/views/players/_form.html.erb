@@ -1,0 +1,23 @@
+<%= form_for @player do |f| %>
+
+	<% if @player.errors.any? %>
+	<ul>
+		<%= @player.errors.full_messages.each do |message| %>
+			<li><%= message %></li>
+		<% end %>
+	</ul>
+	<% end %>
+
+	<%= f.label :xb1_gamertag, "Xbox1 Gamertag" %>
+	<%= f.text_field :xb1_gamertag %>
+
+	<%= f.label :ps4_gamertag, "PS4 Gamertag" %>
+	<%= f.text_field :ps4_gamertag %>
+
+	<%= f.label :steam_username, "Steam Username" %>
+	<%= f.text_field :steam_username %>
+
+	<%= f.hidden_field :user_id, :value => current_user.id %>
+
+	<%= f.submit %>
+<% end %>

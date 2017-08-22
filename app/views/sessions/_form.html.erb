@@ -1,16 +1,17 @@
-<%= form_for :session, url: session_path do |form| %>
-  <div class="text-field">
-    <%= form.label :email %>
-    <%= form.text_field :email, type: 'email' %>
+<%= form_for :session, url: session_path, html: {class: "sign-in-form"} do |form| %>
+
+  <div class="form-field">
+    <%= form.label :email, class: "signin-email-label form-label" %>
+    <%= form.text_field :email, type: 'email', class: "signin-email-input medium form-input" %>
   </div>
 
-  <div class="password-field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
+  <div class="form-field">
+    <%= form.label :password, class: "signin-password-label form-label" %>
+    <%= form.password_field :password, class: "signin-password-input medium form-input" %>
   </div>
 
-  <div class="submit-field">
-    <%= form.submit %>
+  <div class="form-field">
+    <%= form.submit class: "submit-btn" %>
   </div>
 
   <div class="other-links">
