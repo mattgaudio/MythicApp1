@@ -1,0 +1,92 @@
+/* line 1, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/sessions.scss */
+.sign-in-form {
+  border: 2px solid #000;
+  width: 65vw;
+  height: 75vh;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(/dev-assets/wallpaper9-5bacf03fa3c75612395da03d10a8daf2fbdfe8085cb22407745bdc83809479e9.png);
+  background-position: center center;
+  background-size: 100% 100%;
+}
+/* line 15, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/sessions.scss */
+.sign-in-form h2.other-links {
+  text-align: center;
+  margin-bottom: 10px;
+  border: 2px solid #000;
+  background-color: #555;
+  padding: 10px 25px;
+  color: #fff;
+}
+
+/* line 25, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/sessions.scss */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+/* line 33, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/sessions.scss */
+.signin-email-label {
+  width: 35vw;
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+}
+
+/* line 39, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/sessions.scss */
+.signin-email-input {
+  width: 35vw;
+  text-align: center;
+}
+
+/* line 44, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/sessions.scss */
+.signin-password-label {
+  width: 35vw;
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+}
+
+/* line 50, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/sessions.scss */
+.signin-password-input {
+  width: 35vw;
+  text-align: center;
+}
+
+/* line 55, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/sessions.scss */
+.submit-btn {
+  border: 2px solid #000;
+  background-color: #555;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+/* line 62, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/sessions.scss */
+.other-links {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* line 67, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/sessions.scss */
+h2.other-links {
+  text-align: center;
+  border: 2px solid #000;
+  background-color: #555;
+  padding: 10px 25px;
+  color: #fff;
+  width: 65vw;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+/* line 79, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/sessions.scss */
+body {
+  background-color: #333;
+}
