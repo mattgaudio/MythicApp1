@@ -1,0 +1,61 @@
+@import url(tournaments/manifest.css);
+/* line 7, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.scss */
+body {
+  background-color: #000;
+}
+
+/* line 13, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.scss */
+.tournament-box {
+  border: 1px solid #000;
+}
+
+/* line 23, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.scss */
+.tab-nav-box {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+/* Style the tab */
+/* line 29, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.scss */
+div.tab-nav {
+  overflow: hidden;
+  border: 2px solid #000;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the buttons inside the tab */
+/* line 39, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.scss */
+div.tab-nav button {
+  float: left;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: #333;
+  margin: 15px;
+}
+
+/* Change background color of buttons on hover */
+/* line 52, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.scss */
+div.tab-nav button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+/* line 57, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.scss */
+div.tab-nav button.active {
+  background-color: #ccc;
+  border-bottom: 10px solid #fff;
+  color: #000;
+}
+
+/* Style the tab content */
+/* line 67, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.scss */
+.tabcontent {
+  display: none;
+}

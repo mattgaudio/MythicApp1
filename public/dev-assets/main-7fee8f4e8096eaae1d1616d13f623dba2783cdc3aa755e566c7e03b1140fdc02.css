@@ -1,0 +1,577 @@
+/* line 8, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.hero-section {
+  min-height: 90vh;
+  background-color: #444;
+  background-image: url(/dev-assets/image1-11100adb9b497033f870ce831301af91e3869a6c4604f67fb5734b5b4f870237.jpg);
+  background-image-width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 21, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.hero-box {
+  height: 80vh;
+  width: 80vw;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 30, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.wallop-main {
+  height: 75vh;
+  width: 75vw;
+}
+
+/* line 35, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.wallop-slide {
+  height: 75vh;
+  width: 75vw;
+}
+
+/* line 40, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.carousel-slide-img {
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+/* line 44, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.carousel-first-slide {
+  background-image: url(/dev-assets/wallpaper8-3e09e6da51ec42e41fae85007d17a84ca335003807b025359502aa5abc3ed0ca.jpg);
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+/* line 49, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.carousel-second-slide {
+  background-image: url(/dev-assets/wallpaper10-a7bde75f6399842fb7bacf85f3f57ad90de697d7acab1bb6fba87b3a5edf6ad6.jpg);
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+/* line 54, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.carousel-third-slide {
+  background-image: url(/dev-assets/wallpaper7-e53f1773dc03cc722f20abaf48f3a23b9c031a3df39c3edb1bfcf66c28fe313a.jpg);
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+/* line 59, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.carousel-fourth-slide {
+  background-image: url(/dev-assets/wallpaper11-584ed6eebe3646ec53444b9fd12569a36a3f175a96cf8cc6fd61b43f19db43c9.jpg);
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+/* line 64, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.carousel-fifth-slide {
+  background: url(/dev-assets/h3img23-a638073fa2e9fc33eea883de43502e22b0b3176cf28ebc5cef688de9af4e4576.jpg);
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+/* line 70, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.slide-box {
+  position: absolute;
+  bottom: 5vh;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 30vw;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #000;
+  background-color: #333;
+  opacity: 0.75;
+  z-index: 125;
+}
+
+/* line 89, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.slide-box-header {
+  color: #d2d2d2;
+  margin: 25px;
+  color: #fff;
+  font-size: 18px;
+}
+/* line 94, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.slide-box-header:hover {
+  color: #fff;
+}
+
+/* line 100, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.slide-box-button {
+  color: #fff;
+  margin: 25px;
+}
+/* line 103, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.slide-box-button a {
+  background-color: #333;
+  border: 1px solid #000;
+  padding: 15px 25px;
+}
+
+/* line 111, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.wallop-buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 75vh;
+  width: 75vw;
+}
+
+/* line 120, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.Wallop-buttonPrevious {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 75vh;
+  width: 12vw;
+  opacity: 0.10;
+  margin: 0;
+}
+
+/* line 131, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.Wallop-buttonNext {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 75vh;
+  width: 12vw;
+  opacity: 0.10;
+  margin: 0;
+}
+
+/* line 148, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.header, .games-header {
+  height: 10vh;
+  border: 2px solid #000;
+  margin: 2vh 0vw;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  font-size: 22px;
+  color: #d9d9d9;
+}
+
+/* line 158, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.fps-games-header .part-1 {
+  background-color: #6600ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 164, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.fps-games-header .part-2 {
+  color: #6600ff;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 171, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.moba-games-header .part-1 {
+  background-color: #ff8533;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 177, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.moba-games-header .part-2 {
+  color: #ff8533;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 184, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.hero-games-header .part-1 {
+  background-color: #0066cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 190, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.hero-games-header .part-2 {
+  color: #0066cc;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 197, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.more-games-header .part-1 {
+  background-color: #00b386;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 203, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.more-games-header .part-2 {
+  color: #00b386;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 211, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.games-section {
+  background-color: #444;
+  flex-wrap: wrap;
+  flex: 1;
+  min-height: 50vh;
+}
+
+/* line 218, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.game-items {
+  background-color: #333;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 226, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.game-item {
+  height: 90%;
+  width: 80%;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 234, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.fps-game-item {
+  background-color: #6600ff;
+  background-color: #000;
+}
+
+/* line 238, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.moba-game-item {
+  background-color: #ff8533;
+  background-color: #000;
+}
+
+/* line 242, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.hero-game-item {
+  background-color: #0066cc;
+  background-color: #000;
+}
+
+/* line 246, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.more-game-item {
+  background-color: #00b386;
+  background-color: #000;
+}
+
+/* line 251, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.game-link {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+/* line 260, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.game-image {
+  background-image: url(/dev-assets/h2img1-c9bc1af6c4fce98fad22e12a53bfc8b4f31bcffcb520910344264915985cdf92.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 92%;
+  width: 95%;
+}
+
+/* line 271, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.section-header {
+  height: 10vh;
+  border: 2px solid #000;
+  margin: 2vh 0vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  background-color: #333;
+  color: #d9d9d9;
+}
+
+/* line 285, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.signup-section {
+  font-size: 22px;
+  border: 2px solid #000;
+  background-image: url(/dev-assets/hexagonimg2-83f1b83ac3a5a6da9adf599d2f5db7dabfc9f9c949859d2ad399e913747d999e.jpg);
+  background-size: 50% 100%;
+  background-repeat: repeat;
+  color: #d2d2d2;
+  min-height: 50vh;
+}
+
+/* line 295, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.sign-in-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 301, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.create-account-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 307, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.sign-in-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+}
+
+/* line 313, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.create-account-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+}
+
+/* line 326, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.signin-email-input {
+  text-align: center;
+}
+
+/* line 333, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.signin-password-input {
+  text-align: center;
+}
+
+/* line 340, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.ca-email-input {
+  text-align: center;
+}
+
+/* line 347, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.ca-password-input {
+  text-align: center;
+}
+
+/* line 354, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.confirm-ca-password-input {
+  text-align: center;
+}
+
+/* line 358, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.submit-btn {
+  border: 2px solid #444;
+  opacity: 0.9;
+  padding: 10px 20px;
+  color: #d2d2d2;
+  background-color: #333;
+  cursor: pointer;
+}
+
+/* line 366, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* line 372, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.form-label {
+  color: #d2d2d2;
+  font-size: 18px;
+  min-width: 25vw !important;
+  text-align: center;
+}
+
+/* line 378, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.form-input {
+  color: #d2d2d2;
+  font-size: 18px;
+  min-width: 25vw !important;
+}
+
+/* line 384, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.other-links {
+  display: none;
+}
+
+/* line 389, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.statistics-header .col-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 18px;
+  color: #d2d2d2;
+}
+
+/* line 398, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.statistics-section {
+  border: 2px solid #000;
+  font-size: 18px;
+  color: #d2d2d2;
+  background-color: #333;
+  background-image: url(/dev-assets/pattern2-22be1e690d4a18049eb8251476519c592c74da5befd7f6febe456d21aad8c44b.jpg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* line 409, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.statistics-catalogue-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 414, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.statistics-catalogue-item {
+  border: 2px solid #000;
+  font-weight: bold;
+  padding: 10px 25px;
+}
+
+/* line 421, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.console-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+
+/* line 428, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.logo-img {
+  color: #000 !important;
+  filter: grayscale(100%);
+}
+
+/* line 436, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.statistics-header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+}
+
+/* line 442, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.statistics-header-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12vh;
+}
+
+/* line 448, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.current-players-item {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* line 458, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.current-players-item-mid {
+  color: #2952a3;
+  padding: 10px;
+}
+
+/* line 462, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.brackets-filled-item {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* line 472, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.brackets-filled-item-mid {
+  color: #339966;
+  padding: 10px;
+}
+
+/* line 479, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.information-section {
+  background-color: #333;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 65vh;
+  color: #fff;
+  background-image: url(/dev-assets/wallpaper14-6861d6e63961630cee4893ffd5aa246bb0130f263e52ea678bd4725b57bb3204.jpg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* line 492, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.info-section-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+/* line 503, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.info-section-item-header {
+  color: #000;
+  border: 2px solid #336699;
+  border-left: 25px solid #336699;
+  padding: 15px 25px;
+  line-height: 1.2em;
+}
+
+/* line 512, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.info-list-group {
+  border: 2px solid #000;
+  margin: 10px 0px;
+  padding: 10px;
+  min-height: 25vh;
+  background-color: #000;
+  opacity: 0.7;
+}
+
+/* line 521, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.info-list-header {
+  color: #000;
+  font-size: 18px;
+  border: 2px solid #336699;
+  border-left: 25px solid #336699;
+  padding: 5px 15px;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* line 533, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/main.scss */
+.info-list-item {
+  margin-left: 25px;
+}
