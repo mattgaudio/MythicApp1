@@ -16,6 +16,7 @@ class DashboardsController < ApplicationController
   end
 
   def gamertag
+    @player = current_user.player
   end
 
   def payouts

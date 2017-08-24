@@ -8,8 +8,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: image-url("wallpaper9.png");
   background-color: #b3b3b3;
+  background-image: image-url("wallpaper9.png");
   background-position: center center;
   background-size: 100% 100%;
 
@@ -25,14 +25,12 @@ form.new_user {
 
 h2.other-links {
   text-align: center;
-
   border: 2px solid #000;
-  background-color: #555;
+  background-color: #333;
   padding: 10px 25px;
   color: #fff;
   width: 65vw;
-  margin: 0 auto;
-  margin-bottom: 10px;
+  margin: 2vh auto;
 }
 
 
@@ -49,10 +47,12 @@ h2.other-links {
   text-align: center;
   color: #000;
   font-size: 20px;
+  width: 35vw;
 }
 .ca-email-input {
   width: 35vw;
   text-align: center;
+  width: 35vw;
 }
 
 .ca-password-label {
@@ -60,10 +60,12 @@ h2.other-links {
   text-align: center;
   color: #000;
   font-size: 20px;
+  width: 35vw;
 }
 .ca-password-input {
   width: 35vw;
   text-align: center;
+  width: 35vw;
 }
 
 .submit-btn {
@@ -76,9 +78,8 @@ h2.other-links {
 
 .other-links {
   text-align: center;
-  margin-bottom: 10px;
 }
 
 body {
-  background-color: #333;
+  background-color: #000;
 }

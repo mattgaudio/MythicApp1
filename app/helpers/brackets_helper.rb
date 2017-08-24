@@ -4,5 +4,4 @@ module BracketsHelper
 
   end
 
-
 end

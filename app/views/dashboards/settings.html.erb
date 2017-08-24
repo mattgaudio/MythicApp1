@@ -24,14 +24,13 @@
           <div class="dash-value"><%= f.email_field :email, class: "dash-input" %></div>
         </div>
 
-        <div class="field">
-          <div class="dash-label"><%= f.label :password, class: "dash-label" %></div>
-          <div class="dash-value"><%= f.password_field :password, class: "dash-input" %></div>
-        </div>
-
-
-        <%= f.submit %>
+        <%= f.submit "Update email", class: "submit-btn" %>
       <% end %>
+
+      <div class="field">
+        <div class="dash-label">Reset Password: </div>
+        <div class="label-response"><%= link_to "Reset Password Link", new_password_path %></div>
+      </div>
 
 
       </div>

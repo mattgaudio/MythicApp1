@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+	background-color: #000;
+}
+
 .tourn-section {
 	color: #d2d2d2;
 	margin-right: 8px;
@@ -23,20 +27,11 @@
 	background-color: #333;
 	margin-bottom: 2vh;
 	border: 2px solid #000;
+	// background-image: image-url("wallpaper17.jpg");
+	// background-position: center center;
+	// background-size: 100% 100%;
 }
-.tourn-fps-game-item {
 
-}
-.tourn-moba-game-item {
-
-
-}
-.tourn-hero-game-item {
-
-}
-.tourn-more-game-item {
-
-}
 
 .tourn-game-header {
 	padding: 4px;
@@ -162,6 +157,11 @@ padding: 8px;
 	-webkit-appearance: push-button;
 	background-color: #004466;
 
+}
+
+.bracket-header {
+	font-size: 18px;
+	margin: 10px 0px;
 }
 
 .bracket-button {
@@ -320,10 +320,12 @@ ul.side-nav-list {
 
 // Console box
 
-.tourn-item-console-box {
+.console-box {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 
 .console-img {
@@ -342,4 +344,34 @@ ul.side-nav-list {
 	&:hover {
 		border: 2px solid #000
 	}
+}
+
+.console-select {
+margin: 10px;
+}
+
+.select-option {
+	padding: 20px;
+	margin: 5px;
+}
+
+.xbox-buttons {
+	display: none;
+
+}
+
+.ps4-buttons {
+	display: none;
+}
+
+.steam-buttons {
+	display: none;
+}
+
+.active {
+	display: block;
+}
+
+.change-color {
+	color: red !important;
 }

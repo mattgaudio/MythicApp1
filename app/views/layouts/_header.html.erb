@@ -67,24 +67,20 @@
     <% if joined_bracket %>
     <div class="nav-grouping">
       <div class="nav-button"><%= link_to manager_path, class: "nav-button-link nav-button-manager-link" do %>Manager<% end %></div>
+      <ul class="nav-list">
+        <li class="nav-list-item"><%= link_to "current_user_nightly_bracket", manager_path, class: "nav-list-item-link" %></li>
+        <li class="nav-list-item"><%= link_to "Weekly Bracket", manager_path, class: "nav-list-item-link" %></li>
+      </ul>
     </div>
     <% end %>
 
       <div class="nav-grouping">
         <div class="nav-button"><%= link_to root_path, class: "nav-button-link" do %>Information <i class="fa fa-caret-down"></i><% end %></div>
         <ul class="nav-list">
-        	<li class="nav-list-item"><%= link_to "Tournament Basics", manager_path, class: "nav-list-item-link" %></li>
-          <li class="nav-list-item"><%= link_to "Reddit", manager_path, class: "nav-list-item-link" %></li>
-          <li class="nav-list-item"><%= link_to "FAQ", manager_path, class: "nav-list-item-link" %></li>
-          <li class="nav-list-item"><%= link_to "Support", manager_path, class: "nav-list-item-link" %></li>
-        </ul>
-      </div>
-      <div class="nav-grouping">
-        <div class="nav-button"><%= link_to root_path, class: "nav-button-link" do %>More <i class="fa fa-caret-down"></i><% end %></div>
-        <ul class="nav-list">
-          <li class="nav-list-item"><%= link_to "Statistics", manager_path, class: "nav-list-item-link" %></li>
-          <li class="nav-list-item"><%= link_to "Mythic Halo", manager_path, class: "nav-list-item-link" %></li>
-          <li class="nav-list-item"><%= link_to "About us", manager_path, class: "nav-list-item-link" %></li>
+        	<li class="nav-list-item"><%= link_to "Tournament Basics", tournament_basics_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Statistics", statistics_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Reddit", "https://www.reddit.com/r/MythicGaming/", class: "nav-list-item-link", target: "_blank" %></li>
+          <li class="nav-list-item"><%= link_to "FAQ", faq_path, class: "nav-list-item-link" %></li>
           <li class="nav-list-item"><%= link_to "Support", manager_path, class: "nav-list-item-link" %></li>
         </ul>
       </div>

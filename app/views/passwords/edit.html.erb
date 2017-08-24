@@ -5,14 +5,14 @@
 
   <%= form_for :password_reset,
         url: user_password_path(@user, token: @user.confirmation_token),
-        html: { method: :put } do |form| %>
-    <div class="password-field">
-      <%= form.label :password %>
-      <%= form.password_field :password %>
+        html: { method: :put, class: "passwords-form" } do |form| %>
+    <div class="password-field form-field">
+      <%= form.label :password, class: "form-label" %>
+      <%= form.password_field :password, class: "form-input" %>
     </div>
 
-    <div class="submit-field">
-      <%= form.submit %>
+    <div class="submit-field form-field">
+      <%= form.submit class: "submit-btn" %>
     </div>
   <% end %>
 </div>

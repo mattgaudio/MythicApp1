@@ -9,7 +9,7 @@
             <div class="wallop-slide carousel-first-slide carousel-slide-img" alt="First slide">
               <div class="slide-box">
                 <div class="slide-box-header">Welcome to MythicGaming!</div>
-                <div class="slide-box-button"><%= link_to "Join Bracket!", brackets_path %></div>
+                <div class="slide-box-button"><%= link_to "Join a Bracket!", brackets_path %></div>
               </div>
             </div>
           </div>
@@ -24,24 +24,24 @@
           <div class="Wallop-item">
             <div class="wallop-slide carousel-third-slide carousel-slide-img" alt="First slide">
               <div class="slide-box">
-                <div class="slide-box-header">This is a Header</div>
-                <div class="slide-box-button">Join Bracket!</div>
+                <div class="slide-box-header">View Tournament Basics</div>
+                <div class="slide-box-button"><%= link_to "Tournament Basics", tournament_basics_path %></div>
               </div>
             </div>
           </div>
           <div class="Wallop-item">
            <div class="wallop-slide carousel-fourth-slide carousel-slide-img" alt="First slide">
              <div class="slide-box">
-                <div class="slide-box-header">This is a Header</div>
-                <div class="slide-box-button">Join Bracket!</div>
+                <div class="slide-box-header">View Tournament Statistics</div>
+                <div class="slide-box-button"><%= link_to "Statistics", statistics_path %></div>
               </div>
            </div>
           </div>
           <div class="Wallop-item">
             <div class="wallop-slide carousel-fifth-slide carousel-slide-img" alt="First slide">
               <div class="slide-box">
-                <div class="slide-box-header">This is a Header</div>
-                <div class="slide-box-button">Join Bracket!</div>
+                <div class="slide-box-header">View FAQ Information</div>
+                <div class="slide-box-button"><%= link_to "FAQ", faq_path %></div>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@
   <% @games.fps.order(game_group: :asc).order(long_title: :asc).each do |game| %>
      <div class="col-3 game-items">
         <div class="game-item fps-game-item">
-          <%= link_to brackets_path( (game.brackets.first.title if game.brackets.exists?) ), class: "game-link" do  %>
+          <%= link_to brackets_path(anchor: (game.short_title if game.brackets.exists?) ), class: "game-link" do  %>
             <%= image_tag game.game_img.url(:l), class: "game-image" %>
           <% end %>
         </div>
@@ -214,7 +214,38 @@
         <div class="current-players-item">
           <div class="current-players-item-top"> Current Players xb1:</div>
           <div class="current-players-item-mid">
-            <%= calculate_weekly_active_bracket_pools_count %>
+            <%= calculate_weekly_xb1_active_bracket_pools_count %>
+          </div>
+        </div>
+        <div class="brackets-filled-item">
+          <div class="brackets-filled-item-top"> Brackets Filled:</div>
+          <div class="brackets-filled-item-mid">
+            Number
+
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="current-players-item">
+          <div class="current-players-item-top"> Current Players ps4:</div>
+          <div class="current-players-item-mid">
+            <%= calculate_weekly_ps4_active_bracket_pools_count %>
+
+          </div>
+        </div>
+        <div class="brackets-filled-item">
+          <div class="brackets-filled-item-top"> Brackets Filled:</div>
+          <div class="brackets-filled-item-mid">
+            Number
+
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="current-players-item">
+          <div class="current-players-item-top"> Current Players steam:</div>
+          <div class="current-players-item-mid">
+            <%= calculate_weekly_steam_active_bracket_pools_count %>
           </div>
         </div>
         <div class="brackets-filled-item">
@@ -224,28 +255,10 @@
       </div>
       <div class="col-3">
         <div class="current-players-item">
-          <div class="current-players-item-top"> Current Players ps4:</div>
-          <div class="current-players-item-mid">NUMBER</div>
-        </div>
-        <div class="brackets-filled-item">
-          <div class="brackets-filled-item-top"> Brackets Filled:</div>
-          <div class="brackets-filled-item-mid">NUMBER</div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="current-players-item">
-          <div class="current-players-item-top"> Current Players steam:</div>
-          <div class="current-players-item-mid">NUMBER</div>
-        </div>
-        <div class="brackets-filled-item">
-          <div class="brackets-filled-item-top"> Brackets Filled:</div>
-          <div class="brackets-filled-item-mid">NUMBER</div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="current-players-item">
           <div class="current-players-item-top"> Current Players all:</div>
-          <div class="current-players-item-mid">NUMBER</div>
+          <div class="current-players-item-mid">
+            <%= calculate_weekly_total_active_bracket_pools_count %>
+          </div>
         </div>
         <div class="brackets-filled-item">
           <div class="brackets-filled-item-top"> Brackets Filled:</div>

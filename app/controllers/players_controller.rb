@@ -18,11 +18,7 @@ class PlayersController < ApplicationController
 
 	def update
 		@player = Player.update(player_params)
-		if @player.save
-			redirect_to dash_gamertag_path
-		else
-			redirect_to dash_gamertag_path
-		end
+		redirect_to dash_gamertag_path
 	end
 
 	private

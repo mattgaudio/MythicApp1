@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
-  resources :products
+
+
+
   # Routes for Main Controller
   root 'main#front_page'
+  get 'tournament_basics' => "pages#tournament_basics"
+  get 'statistics' => "pages#statistics"
+  get 'faq' => "pages#faq"
 
   # Routes for Brackets and Tournaments Controllers
   get 'brackets' => "brackets#brackets"
@@ -27,6 +32,7 @@ Rails.application.routes.draw do
   resources :tournaments
   resources :users
   resources :players
+  resources :products
   resources :brackets do
     resources :bracket_players
   end

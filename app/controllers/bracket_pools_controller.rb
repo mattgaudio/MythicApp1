@@ -1,6 +1,10 @@
 class BracketPoolsController < ApplicationController
   before_action :require_login
 
+  before_action :require_player
+
+  # Rest Actions
+
   def create
     generate_bracket_pools
     redirect_to action: :creator_button
@@ -14,13 +18,22 @@ class BracketPoolsController < ApplicationController
     @user = current_user
   end
 
+  # Non-Rest Actions
+
   def join
     @bracket_pool = BracketPool.find(params[:bracket_pool_id])
     @player = current_user.player
     @team = Team.create(team_name: "#{name_pool}", bracket_pool: @bracket_pool)
-    BracketPoolPlayer.create(player: @player, bracket_pool: @bracket_pool, team: @team)
-    @bracket_pool.update_attributes(player_size: @bracket_pool.players.count)
-    redirect_to manager_path
+    @bracket_pool_player = BracketPoolPlayer.new(player: @player, bracket_pool: @bracket_pool, team: @team)
+    if @bracket_pool_player.save
+      @bracket_pool.update_attributes(player_size: @bracket_pool.players.count)
+      flash[:success] = "Succesfully joined bracket!"
+          redirect_to manager_path
+    else
+      flash[:error] = @bracket_pool_player.errors.full_messages.join("\n")
+      redirect_to brackets_path
+    end
+
   end
 
   def generate_bracket_pools
@@ -70,8 +83,16 @@ class BracketPoolsController < ApplicationController
 
 
 
-  def bracket_pool_params
-    params.require(:bracket_pool).permit(:name, :player, :team)
+  def bracket_pool_player_params
+    params.require(:bracket_pool_player).permit(:name, :player, :team)
+  end
+
+  def require_player
+    if current_user.player
+    else
+      redirect_to new_player_path
+      flash[:error] = "Player creation required to join bracket"
+    end
   end
 
 end

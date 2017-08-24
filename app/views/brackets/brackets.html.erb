@@ -14,25 +14,25 @@
         <div class="side-nav-item-header">FPS Games</div>
         <% @fps_games.each do |game| %>
         <ul class="side-nav-list">
-          <li class="side-nav-item"><%= game.short_title %></li>
+          <li class="side-nav-item"><%= link_to "#{game.short_title} (#{(game.brackets.count)})", "##{game.short_title}", data: { turbolinks: false }  %> </li>
         </ul>
         <% end %>
         <div class="side-nav-item-header">MOBA Games</div>
         <% @moba_games.each do |game| %>
         <ul class="side-nav-list">
-          <li class="side-nav-item"><%= game.short_title %></li>
+          <li class="side-nav-item"><%= link_to "#{game.short_title} (#{(game.brackets.count)})", "##{game.short_title}", data: { turbolinks: false }  %> </li>
         </ul>
         <% end %>
         <div class="side-nav-item-header">Hero Games</div>
        <% @more_games.each do |game| %>
         <ul class="side-nav-list">
-          <li class="side-nav-item"><%= game.short_title %></li>
+          <li class="side-nav-item"><%= link_to "#{game.short_title} (#{(game.brackets.count)})", "##{game.short_title}", data: { turbolinks: false }  %> </li>
         </ul>
         <% end %>
         <div class="side-nav-item-header">More Games</div>
         <% @hero_games.each do |game| %>
         <ul class="side-nav-list">
-          <li class="side-nav-item"><%= game.short_title %></li>
+          <li class="side-nav-item"><%= link_to "#{game.short_title} (#{(game.brackets.count)})", "##{game.short_title}", data: { turbolinks: false }  %> </li>
         </ul>
         <% end %>
       </nav>

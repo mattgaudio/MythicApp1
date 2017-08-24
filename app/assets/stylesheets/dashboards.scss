@@ -51,6 +51,9 @@
   background-color: #444;
   color: #d2d2d2;
   min-height: 80vh;
+  background-image: image-url("wallpaper9.png");
+  background-size: 100% 100%;
+  background-position: center center;
 
 }
 
@@ -60,25 +63,26 @@
 }
 
 .dash-label {
-  padding: 20px;
+  padding: 15px;
   background-color: #555;
   color: #fff;
   margin: 0 20px;
-  min-width: 12vw;
+  min-width: 15vw;
   font-size: 16px;
 
 }
 
 .dash-value {
-  padding: 20px;
+  padding: 15px;
   background-color: #555;
   color: #fff;
   margin: 0 20px;
+  min-width: 15vw;
 }
 
 .dash-button {
   a {
-    padding: 20px;
+    padding: 10px 20px;
     background-color: #555;
     color: #fff;
     margin: 0 20px;
@@ -95,5 +99,71 @@
   padding: 20px;
   background-color: #555;
   min-width: 20vw;
+
+}
+
+.submit-btn {
+  border: 2px solid #000;
+  color: #d2d2d2;
+  background-color: #1a1a1a;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 11px;
+  margin: 10px 20px;
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+  }
+}
+
+// Player Form
+
+.form-header {
+  width: 65vw;
+  margin: 2vh auto;
+  border: 2px solid #000;
+  background-color: #333;
+  text-align: center;
+  color: #fff;
+  h5 {
+    color: #336699;
+  }
+  h2 {
+    color: #000;
+  }
+}
+.player-form {
+  width: 65vw;
+  height: 75vh;
+  border: 2px solid #000;
+  background-image: image-url("wallpaper9.png");
+  background-size: 100% 100%;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh auto;
+}
+
+.form-field {
+  margin: 2vh 0;
+  color: #fff;
+  font-size: 18px !important;
+
+}
+
+.form-label {
+  text-align: center;
+  width: 35vw;
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+
+}
+
+.form-input {
+  text-align: center;
+  width: 35vw;
 
 }

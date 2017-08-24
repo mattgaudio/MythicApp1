@@ -12,14 +12,6 @@
   background-position: center center;
   background-size: 100% 100%;
 
-  h2.other-links {
-    text-align: center;
-    margin-bottom: 10px;
-    border: 2px solid #000;
-    background-color: #555;
-    padding: 10px 25px;
-    color: #fff;
-  }
 }
 
 .form-field {
@@ -66,16 +58,14 @@
 
 h2.other-links {
   text-align: center;
-
   border: 2px solid #000;
-  background-color: #555;
+  background-color: #333;
   padding: 10px 25px;
   color: #fff;
   width: 65vw;
-  margin: 0 auto;
-  margin-bottom: 10px;
+  margin: 2vh auto;
 }
 
 body {
-  background-color: #333;
+  background-color: #000;
 }

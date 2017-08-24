@@ -1,4 +1,4 @@
-<%= form_for @player do |f| %>
+<%= form_for @player, html: { class: "player-form"} do |f| %>
 
 	<% if @player.errors.any? %>
 	<ul>
@@ -8,16 +8,22 @@
 	</ul>
 	<% end %>
 
-	<%= f.label :xb1_gamertag, "Xbox1 Gamertag" %>
-	<%= f.text_field :xb1_gamertag %>
-
-	<%= f.label :ps4_gamertag, "PS4 Gamertag" %>
-	<%= f.text_field :ps4_gamertag %>
-
-	<%= f.label :steam_username, "Steam Username" %>
-	<%= f.text_field :steam_username %>
+<div class="form-field">
+	<%= f.label :xb1_gamertag, "Xbox1 Gamertag", class: "form-label" %>
+	<%= f.text_field :xb1_gamertag, class: "form-input" %>
+</div>
+<div class="form-field">
+	<%= f.label :ps4_gamertag, "PS4 Gamertag", class: "form-label" %>
+	<%= f.text_field :ps4_gamertag, class: "form-input" %>
+</div>
+<div class="form-field">
+	<%= f.label :steam_username, "Steam Username", class: "form-label" %>
+	<%= f.text_field :steam_username, class: "form-input" %>
+</div>
 
 	<%= f.hidden_field :user_id, :value => current_user.id %>
 
-	<%= f.submit %>
+<div class="form-field">
+	<%= f.submit class: "submit-btn" %>
+</div>
 <% end %>

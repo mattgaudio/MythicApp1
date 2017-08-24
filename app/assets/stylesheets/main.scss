@@ -82,19 +82,24 @@
 	border: 2px solid #000;
 	background-color: #333;
 	opacity: 0.75;
+	z-index: 125;
 
 }
 
 .slide-box-header {
-	color: #000;
-	margin: 10px;
+	color: #d2d2d2;
+	margin: 25px;
 	color: #fff;
+	font-size: 18px;
+	&:hover {
+		color: #fff;
+	}
 
 }
 
 .slide-box-button {
 	color: #fff;
-	margin: 10px;
+	margin: 25px;
 	a {
 		background-color: #333;
 		border: 1px solid #000;
@@ -118,7 +123,7 @@
   top: 0;
   height: 75vh;
   width: 12vw;
-  opacity: 0.15;
+  opacity: 0.10;
   margin: 0;
 
 }
@@ -129,7 +134,7 @@
   top: 0;
   height: 75vh;
   width: 12vw;
-  opacity: 0.15;
+  opacity: 0.10;
   margin: 0;
 
 }

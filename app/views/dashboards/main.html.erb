@@ -18,9 +18,19 @@
           <div><%= button_to "View Settings", dashboards_path, class: "dash-button" %></div>
         </div>
         <div class="field">
-          <div class="dash-label">Nickname: </div>
-          <div class="label-response"><%= current_user.nickname ? current_user.nickname : "nickname" %></div>
-          <div class="dash-button"><%= button_to "View Player", dashboards_path, class: "dash-button" %></div>
+          <div class="dash-label">Xbox1 Gamertag </div>
+          <div class="label-response"><%= current_user.player.xb1_gamertag ? current_user.player.xb1_gamertag : "xb1_gamertag" %></div>
+          <div class="dash-button"><%= button_to "Edit Gamertag", dash_gamertag_path, class: "dash-button" %></div>
+        </div>
+        <div class="field">
+          <div class="dash-label">PS4 Gamertag </div>
+          <div class="label-response"><%= current_user.player.ps4_gamertag ? current_user.player.ps4_gamertag : "xb1_gamertag" %></div>
+          <div class="dash-button"><%= button_to "Edit Gamertag", dash_gamertag_path, class: "dash-button" %></div>
+        </div>
+        <div class="field">
+          <div class="dash-label">Steam Username </div>
+          <div class="label-response"><%= current_user.player.steam_username ? current_user.player.steam_username : "xb1_gamertag" %></div>
+          <div class="dash-button"><%= button_to "Edit Gamertag", dash_gamertag_path, class: "dash-button" %></div>
         </div>
         <div class="field">
           <div class="dash-label">Pools Joined: </div>
