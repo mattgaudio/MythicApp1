@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170821232857) do
+ActiveRecord::Schema.define(version: 20170824062048) do
 
   create_table "bracket_pool_players", force: :cascade do |t|
     t.integer "bracket_pool_id"
@@ -119,9 +119,6 @@ ActiveRecord::Schema.define(version: 20170821232857) do
     t.string "name"
     t.string "description"
     t.integer "tournament_id"
-    t.boolean "open_signup"
-    t.boolean "show_rounds"
-    t.boolean "private"
     t.datetime "start_at"
     t.integer "bracket_id"
     t.index ["bracket_id"], name: "index_tournaments_on_bracket_id"
