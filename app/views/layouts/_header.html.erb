@@ -4,7 +4,7 @@
     <div class="nav-left">
       <div class="nav-grouping">
         <div class="nav-button logo-link"><%= link_to root_path, class: "logo-link" do %>
-        	<i class="fa fa-cubes"></i> Mythic Gaming
+        	<i class="fa fa-cubes"></i> Mythic Gaming(alpha)
         <% end %>
         </div>
       </div>
@@ -84,12 +84,15 @@
           <li class="nav-list-item"><%= link_to "Support", manager_path, class: "nav-list-item-link" %></li>
         </ul>
       </div>
+
+      <% if current_user.admin %>
       <div class="nav-grouping">
         <%# if current_user && current_user.admin == true %>
           <div class="nav-button"><%= link_to "Admin", admin_root_path, class: "nav-button-link" %></div>
         <%# end %>
       </div>
     </div>
+    <% end %>
 
 
     <div class="nav-right">

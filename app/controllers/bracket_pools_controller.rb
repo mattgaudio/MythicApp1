@@ -3,6 +3,8 @@ class BracketPoolsController < ApplicationController
 
   before_action :require_player
 
+  before_action :require_admin, only: [:create]
+
   # Rest Actions
 
   def create
@@ -92,6 +94,14 @@ class BracketPoolsController < ApplicationController
     else
       redirect_to new_player_path
       flash[:error] = "Player creation required to join bracket"
+    end
+  end
+
+  def require_admin
+    if current_user.admin
+    else
+      redirect_to root_path
+      flash[:error] = "Page can't be accessed"
     end
   end
 
