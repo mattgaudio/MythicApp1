@@ -98,7 +98,7 @@ class BracketPoolsController < ApplicationController
   end
 
   def require_admin
-    if current_user.admin
+    if current_user && current_user.admin
     else
       redirect_to root_path
       flash[:error] = "Page can't be accessed"

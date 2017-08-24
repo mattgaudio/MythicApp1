@@ -85,7 +85,7 @@
         </ul>
       </div>
 
-      <% if current_user.admin %>
+      <% if current_user && current_user.admin %>
       <div class="nav-grouping">
         <%# if current_user && current_user.admin == true %>
           <div class="nav-button"><%= link_to "Admin", admin_root_path, class: "nav-button-link" %></div>
