@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'font-awesome-sass', "~> 4.7.0"
 gem 'administrate'
 gem "paperclip", "~> 5.0.0"
-gem "aws-sdk"
+gem "aws-sdk", "~> 2.3.0"
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'challonge-api'
