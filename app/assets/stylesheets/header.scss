@@ -1,6 +1,6 @@
 .navbar {
 	padding: 0;
-	z-index: 99;
+	z-index: 225;
 	a {
 		color: #d3d3d3;
 	}
@@ -114,6 +114,7 @@
 	right: 0;
 	left: 0;
 	margin: 0 auto;
+	z-index: 225;
 }
 
 .nav-right .nav-list {
