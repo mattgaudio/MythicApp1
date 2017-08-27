@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170824062048) do
+ActiveRecord::Schema.define(version: 20170827024717) do
 
   create_table "bracket_pool_players", force: :cascade do |t|
     t.integer "bracket_pool_id"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170824062048) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "team_id"
+    t.boolean "captain"
     t.index ["bracket_pool_id"], name: "index_bracket_pool_players_on_bracket_pool_id"
     t.index ["player_id"], name: "index_bracket_pool_players_on_player_id"
   end
@@ -66,6 +67,15 @@ ActiveRecord::Schema.define(version: 20170824062048) do
     t.index ["game_id"], name: "index_brackets_on_game_id"
   end
 
+  create_table "captains", force: :cascade do |t|
+    t.integer "team_id"
+    t.integer "player_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["player_id"], name: "index_captains_on_player_id"
+    t.index ["team_id"], name: "index_captains_on_team_id"
+  end
+
   create_table "games", force: :cascade do |t|
     t.string "short_title"
     t.string "long_title"
@@ -101,6 +111,14 @@ ActiveRecord::Schema.define(version: 20170824062048) do
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "team_invites", force: :cascade do |t|
+    t.integer "team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "player_id"
+    t.index ["team_id"], name: "index_team_invites_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|

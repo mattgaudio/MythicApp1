@@ -14,6 +14,10 @@
     <div class="find-teammates-box-item-value"><%= x.title %></div>
   </div>
   <div class="find-teammates-box-item">
+    <div class="find-teammates-box-item-label">Bracket Pool console:</div>
+    <div class="find-teammates-box-item-value"><%= x.console.upcase %></div>
+  </div>
+  <div class="find-teammates-box-item">
     <% if Rails.env.development? %>
       <div class="find-teammates-box-item-label">Bracket ID: </div>
       <div class="find-teammates-box-item-value">  <%= x.bracket.id %> </div>

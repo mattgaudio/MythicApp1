@@ -6,12 +6,15 @@ class TournamentsController < ApplicationController
 	end
 
 	def show
-
 		@quickvar = name_pool
 	end
 
 
 	def tournament_manager_page
+		@team_nightly = current_player_team_nightly
+		@team_weekly = current_player_team_weekly
+		@bracket_pool_nightly = current_player_active_nightly_bracket_pools
+		@bracket_pool_weekly = current_player_active_weekly_bracket_pools
 	end
 
 	def brackets
@@ -37,7 +40,5 @@ class TournamentsController < ApplicationController
 
 	def find_teammates_box
 	end
-
-
 
 end

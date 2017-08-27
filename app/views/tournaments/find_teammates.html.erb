@@ -2,71 +2,87 @@
    <thead>
      <tr>
        <th>Current Team Table</th>
-       <% current_user.player.bracket_pool_players.each do |x| %>
         <th>
-          Team Name: <%= x.team.team_name %>
+          Team Name: <%= @team_nightly.team_name %>
         </th>
-       <% end %>
      </tr>
      <tr>
-       <th>Player nickname: </th>
+       <th>Player Gamertag: </th>
        <th>Player points: </th>
-       <th>Invite</th>
+       <th>Kick:</th>
+       <% @team_nightly.bracket_pool_players.each do |x| %>
+         <% if x.captain && @team_nightly.bracket_pool_players.size > 1 %>
+           <th>Switch Captain:</th>
+          <% end %>
+        <% end %>
      </tr>
    </thead>
    <tbody>
-     <% current_user.player.bracket_pool_players.each do |x| %>
-       <% x.team.bracket_pool_players.each do |y| %>
-     <tr>
-       <td>
-         <div class="current-team-item-category">  <em> <%= y.player.nickname %></em> </div>
-       </td>
-       <td>
-         <div class="current-team-item-category">  <em> <%= y.player.points %> </em> </div>
-       </td>
-       <td>
-        <div class="current-team-item-category">
-          <%= button_to "kick", { remote: true}, {class: 'invite-teammates-btn'} %>
-        </div>
-       </td>
-     </tr>
+     <% @team_nightly.bracket_pool_players.each do |x| %>
+       <tr>
+         <td>
+           <div class="current-team-item-category">  <em>
+             <% if x.captain %>
+               Captain:
+             <% end %>
+             <%= x.player.xb1_gamertag %>
+           </em> </div>
+         </td>
+         <td>
+           <div class="current-team-item-category">  <em>  </em> <%= x.player.points %></div>
+         </td>
+         <td>
+          <div class="current-team-item-category">
+            <%= button_to "kick", { remote: true}, {class: 'invite-teammates-btn'} %>
+          </div>
+         </td>
+         <% @team_nightly.bracket_pool_players.each do |x| %>
+           <% if @team_nightly.bracket_pool_players.size > 1 %>
+             <% if x.captain == false %>
+               <td><%= button_to "Switch Captain",  class: 'switch-captain-btn' %></td>
+             <% else %>
+             <% end %>
+            <% end %>
+          <% end %>
+       </tr>
      <% end %>
-     <% end %>
+       <tr>
+         <td></td>
+         <td></td>
+         <td>
+           <%= button_to "Leave Team" %>
+         </td>
+       </tr>
    </tbody>
 </table>
 
-<table class="join-teammates-table responsive">
+<table class="join-teammates-table responsive" id="join-teammates-table">
    <thead>
      <tr>
        <th>Join Teammates Table</th>
      </tr>
      <tr>
-       <th>Bracket Pool Player ID: </th>
-       <th>Player nickname: </th>
+       <th>Player Gamertag: </th>
        <th>Player points: </th>
        <th>Invite</th>
      </tr>
    </thead>
    <tbody>
-     <% current_user.player.bracket_pools.all.each do |x| %>
-     <% x.bracket_pool_players.each do |y| %>
-     <tr>
-       <td>
-         <div class="join-teammates-item-category">  <em> <%= y.id %></em> </div>
-       </td>
-       <td>
-         <div class="join-teammates-item-category">  <em> <%= y.player.user.nickname %> </em> </div>
-       </td>
-       <td>
-         <div class="join-teammates-item-category">  <em> <%= y.player.points %> </em> </div>
-       </td>
-       <td>
-        <div class="join-teammates-item-category">
-          <%= button_to "Join", { remote: true}, {class: 'join-teammates-btn'} %>
-        </div>
-       </td>
-     </tr>
-     <% end %>
+     <% current_user.player.team_invites.each do |team_invite|  %>
+       <tr>
+         <td>
+           <div class="join-teammates-item-category">  <em> <%= team_invite.team.team_name %></em> </div>
+         </td>
+         <td>
+           <div class="join-teammates-item-category">  <em> <%= team_invite.team.bracket_pool_players.joins(:player).map(&:player_xb1_gamertag).to_sentence %> </em> </div>
+         </td>
+         <td>
+          <div class="join-teammates-item-category">
+            <%= button_to "Join", join_team_path(player_id: current_user.player, bracket_pool_id: @bracket_pool_nightly), {class: 'join-teammates-btn', method: :put, params: {bracket_pool_player: {team_id: team_invite.team_id}}} %>
+            <%= button_to "Dismiss", destroy_join_path(id: team_invite.id), class: 'dismiss-btn' %>
+          </div>
+         </td>
+       </tr>
      <% end %>
    </tbody>
 </table>
@@ -77,32 +93,49 @@
        <th>Find Teammates Table</th>
      </tr>
      <tr>
-       <th>Bracket Pool Player ID: </th>
-       <th>Player nickname: </th>
+       <th>Player Gamertag: </th>
        <th>Player points: </th>
+       <th>Player Team: </th>
        <th>Invite</th>
      </tr>
    </thead>
    <tbody>
-     <% current_user.player.bracket_pools.all.each do |x| %>
-     <% x.bracket_pool_players.each do |y| %>
+     <% @team_nightly.team_invites.each do |team_invite|  %>
+       <tr>
+         <td>
+           <div class="find-teammates-item-category">  <em> <%= team_invite.player.xb1_gamertag %> </em> </div>
+         </td>
+         <td>
+           <div class="find-teammates-item-category">  <em> <%= team_invite.player.points %></em> </div>
+         </td>
+         <td>
+           <div class="find-teammates-item-category">  <em> <%= team_invite.player.bracket_pool_players.find_by(bracket_pool_id: @bracket_pool_nightly).team.team_name %></em> </div>
+         </td>
+          <td>
+            <div class="find-teammates-item-category">
+              <%= button_to "Sent", {disabled: true}, {class: 'invite-sent-btn'} %>
+              <%= button_to "Dismiss", destroy_invite_path(id: team_invite.id),class: "dismiss-btn" %>
+            </div>
+          </td>
+       </tr>
+     <% end %>
+     <% @bracket_pool_nightly.bracket_pool_players.not_team_invites.each do |bracket_pool_player| %>
      <tr>
        <td>
-         <div class="find-teammates-item-category">  <em> <%= y.id %></em> </div>
+         <div class="find-teammates-item-category">  <em><%= bracket_pool_player.player.xb1_gamertag %> </em> </div>
        </td>
        <td>
-         <div class="find-teammates-item-category">  <em> <%= y.player.user.nickname %> </em> </div>
+         <div class="find-teammates-item-category">  <em><%= bracket_pool_player.player.points %> </em> </div>
        </td>
        <td>
-         <div class="find-teammates-item-category">  <em> <%= y.player.points %> </em> </div>
+         <div class="find-teammates-item-category">  <em><%= bracket_pool_player.team.team_name %> </em> </div>
        </td>
        <td>
         <div class="find-teammates-item-category">
-          <%= button_to "Invite", { remote: true}, {class: 'invite-teammates-btn'} %>
+          <%= button_to "invite", team_invites_path, {class: 'invite-teammates-btn', method: :post, params: {team_invite: {team_id: @team_nightly, player_id: bracket_pool_player.player.id }}} %>
         </div>
        </td>
      </tr>
-     <% end %>
      <% end %>
    </tbody>
 </table>

@@ -66,10 +66,28 @@
 
     <% if joined_bracket %>
     <div class="nav-grouping">
-      <div class="nav-button"><%= link_to manager_path, class: "nav-button-link nav-button-manager-link" do %>Manager<% end %></div>
+      <div class="nav-button"><%= link_to manager_path(bracket_pool_id: current_player_bracket_pool_nightly), class: "nav-button-link nav-button-manager-link" do %>Manager<% end %></div>
       <ul class="nav-list">
-        <li class="nav-list-item"><%= link_to "current_user_nightly_bracket", manager_path, class: "nav-list-item-link" %></li>
-        <li class="nav-list-item"><%= link_to "Weekly Bracket", manager_path, class: "nav-list-item-link" %></li>
+        <li class="nav-list-item">
+          <% if current_player_bracket_pool_nightly %>
+            <%= link_to manager_path(bracket_pool_id: current_player_bracket_pool_nightly), class: "nav-button-link nav-button-manager-link" do %>Nightly Bracket:
+              <% current_user.player.bracket_pools.where(active: true, nightly: true).each do |x| %>
+                <%= x.bracket.game.short_title %>
+                <%= x.bracket.title %>
+              <% end %>
+            <% end %>
+          <% end %>
+        </li>
+        <% if current_player_bracket_pool_weekly %>
+        <li class="nav-list-item">
+          <%= link_to manager_path(bracket_pool_id: current_player_bracket_pool_weekly), class: "nav-button-link nav-button-manager-link" do %>Weekly Bracket:
+            <% current_user.player.bracket_pools.where(active: true, weekly: true).each do |x| %>
+              <%= x.bracket.game.short_title %>
+              <%= x.bracket.title %>
+            <% end %>
+          <% end %>
+        </li>
+        <% end %>
       </ul>
     </div>
     <% end %>
@@ -81,7 +99,7 @@
           <li class="nav-list-item"><%= link_to "Statistics", statistics_path, class: "nav-list-item-link" %></li>
           <li class="nav-list-item"><%= link_to "Reddit", "https://www.reddit.com/r/MythicGaming/", class: "nav-list-item-link", target: "_blank" %></li>
           <li class="nav-list-item"><%= link_to "FAQ", faq_path, class: "nav-list-item-link" %></li>
-          <li class="nav-list-item"><%= link_to "Support", manager_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Support", root_path, class: "nav-list-item-link" %></li>
         </ul>
       </div>
 

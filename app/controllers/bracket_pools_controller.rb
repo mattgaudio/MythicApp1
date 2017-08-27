@@ -26,16 +26,15 @@ class BracketPoolsController < ApplicationController
     @bracket_pool = BracketPool.find(params[:bracket_pool_id])
     @player = current_user.player
     @team = Team.create(team_name: "#{name_pool}", bracket_pool: @bracket_pool)
-    @bracket_pool_player = BracketPoolPlayer.new(player: @player, bracket_pool: @bracket_pool, team: @team)
+    @bracket_pool_player = BracketPoolPlayer.new(player: @player, bracket_pool: @bracket_pool, team: @team, captain: true)
     if @bracket_pool_player.save
       @bracket_pool.update_attributes(player_size: @bracket_pool.players.count)
       flash[:success] = "Succesfully joined bracket!"
-          redirect_to manager_path
+      redirect_to manager_path(@bracket_pool)
     else
       flash[:error] = @bracket_pool_player.errors.full_messages.join("\n")
       redirect_to brackets_path
     end
-
   end
 
   def generate_bracket_pools

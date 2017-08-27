@@ -45,10 +45,14 @@ gem 'clearance'
 gem 'chronic'
 gem 'rake'
 
+
 # Future Gems
 gem 'stripe'
 gem 'cancancan'
 gem 'ransack'
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
+gem 'react-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

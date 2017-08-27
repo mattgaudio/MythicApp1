@@ -118,6 +118,7 @@
 			<div class="col-2 tourn-item tourn-item-buttons"> <br>
 				<div class="xbox-buttons">
 				<% y.bracket_pools.where(title: "Nightly Free", console: "xb1").each do  |z| %>
+				<% cache z do %>
 		      <% if current_user && z.active && (z.players.include? current_user.player) %>
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
@@ -128,10 +129,12 @@
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Not Active bracket-button-not-active", brackets_path, class: "bracket-button" %>
 		      <% end %>
+				<% end %>
 		    <% end %>
 				</div>
 				<div class="ps4-buttons">
 					<% y.bracket_pools.where(title: "Nightly Free", console: "ps4").each do  |z| %>
+					<% cache z do %>
 			      <% if current_user && z.active && (z.players.include? current_user.player) %>
 			        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 			        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
@@ -142,10 +145,12 @@
 			        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 			        <%= button_to "Not Active bracket-button-not-active", brackets_path, class: "bracket-button" %>
 			      <% end %>
+					<% end %>
 			    <% end %>
 				</div>
 				<div class="steam-buttons">
 				<% y.bracket_pools.where(title: "Nightly Free", console: "steam").each do  |z| %>
+				<% cache z do %>
 		      <% if current_user && z.active && (z.players.include? current_user.player) %>
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
@@ -156,12 +161,14 @@
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Not Active bracket-button-not-active", brackets_path, class: "bracket-button" %>
 		      <% end %>
+				<% end %>
 		    <% end %>
 				</div>
 			</div>
 			<div class="col-2 tourn-item tourn-item-buttons">$10 <br>
 				<div class="xbox-buttons">
 				<% y.bracket_pools.where(title: "Nightly 10", console: "xb1").each do  |z| %>
+				<% cache z do %>
 		      <% if current_user && z.active && (z.players.include? current_user.player) %>
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
@@ -172,10 +179,12 @@
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Not Active bracket-button-not-active", brackets_path, class: "bracket-button" %>
 		      <% end %>
+				<% end %>
 		    <% end %>
 				</div>
 				<div class="ps4-buttons">
 				<% y.bracket_pools.where(title: "Nightly 10", console: "ps4").each do  |z| %>
+				<% cache z do %>
 		      <% if current_user && z.active && (z.players.include? current_user.player) %>
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
@@ -186,10 +195,12 @@
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Not Active bracket-button-not-active", brackets_path, class: "bracket-button" %>
 		      <% end %>
+				<% end %>
 		    <% end %>
 				</div>
 				<div class="steam-buttons">
 				<% y.bracket_pools.where(title: "Nightly 10", console: "steam").each do  |z| %>
+				<% cache z do %>
 		      <% if current_user && z.active && (z.players.include? current_user.player) %>
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
@@ -200,12 +211,14 @@
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Not Active bracket-button-not-active", brackets_path, class: "bracket-button" %>
 		      <% end %>
+				<% end %>
 		    <% end %>
 				</div>
 			</div>
 			<div class="col-2 tourn-item tourn-item-buttons">$25 <br>
 				<div class="xbox-buttons">
 				<% y.bracket_pools.where(title: "Nightly 25", console: "xb1").each do  |z| %>
+				<% cache z do %>
 		      <% if current_user && z.active && (z.players.include? current_user.player) %>
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
@@ -216,10 +229,12 @@
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Not Active bracket-button-not-active", brackets_path, class: "bracket-button" %>
 		      <% end %>
+				<% end %>
 		    <% end %>
 				</div>
 				<div class="ps4-buttons">
 				<% y.bracket_pools.where(title: "Nightly 25", console: "ps4").each do  |z| %>
+				<% cache z do %>
 		      <% if current_user && z.active && (z.players.include? current_user.player) %>
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
@@ -230,10 +245,12 @@
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Not Active bracket-button-not-active", brackets_path, class: "bracket-button" %>
 		      <% end %>
+				<% end %>
 		    <% end %>
 				</div>
 				<div class="steam-buttons">
 				<% y.bracket_pools.where(title: "Nightly 25", console: "steam").each do  |z| %>
+				<% cache z do %>
 		      <% if current_user && z.active && (z.players.include? current_user.player) %>
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
@@ -244,12 +261,14 @@
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Not Active bracket-button-not-active", brackets_path, class: "bracket-button" %>
 		      <% end %>
+				<% end %>
 		    <% end %>
 				</div>
 			</div>
 			<div class="col-2 tourn-item tourn-item-buttons">$100 <br>
 				<div class="xbox-buttons">
 				<% y.bracket_pools.where(title: "Nightly 100", console: "xb1").each do  |z| %>
+				<% cache z do %>
 		      <% if current_user && z.active && (z.players.include? current_user.player) %>
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
@@ -260,10 +279,12 @@
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Not Active bracket-button-not-active", brackets_path, class: "bracket-button" %>
 		      <% end %>
+				<% end %>
 		    <% end %>
 				</div>
 				<div class="ps4-buttons">
 				<% y.bracket_pools.where(title: "Nightly 100", console: "ps4").each do  |z| %>
+				<% cache z do %>
 		      <% if current_user && z.active && (z.players.include? current_user.player) %>
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
@@ -274,10 +295,12 @@
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Not Active bracket-button-not-active", brackets_path, class: "bracket-button" %>
 		      <% end %>
+				<% end %>
 		    <% end %>
 				</div>
 				<div class="steam-buttons">
 				<% y.bracket_pools.where(title: "Nightly 100", console: "steam").each do  |z| %>
+				<% cache z do %>
 		      <% if current_user && z.active && (z.players.include? current_user.player) %>
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Leave Bracket", leave_bracket_path(bracket_pool_id: z.id), class: "bracket-button bracket-button-leave" %>
@@ -288,6 +311,7 @@
 		        <div class="bracket-header"><%= z.title.capitalize %> <%= z.console.capitalize %></div>
 		        <%= button_to "Not Active bracket-button-not-active", brackets_path, class: "bracket-button" %>
 		      <% end %>
+				<% end %>
 		    <% end %>
 				</div>
 			</div>

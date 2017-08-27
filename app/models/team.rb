@@ -1,6 +1,8 @@
 class Team < ApplicationRecord
   belongs_to :bracket_pool
-  has_many :bracket_pool_players, dependent: :destroy
+  has_many :bracket_pool_players
+  has_many :team_invites, dependent: :destroy
+  has_one :captain
   # has_one :captain, class_name: 'Player'
 
   validate :max_number_of_bracket_pool_players

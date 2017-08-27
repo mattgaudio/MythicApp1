@@ -1,10 +1,12 @@
 module TournamentsHelper
 
+
+
   def set_values
     @tournament = Tournament.find(params[:id])
   end
 
-  
+
 
 
   def add_participants_to_challonge

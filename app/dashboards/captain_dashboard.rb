@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class BracketPoolPlayerDashboard < Administrate::BaseDashboard
+class CaptainDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -8,13 +8,11 @@ class BracketPoolPlayerDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    bracket_pool: Field::BelongsTo,
-    player: Field::BelongsTo,
     team: Field::BelongsTo,
+    player: Field::BelongsTo,
     id: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    captain: Field::Boolean,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -23,38 +21,34 @@ class BracketPoolPlayerDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :bracket_pool,
-    :player,
     :team,
+    :player,
     :id,
+    :created_at,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :bracket_pool,
-    :player,
     :team,
+    :player,
     :id,
     :created_at,
     :updated_at,
-    :captain,
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :bracket_pool,
-    :player,
     :team,
-    :captain,
+    :player,
   ].freeze
 
-  # Overwrite this method to customize how bracket pool players are displayed
+  # Overwrite this method to customize how captains are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(bracket_pool_player)
-  #   "BracketPoolPlayer ##{bracket_pool_player.id}"
+  # def display_resource(captain)
+  #   "Captain ##{captain.id}"
   # end
 end
