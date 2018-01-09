@@ -3,6 +3,7 @@ class Team < ApplicationRecord
   has_many :bracket_pool_players
   has_many :team_invites, dependent: :destroy
   has_one :captain
+  belongs_to :tournament_pool, optional: true
   # has_one :captain, class_name: 'Player'
 
   validate :max_number_of_bracket_pool_players

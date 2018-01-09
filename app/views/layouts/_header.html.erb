@@ -21,7 +21,6 @@
 	        		<% (@fps_games || Game.fps).each do |game| %>
 	          		<li class="nav-list-item">
                   <%= link_to brackets_path, class: "nav-list-item-link" do %>
-                    <%= image_tag(game.game_img.url(:xs)) %>
                     <%= game.short_title %>
                   <% end %>
                 </li>
@@ -32,7 +31,6 @@
         		<% (@moba_games || Game.moba).each do |game| %>
           		<li class="nav-list-item">
                   <%= link_to brackets_path, class: "nav-list-item-link" do %>
-                    <%= image_tag(game.game_img.url(:xs)) %>
                     <%= game.short_title %>
                   <% end %>
                 </li>
@@ -43,7 +41,6 @@
         		<% (@hero_games || Game.hero).each do |game| %>
           		<li class="nav-list-item">
                   <%= link_to brackets_path, class: "nav-list-item-link" do %>
-                    <%= image_tag(game.game_img.url(:xs)) %>
                     <%= game.short_title %>
                   <% end %>
                 </li>
@@ -54,7 +51,6 @@
         		<% (@more_games || Game.more).each do |game| %>
           		<li class="nav-list-item">
                   <%= link_to brackets_path, class: "nav-list-item-link" do %>
-                    <%= image_tag(game.game_img.url(:xs)) %>
                     <%= game.short_title %>
                   <% end %>
                 </li>

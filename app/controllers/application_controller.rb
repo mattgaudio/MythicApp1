@@ -10,6 +10,18 @@ class ApplicationController < ActionController::Base
  		@games = Game.all
  	end
 
+  def current_bpl_nightly
+  end
+
+  def current_bpl_weekly
+  end
+
+  def current_player_nightly
+  end
+
+  def current_player_weekly
+  end
+
   def current_player_team_nightly
     current_user.player.bracket_pool_players.each do |x|
       if x.bracket_pool.active && x.bracket_pool.nightly

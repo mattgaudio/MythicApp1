@@ -47,11 +47,10 @@
        </tr>
      <% end %>
        <tr>
+         <td><%= button_to "Leave Team", class: "leave-team-btn" %></td>
          <td></td>
          <td></td>
-         <td>
-           <%= button_to "Leave Team" %>
-         </td>
+         <td></td>
        </tr>
    </tbody>
 </table>
@@ -64,7 +63,8 @@
      <tr>
        <th>Player Gamertag: </th>
        <th>Player points: </th>
-       <th>Invite</th>
+       <th>Invite: </th>
+       <th>Dismiss: </th>
      </tr>
    </thead>
    <tbody>
@@ -79,8 +79,12 @@
          <td>
           <div class="join-teammates-item-category">
             <%= button_to "Join", join_team_path(player_id: current_user.player, bracket_pool_id: @bracket_pool_nightly), {class: 'join-teammates-btn', method: :put, params: {bracket_pool_player: {team_id: team_invite.team_id}}} %>
-            <%= button_to "Dismiss", destroy_join_path(id: team_invite.id), class: 'dismiss-btn' %>
           </div>
+         </td>
+         <td>
+           <div class="join-teammates-item-category">
+             <%= button_to "Dismiss", destroy_join_path(id: team_invite.id), class: 'dismiss-btn' %>
+           </div>
          </td>
        </tr>
      <% end %>
@@ -113,8 +117,7 @@
          </td>
           <td>
             <div class="find-teammates-item-category">
-              <%= button_to "Sent", {disabled: true}, {class: 'invite-sent-btn'} %>
-              <%= button_to "Dismiss", destroy_invite_path(id: team_invite.id),class: "dismiss-btn" %>
+              <%= button_to "Sent", destroy_invite_path(id: team_invite.id), class: "dismiss-btn" %>
             </div>
           </td>
        </tr>

@@ -57,6 +57,7 @@ Rails.application.routes.draw do
     resources :teams
     resources :team_invites
     resources :captains
+    resources :tournament_pools
 
 
     root to: "games#index"

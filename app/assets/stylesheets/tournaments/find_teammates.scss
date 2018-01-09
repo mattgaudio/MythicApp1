@@ -45,7 +45,7 @@
 }
 
 .invite-teammates-btn {
-  padding: 15px 25px;
+  padding: 10px 25px;
   border: 1px solid #000;
   border-radius: 5px;
   display: flex;
@@ -56,14 +56,14 @@
 }
 
 .invite-sent-btn {
-  padding: 15px 25px;
+  padding: 10px 25px;
   border: 1px solid #000;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
-  background-color: #339966;
+  background-color: #555;
 }
 
 .join-teammates-table {
@@ -77,7 +77,7 @@
 }
 
 .join-teammates-item-category {
-  padding: 20px;
+  padding: 10px 25px;
   background-color: #264d73;
   margin: 0px 10px;
   height: 10vh;
@@ -95,7 +95,7 @@
 .dismiss-btn {
   padding: 10px 25px;
   border: 1px solid #000;
-  background-color: #555;
+  background-color: #339966;
   border-radius: 5px;
 }
 
@@ -104,4 +104,17 @@
   border: 1px solid #000;
   border-radius: 5px;
   background-color: #333;
+}
+
+.leave-team-btn {
+  padding: 10px 25px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #333;
+}
+
+form.button_to {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -5,4 +5,21 @@
 
 $(document).ready(function () {
   document.getElementById("defaultOpen").click();
+
+  $(".dismiss-btn").hover(
+        function() // on mouseover
+        {
+          $(this).removeClass("dismiss-btn");
+          $(this).addClass("invite-sent-btn");
+          $(this).text("Dismiss");
+        },
+
+        function() // on mouseout
+        {
+          $(this).removeClass("invite-sent-btn");
+          $(this).addClass("dismiss-btn");
+          $(this).text("Sent");
+        });
+
+
 });
