@@ -1,0 +1,355 @@
+/* line 4, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/brackets.scss */
+iframe {
+  min-height: 265vh;
+  width: 100%;
+  border-radius: 0;
+}
+
+/* line 1, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.find-teammates-list {
+  width: 100%;
+  background-color: #333;
+  color: #d2d2d2;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 9, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.current-team-table {
+  background-color: #333;
+  color: #d2d2d2;
+}
+/* line 12, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.current-team-table form {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 18, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.current-team-item-category {
+  padding: 20px;
+  background-color: #555;
+  margin: 0px 10px;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 27, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.find-teammates-table {
+  background-color: #333;
+  color: #d2d2d2;
+}
+/* line 30, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.find-teammates-table form {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 37, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.find-teammates-item-category {
+  padding: 20px;
+  background-color: #555;
+  margin: 0px 10px;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 47, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.invite-teammates-btn {
+  padding: 10px 25px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 58, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.invite-sent-btn {
+  padding: 10px 25px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #555;
+}
+
+/* line 69, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.join-teammates-table {
+  background-color: #204060;
+  color: #d2d2d2;
+}
+/* line 72, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.join-teammates-table form {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 79, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.join-teammates-item-category {
+  padding: 10px 25px;
+  background-color: #264d73;
+  margin: 0px 10px;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 88, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.join-teammates-btn {
+  padding: 10px 25px;
+  border: 1px solid #000;
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* line 95, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.dismiss-btn {
+  padding: 10px 25px;
+  border: 1px solid #000;
+  background-color: #339966;
+  border-radius: 5px;
+}
+
+/* line 102, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.switch-captain-btn {
+  padding: 10px 25px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #333;
+}
+
+/* line 109, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+.leave-team-btn {
+  padding: 10px 25px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #333;
+}
+
+/* line 116, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/find_teammates.scss */
+form.button_to {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 3, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/live_game_box.scss */
+.live-game-box {
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: row;
+  background-color: #ccc;
+  min-height: 30vh;
+  overflow-y: scroll;
+}
+
+/* line 13, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/live_game_box.scss */
+.current-round-row {
+  width: 100%;
+  background-color: #ccc;
+}
+
+/* line 18, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/live_game_box.scss */
+.current-roster-section {
+  display: flex;
+  flex-direction: row;
+}
+
+/* line 24, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/live_game_box.scss */
+.current-matchup-list {
+  list-style-type: none;
+}
+
+/* line 33, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/live_game_box.scss */
+.my-team-list {
+  color: #336699;
+}
+
+/* line 43, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/live_game_box.scss */
+.opponent-team-list {
+  color: #993333;
+}
+
+/* line 52, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/live_game_box.scss */
+.current-score-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 60, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/live_game_box.scss */
+.current-round {
+  font-size: 22px;
+  font-color: #000;
+  margin: 1vh 0vw;
+}
+
+/* line 67, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/live_game_box.scss */
+.current-scoreboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* line 81, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/live_game_box.scss */
+.current-matchup-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 86, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/live_game_box.scss */
+.current-matchup {
+  display: flex;
+  flex-direction: row;
+}
+
+/* line 7, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/scores_and_results.scss */
+.list-of-rounds {
+  list-style-type: none;
+  padding: 0 8px;
+  margin: 0;
+  font-size: 1em;
+}
+
+/* line 24, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/scores_and_results.scss */
+button.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+/* line 37, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/scores_and_results.scss */
+button.accordion.active, button.accordion:hover {
+  background-color: #ddd;
+}
+
+/* line 41, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/scores_and_results.scss */
+button.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+/* line 49, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/scores_and_results.scss */
+button.accordion.active:after {
+  content: "\2212";
+}
+
+/* line 53, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/scores_and_results.scss */
+div.panel {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* line 1, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/tourn_info_box.scss */
+.find-teammates-box {
+  background-color: #333;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #d2d2d2;
+  flex-wrap: wrap;
+  margin-bottom: 2vh;
+  min-height: 10vh;
+}
+
+/* line 13, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/tourn_info_box.scss */
+.find-teammates-box-item {
+  display: flex;
+  margin: 5px;
+}
+
+/* line 18, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/tourn_info_box.scss */
+.find-teammates-box-item-label {
+  padding: 10px;
+  background-color: #555;
+}
+
+/* line 23, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments/tourn_info_box.scss */
+.find-teammates-box-item-value {
+  padding: 10px;
+  background-color: #555;
+  margin-left: 5px;
+}
+
+/* line 7, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.css.scss */
+body {
+  background-color: #000;
+}
+
+/* line 13, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.css.scss */
+.tournament-box {
+  border: 1px solid #000;
+}
+
+/* line 23, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.css.scss */
+.tab-nav-box {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+/* Style the tab */
+/* line 29, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.css.scss */
+div.tab-nav {
+  overflow: hidden;
+  border: 2px solid #000;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the buttons inside the tab */
+/* line 39, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.css.scss */
+div.tab-nav button {
+  float: left;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: #333;
+  margin: 15px;
+}
+
+/* Change background color of buttons on hover */
+/* line 52, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.css.scss */
+div.tab-nav button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+/* line 57, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.css.scss */
+div.tab-nav button.active {
+  background-color: #ccc;
+  border-bottom: 10px solid #fff;
+  color: #000;
+}
+
+/* Style the tab content */
+/* line 67, /Users/MatthewGaudio/Desktop/rubyonrails/rails/projects_rails/mythic_app1/app/assets/stylesheets/tournaments.css.scss */
+.tabcontent {
+  display: none;
+}

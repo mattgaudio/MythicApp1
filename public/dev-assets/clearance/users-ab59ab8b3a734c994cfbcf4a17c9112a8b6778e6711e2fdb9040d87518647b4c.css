@@ -1,0 +1,95 @@
+/* line 1, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/users.css.scss */
+.sign-up-form {
+  border: 2px solid #000;
+  width: 65vw;
+  height: 75vh;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #b3b3b3;
+  background-image: url(/dev-assets/wallpaper9-5bacf03fa3c75612395da03d10a8daf2fbdfe8085cb22407745bdc83809479e9.png);
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+/* line 19, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/users.css.scss */
+form.new_user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 26, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/users.css.scss */
+h2.other-links {
+  text-align: center;
+  border: 2px solid #000;
+  background-color: #333;
+  padding: 10px 25px;
+  color: #fff;
+  width: 65vw;
+  margin: 2vh auto;
+}
+
+/* line 37, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/users.css.scss */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+/* line 45, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/users.css.scss */
+.ca-email-label {
+  width: 35vw;
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+  width: 35vw;
+}
+
+/* line 52, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/users.css.scss */
+.ca-email-input {
+  width: 35vw;
+  text-align: center;
+  width: 35vw;
+}
+
+/* line 58, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/users.css.scss */
+.ca-password-label {
+  width: 35vw;
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+  width: 35vw;
+}
+
+/* line 65, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/users.css.scss */
+.ca-password-input {
+  width: 35vw;
+  text-align: center;
+  width: 35vw;
+}
+
+/* line 71, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/users.css.scss */
+.submit-btn {
+  border: 2px solid #000;
+  background-color: #555;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 15px;
+}
+
+/* line 79, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/users.css.scss */
+.other-links {
+  text-align: center;
+}
+
+/* line 83, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/clearance/users.css.scss */
+body {
+  background-color: #000;
+}

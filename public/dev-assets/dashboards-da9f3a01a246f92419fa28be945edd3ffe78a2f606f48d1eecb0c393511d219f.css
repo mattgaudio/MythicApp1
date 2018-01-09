@@ -1,0 +1,167 @@
+/* line 5, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.dashboard-container {
+  background-color: #333;
+  border-top: 1px solid #000;
+}
+
+/* line 11, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.dash-top-row {
+  height: 15vh;
+  border-bottom: 1px solid #000;
+}
+
+/* line 18, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.main-dash {
+  border-top: none;
+  background-color: #333;
+}
+
+/* line 29, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.side-nav-list {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 35, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.side-nav-item {
+  display: flex;
+}
+
+/* line 40, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.side-nav-link {
+  padding: 15px 30px;
+  width: 100%;
+}
+/* line 43, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.side-nav-link:hover {
+  background-color: #d2d2d2;
+  color: #000;
+}
+
+/* line 50, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.dash-main-body {
+  background-color: #444;
+  color: #d2d2d2;
+  min-height: 80vh;
+  background-image: url(/dev-assets/wallpaper9-5bacf03fa3c75612395da03d10a8daf2fbdfe8085cb22407745bdc83809479e9.png);
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+/* line 60, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.field {
+  display: flex;
+  margin-bottom: 1vh;
+}
+
+/* line 65, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.dash-label {
+  padding: 15px;
+  background-color: #555;
+  color: #fff;
+  margin: 0 20px;
+  min-width: 15vw;
+  font-size: 16px;
+}
+
+/* line 75, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.dash-value {
+  padding: 15px;
+  background-color: #555;
+  color: #fff;
+  margin: 0 20px;
+  min-width: 15vw;
+}
+
+/* line 84, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.dash-button a {
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+  margin: 0 20px;
+  min-width: 12vw;
+  font-size: 16px;
+}
+
+/* line 94, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.dash-input {
+  min-width: 300px;
+}
+
+/* line 98, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.label-response {
+  padding: 20px;
+  background-color: #555;
+  min-width: 20vw;
+}
+
+/* line 105, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.submit-btn {
+  border: 2px solid #000;
+  color: #d2d2d2;
+  background-color: #1a1a1a;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 11px;
+  margin: 10px 20px;
+}
+/* line 113, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.submit-btn:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+/* line 121, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.form-header {
+  width: 65vw;
+  margin: 2vh auto;
+  border: 2px solid #000;
+  background-color: #333;
+  text-align: center;
+  color: #fff;
+}
+/* line 128, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.form-header h5 {
+  color: #336699;
+}
+/* line 131, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.form-header h2 {
+  color: #000;
+}
+
+/* line 135, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.player-form {
+  width: 65vw;
+  height: 75vh;
+  border: 2px solid #000;
+  background-image: url(/dev-assets/wallpaper9-5bacf03fa3c75612395da03d10a8daf2fbdfe8085cb22407745bdc83809479e9.png);
+  background-size: 100% 100%;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh auto;
+}
+
+/* line 149, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.form-field {
+  margin: 2vh 0;
+  color: #fff;
+  font-size: 18px !important;
+}
+
+/* line 156, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.form-label {
+  text-align: center;
+  width: 35vw;
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+}
+
+/* line 165, /Users/MatthewGaudio/Desktop/dev/rails/projects_rails/mythic_app1/app/assets/stylesheets/dashboards.scss */
+.form-input {
+  text-align: center;
+  width: 35vw;
+}

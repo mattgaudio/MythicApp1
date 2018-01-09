@@ -8,7 +8,7 @@
 .hero-section {
 	min-height: 90vh;
 	background-color: #444;
-	background-image: image-url("nebula-wallpaper-5.jpg");
+	background-image: image-url("background3.jpg");
 	background-image-width: 100vw;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -26,6 +26,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+	opacity: 0.85;
+	&:hover {
+		opacity: 1;
+	}
 }
 
 .wallop-main {
