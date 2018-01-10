@@ -40,10 +40,11 @@ gem "paperclip", "~> 5.0.0"
 gem "aws-sdk", "~> 2.3.0"
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'challonge-api'
+# gem 'challonge-api'
 gem 'clearance'
 gem 'chronic'
 gem 'rake'
+gem 'skylight'
 
 
 # Future Gems
