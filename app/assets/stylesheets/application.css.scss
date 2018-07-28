@@ -20,13 +20,14 @@
 @import "font-awesome";
 @import "furatto";
 @import "furatto_overrides";
+@import "semantic.css";
 
 // Vendor CSS
 @import "wallop";
 
 // Application SCSS
 @import "global";
-@import "header";
+@import "nav";
 @import "footer";
 
 

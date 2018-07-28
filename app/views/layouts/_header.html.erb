@@ -60,6 +60,17 @@
         </ul>
       </div>
 
+      <div class="nav-grouping">
+        <div class="nav-button"><%= link_to root_path, class: "nav-button-link" do %>Brackets <i class="fa fa-caret-down"></i><% end %></div>
+        <ul class="nav-list">
+        	<!-- <li class="nav-list-item"><%= link_to "The Circuit", tournament_basics_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Teams", statistics_path, class: "nav-list-item-link" %></li> -->
+          <li class="nav-list-item"><%= link_to "Reddit", "https://www.reddit.com/r/MythicGaming/", class: "nav-list-item-link", target: "_blank" %></li>
+          <!-- <li class="nav-list-item"><%= link_to "Amateurs", faq_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Leader Boards", root_path, class: "nav-list-item-link" %></li> -->
+        </ul>
+      </div>
+
     <% if joined_bracket %>
     <div class="nav-grouping">
       <div class="nav-button"><%= link_to manager_path(bracket_pool_id: current_player_bracket_pool_nightly), class: "nav-button-link nav-button-manager-link" do %>Manager<% end %></div>
@@ -88,14 +99,38 @@
     </div>
     <% end %>
 
+      <% if Rails.env.development? %>
+      <div class="nav-grouping">
+        <div class="nav-button"><%= link_to root_path, class: "nav-button-link" do %>The Circuit <i class="fa fa-caret-down"></i><% end %></div>
+        <ul class="nav-list">
+        	<li class="nav-list-item"><%= link_to "The Circuit", tournament_basics_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Teams", statistics_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Reddit", "https://www.reddit.com/r/MythicGaming/", class: "nav-list-item-link", target: "_blank" %></li>
+          <li class="nav-list-item"><%= link_to "Amateurs", faq_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Leader Boards", root_path, class: "nav-list-item-link" %></li>
+        </ul>
+      </div>
+      <% end %>
+
       <div class="nav-grouping">
         <div class="nav-button"><%= link_to root_path, class: "nav-button-link" do %>Information <i class="fa fa-caret-down"></i><% end %></div>
         <ul class="nav-list">
-        	<li class="nav-list-item"><%= link_to "Tournament Basics", tournament_basics_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Tournament Basics", tournament_basics_path, class: "nav-list-item-link" %></li>
           <li class="nav-list-item"><%= link_to "Statistics", statistics_path, class: "nav-list-item-link" %></li>
           <li class="nav-list-item"><%= link_to "Reddit", "https://www.reddit.com/r/MythicGaming/", class: "nav-list-item-link", target: "_blank" %></li>
           <li class="nav-list-item"><%= link_to "FAQ", faq_path, class: "nav-list-item-link" %></li>
           <li class="nav-list-item"><%= link_to "Support", root_path, class: "nav-list-item-link" %></li>
+        </ul>
+      </div>
+
+      <div class="nav-grouping">
+        <div class="nav-button"><%= link_to root_path, class: "nav-button-link" do %>More <i class="fa fa-caret-down"></i><% end %></div>
+        <ul class="nav-list">
+        	 <li class="nav-list-item"><%= link_to "The Circuit", tournament_basics_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Teams", statistics_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Reddit", "https://www.reddit.com/r/MythicGaming/", class: "nav-list-item-link", target: "_blank" %></li>
+          <li class="nav-list-item"><%= link_to "Amateurs", faq_path, class: "nav-list-item-link" %></li>
+          <li class="nav-list-item"><%= link_to "Leader Boards", root_path, class: "nav-list-item-link" %></li>
         </ul>
       </div>
 

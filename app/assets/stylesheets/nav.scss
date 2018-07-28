@@ -1,0 +1,142 @@
+.main-nav {
+  background-color: #333333;
+  color: #e6e6e6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 10vh;
+  font-size: 16px;
+  &:hover {
+    color: #fff;
+  }
+
+
+}
+
+.main-nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.left-nav {
+  width: 20%;
+
+}
+
+.middle-nav {
+  width: 60%;
+  display: flex;
+
+}
+
+.right-nav {
+  width: 20%;
+
+}
+
+.nav-item {
+  padding: 15px 25px;
+  border-radius: 7px;
+  cursor: pointer;
+  &:hover {
+    background-color: #4d4d4d;
+  }
+
+}
+
+.games-sub-menu {
+  color: #000;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  width: 100%;
+  background-color: #333;
+  color: #e6e6e6;
+}
+
+.sub-menu-header {
+  padding: 5px;
+  border-radius: 7px;
+  cursor: pointer;
+  &:hover {
+    background-color: #264d73;
+    color: #fff;
+  }
+}
+
+.sub-menu-item {
+  padding: 5px;
+  cursor: pointer;
+  &:hover {
+    background: #4d4d4d;
+  }
+}
+
+.nav-dropdown-menu {
+  background-color: #333333 !important;
+  color: #e6e6e6 !important;
+  .nav-item {
+    color: #e6e6e6 !important;
+    &:hover {
+      background-color: #4d4d4d !important;
+      color: #fff !important;
+    }
+  }
+}
+
+// Media Queries Main Nav
+
+@media (max-width: 1160px) {
+  .main-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 1161px) {
+  .sidebar-header {
+    display: none !important;
+  }
+}
+
+// SIDEBAR NAV
+
+.sidebar-header {
+  background-color: #333333;
+  color: #e6e6e6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 10vh;
+  font-size: 16px;
+  &:hover {
+    color: #fff;
+  }
+
+}
+
+.ui.sidebar.sidebar-nav {
+  background-color: #333 !important;
+  color: #e6e6e6 !important;
+}
+
+.side-nav-link {
+
+}
+
+.side-nav-item {
+  .item {
+    color: #e6e6e6 !important;
+  }
+  &:hover {
+    color: #fff !important;
+    background-color: #d4d4d4;
+  }
+
+}
